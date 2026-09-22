@@ -1,0 +1,534 @@
+import sqlite3
+
+
+DATABASE_NAME = "learnsmart.db"
+
+
+def get_connection():
+    conn = sqlite3.connect(DATABASE_NAME)
+    conn.execute("PRAGMA foreign_keys = ON")
+    return conn
+
+
+def create_tables():
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    # =====================================================
+    # USERS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            email TEXT UNIQUE NOT NULL,
+            password TEXT NOT NULL,
+            role TEXT NOT NULL
+                CHECK(role IN ('admin', 'teacher', 'parent', 'student')),
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    # =====================================================
+    # SCHOOLS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS schools (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT UNIQUE NOT NULL,
+            address TEXT,
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    # =====================================================
+    # TEACHERS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS teachers (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER UNIQUE,
+            teacher_code TEXT UNIQUE NOT NULL,
+            school_id INTEGER,
+            subject TEXT,
+            FOREIGN KEY (user_id) REFERENCES users(id),
+            FOREIGN KEY (school_id) REFERENCES schools(id)
+        )
+    """)
+
+    # =====================================================
+    # STUDENTS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS students (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            student_code TEXT UNIQUE NOT NULL,
+            user_id INTEGER UNIQUE,
+            student_name TEXT NOT NULL,
+            gender TEXT,
+            school_id INTEGER,
+            school_name TEXT,
+            class_name TEXT,
+            teacher_id INTEGER,
+            teacher_name TEXT,
+            grade_level TEXT,
+            date_of_birth TEXT,
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+
+            FOREIGN KEY (user_id) REFERENCES users(id),
+            FOREIGN KEY (school_id) REFERENCES schools(id),
+            FOREIGN KEY (teacher_id) REFERENCES teachers(id)
+        )
+    """)
+
+    # =====================================================
+    # PARENTS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS parents (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER UNIQUE,
+            phone TEXT,
+            FOREIGN KEY (user_id) REFERENCES users(id)
+        )
+    """)
+
+    # =====================================================
+    # PARENT - STUDENT
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS parent_student (
+            parent_id INTEGER,
+            student_id INTEGER,
+
+            PRIMARY KEY (parent_id, student_id),
+
+            FOREIGN KEY (parent_id)
+                REFERENCES parents(id)
+                ON DELETE CASCADE,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # SUBJECTS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS subjects (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT UNIQUE NOT NULL,
+            grade_level TEXT
+        )
+    """)
+
+    # =====================================================
+    # ACADEMIC RECORDS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS academic_records (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            student_id INTEGER NOT NULL,
+
+            date TEXT,
+            subject TEXT,
+            score REAL,
+
+            performance_level TEXT,
+
+            teacher_note TEXT,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # STUDENT HISTORY
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS student_history (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            student_id INTEGER NOT NULL,
+
+            date TEXT NOT NULL,
+
+            overall_score REAL,
+            grade TEXT,
+            performance_level TEXT,
+
+            attendance_percentage REAL,
+            study_hours_per_day REAL,
+
+            assignment_score REAL,
+            midterm_score REAL,
+            final_exam_score REAL,
+
+            participation_score REAL,
+            sleep_hours REAL,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # ATTENDANCE
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS attendance_records (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            student_id INTEGER NOT NULL,
+
+            date TEXT NOT NULL,
+            status TEXT NOT NULL,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # TEACHER NOTES
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS teacher_notes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            student_id INTEGER NOT NULL,
+
+            teacher_name TEXT,
+            note TEXT NOT NULL,
+            date TEXT,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # QUIZZES
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS quizzes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            title TEXT NOT NULL,
+            subject TEXT,
+            topic TEXT,
+            grade_level TEXT,
+
+            difficulty TEXT,
+
+            generated_by TEXT,
+
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    # =====================================================
+    # QUIZ QUESTIONS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS quiz_questions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            quiz_id INTEGER NOT NULL,
+
+            question TEXT NOT NULL,
+
+            option_a TEXT,
+            option_b TEXT,
+            option_c TEXT,
+            option_d TEXT,
+
+            correct_answer TEXT,
+
+            explanation TEXT,
+
+            FOREIGN KEY (quiz_id)
+                REFERENCES quizzes(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # QUIZ RESULTS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS quiz_results (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            student_id INTEGER NOT NULL,
+            quiz_id INTEGER,
+
+            subject TEXT,
+            topic TEXT,
+
+            score REAL,
+            total_questions INTEGER,
+
+            percentage REAL,
+
+            date TEXT,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE,
+
+            FOREIGN KEY (quiz_id)
+                REFERENCES quizzes(id)
+                ON DELETE SET NULL
+        )
+    """)
+
+    # =====================================================
+    # MENTAL GAMES
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS mental_games (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            title TEXT NOT NULL,
+            game_type TEXT,
+
+            subject TEXT,
+            topic TEXT,
+
+            grade_level TEXT,
+            difficulty TEXT,
+
+            description TEXT,
+
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    # =====================================================
+    # GAME RESULTS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS game_results (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            student_id INTEGER NOT NULL,
+            game_id INTEGER,
+
+            score REAL,
+            accuracy REAL,
+
+            duration_seconds INTEGER,
+
+            date TEXT,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE,
+
+            FOREIGN KEY (game_id)
+                REFERENCES mental_games(id)
+                ON DELETE SET NULL
+        )
+    """)
+
+    # =====================================================
+    # AI INSIGHTS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS ai_insights (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            student_id INTEGER NOT NULL,
+
+            insight TEXT NOT NULL,
+
+            risk_level TEXT,
+
+            weak_topics TEXT,
+
+            recommendations TEXT,
+
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # LEARNING PLANS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS learning_plans (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            student_id INTEGER NOT NULL,
+
+            plan TEXT NOT NULL,
+
+            goals TEXT,
+            weak_topics TEXT,
+
+            duration_days INTEGER,
+
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # RAG SOURCES
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS rag_sources (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            title TEXT NOT NULL,
+            source_type TEXT,
+
+            file_path TEXT,
+            url TEXT,
+
+            description TEXT,
+
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    # =====================================================
+    # RAG CHUNKS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS rag_chunks (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            source_id INTEGER NOT NULL,
+
+            chunk_index INTEGER,
+
+            content TEXT NOT NULL,
+
+            topic TEXT,
+            grade_level TEXT,
+
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+
+            FOREIGN KEY (source_id)
+                REFERENCES rag_sources(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # AI GENERATED CONTENT
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS ai_generated_content (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            student_id INTEGER,
+
+            content_type TEXT,
+
+            prompt TEXT,
+
+            generated_content TEXT,
+
+            sources TEXT,
+
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+
+            FOREIGN KEY (student_id)
+                REFERENCES students(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
+    # INDEXES
+    # =====================================================
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_student_history_student
+        ON student_history(student_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_academic_student
+        ON academic_records(student_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_attendance_student
+        ON attendance_records(student_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_quiz_results_student
+        ON quiz_results(student_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_ai_insights_student
+        ON ai_insights(student_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_learning_plans_student
+        ON learning_plans(student_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_rag_chunks_source
+        ON rag_chunks(source_id)
+    """)
+
+    conn.commit()
+    conn.close()
+
+
+if __name__ == "__main__":
+
+    create_tables()
+
+    print("======================================")
+    print("LearnSmart AI Database")
+    print("======================================")
+    print("Database created successfully!")
+    print("All tables are ready.")
+    print("======================================")

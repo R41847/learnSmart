@@ -1,0 +1,1259 @@
+import streamlit as st
+import pandas as pd
+import joblib
+import sys
+from pathlib import Path
+
+
+# ============================================================
+# PAGE CONFIG
+# ============================================================
+
+st.set_page_config(
+    page_title="LearnSmart AI",
+    page_icon="🎓",
+    layout="wide"
+)
+
+
+# ============================================================
+# PATHS
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_FILE = BASE_DIR / "student_performance_data (1).csv"
+MODEL_FILE = BASE_DIR / "learnsmart_model.joblib"
+RAG_DIR = BASE_DIR / "Rag"
+
+
+# ============================================================
+# LOAD DATA + MODEL
+# ============================================================
+
+@st.cache_data
+def load_data():
+    return pd.read_csv(DATA_FILE)
+
+
+@st.cache_resource
+def load_model():
+    return joblib.load(MODEL_FILE)
+
+
+df = load_data()
+model = load_model()
+
+
+# ============================================================
+# PERFORMANCE LEVEL
+# ============================================================
+
+def get_performance_level(grade):
+    if grade in ["A", "B"]:
+        return "Good"
+    elif grade == "C":
+        return "Average"
+    else:
+        return "At Risk"
+
+
+df["performance_level"] = df["grade"].apply(get_performance_level)
+
+
+# ============================================================
+# DEMO RELATIONAL DATA
+# ============================================================
+#
+# IMPORTANT:
+# The original 10,000 records are kept for ML.
+# The application UI uses only these 15 realistic demo students.
+#
+# Relationships are FIXED:
+# Parent -> Children
+# Teacher -> Students
+# School -> Classes -> Students
+#
+# No modulo/random relationships.
+# ============================================================
+
+DEMO_STUDENTS = [
+    {
+        "student_name": "Ahmed Ali",
+        "teacher_name": "Ms. Sara Hassan",
+        "class_name": "5A",
+        "school_name": "Nile Future School",
+        "parent_name": "Ahmed's Mother"
+    },
+    {
+        "student_name": "Omar Mohamed",
+        "teacher_name": "Ms. Sara Hassan",
+        "class_name": "5A",
+        "school_name": "Nile Future School",
+        "parent_name": "Omar's Father"
+    },
+    {
+        "student_name": "Youssef Hassan",
+        "teacher_name": "Ms. Sara Hassan",
+        "class_name": "5A",
+        "school_name": "Nile Future School",
+        "parent_name": "Youssef's Mother"
+    },
+    {
+        "student_name": "Jana Ahmed",
+        "teacher_name": "Ms. Sara Hassan",
+        "class_name": "5A",
+        "school_name": "Nile Future School",
+        "parent_name": "Jana's Mother"
+    },
+    {
+        "student_name": "Mariam Ali",
+        "teacher_name": "Mr. Ahmed Khaled",
+        "class_name": "5B",
+        "school_name": "Nile Future School",
+        "parent_name": "Ahmed's Mother"
+    },
+    {
+        "student_name": "Adam Mahmoud",
+        "teacher_name": "Mr. Ahmed Khaled",
+        "class_name": "5B",
+        "school_name": "Nile Future School",
+        "parent_name": "Adam's Father"
+    },
+    {
+        "student_name": "Laila Mohamed",
+        "teacher_name": "Mr. Ahmed Khaled",
+        "class_name": "5B",
+        "school_name": "Nile Future School",
+        "parent_name": "Youssef's Mother"
+    },
+    {
+        "student_name": "Malak Hassan",
+        "teacher_name": "Ms. Mariam Ali",
+        "class_name": "5C",
+        "school_name": "Nile Future School",
+        "parent_name": "Omar's Father"
+    },
+    {
+        "student_name": "Yassin Mahmoud",
+        "teacher_name": "Ms. Mariam Ali",
+        "class_name": "5C",
+        "school_name": "Nile Future School",
+        "parent_name": "Yassin's Mother"
+    },
+    {
+        "student_name": "Nour Ahmed",
+        "teacher_name": "Ms. Mariam Ali",
+        "class_name": "5C",
+        "school_name": "Nile Future School",
+        "parent_name": "Nour's Mother"
+    },
+    {
+        "student_name": "Seif Khaled",
+        "teacher_name": "Mr. Omar Hassan",
+        "class_name": "6A",
+        "school_name": "Al Noor Primary School",
+        "parent_name": "Seif's Father"
+    },
+    {
+        "student_name": "Lina Mostafa",
+        "teacher_name": "Mr. Omar Hassan",
+        "class_name": "6A",
+        "school_name": "Al Noor Primary School",
+        "parent_name": "Lina's Mother"
+    },
+    {
+        "student_name": "Omar Hassan",
+        "teacher_name": "Mr. Nada Mohamed",
+        "class_name": "6B",
+        "school_name": "Al Noor Primary School",
+        "parent_name": "Omar Hassan's Mother"
+    },
+    {
+        "student_name": "Maya Ahmed",
+        "teacher_name": "Mr. Nada Mohamed",
+        "class_name": "6B",
+        "school_name": "Al Noor Primary School",
+        "parent_name": "Maya's Mother"
+    },
+    {
+        "student_name": "Kareem Ali",
+        "teacher_name": "Mr. Nada Mohamed",
+        "class_name": "6B",
+        "school_name": "Al Noor Primary School",
+        "parent_name": "Kareem's Father"
+    }
+]
+
+
+# ============================================================
+# CREATE DEMO DATASET
+# ============================================================
+
+demo_df = df.head(len(DEMO_STUDENTS)).copy()
+
+demo_relationships = pd.DataFrame(DEMO_STUDENTS)
+
+demo_df = demo_df.reset_index(drop=True)
+demo_relationships = demo_relationships.reset_index(drop=True)
+
+demo_df["student_name"] = demo_relationships["student_name"]
+demo_df["teacher_name"] = demo_relationships["teacher_name"]
+demo_df["class_name"] = demo_relationships["class_name"]
+demo_df["school_name"] = demo_relationships["school_name"]
+demo_df["parent_name"] = demo_relationships["parent_name"]
+
+
+# ============================================================
+# SESSION STATE
+# ============================================================
+
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+if "role" not in st.session_state:
+    st.session_state.role = None
+
+if "user_name" not in st.session_state:
+    st.session_state.user_name = None
+
+if "selected_student_name" not in st.session_state:
+    st.session_state.selected_student_name = None
+
+
+# ============================================================
+# HELPER FUNCTIONS
+# ============================================================
+
+def reset_session():
+    st.session_state.logged_in = False
+    st.session_state.role = None
+    st.session_state.user_name = None
+    st.session_state.selected_student_name = None
+
+
+def get_student(student_name):
+    result = demo_df[
+        demo_df["student_name"] == student_name
+    ]
+
+    if result.empty:
+        return None
+
+    return result.iloc[0]
+
+
+def student_card(student):
+    st.markdown(
+        f"""
+        <div style="
+            padding:20px;
+            border-radius:15px;
+            border:1px solid #ddd;
+            margin-bottom:15px;
+            background-color:#fafafa;
+        ">
+            <h3>👨‍🎓 {student['student_name']}</h3>
+            <p><b>Class:</b> {student['class_name']}</p>
+            <p><b>Teacher:</b> {student['teacher_name']}</p>
+            <p><b>School:</b> {student['school_name']}</p>
+            <p><b>Performance:</b> {student['performance_level']}</p>
+            <p><b>Overall Score:</b> {student['overall_score']:.1f}</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+def performance_badge(level):
+    if level == "Good":
+        return "🟢 Good"
+    elif level == "Average":
+        return "🟡 Average"
+    else:
+        return "🔴 At Risk"
+
+
+# ============================================================
+# ROLE SELECTION SCREEN
+# ============================================================
+
+if not st.session_state.logged_in:
+
+    st.title("🎓 LearnSmart AI")
+
+    st.markdown(
+        """
+        ### AI-Powered Adaptive Learning Platform
+
+        LearnSmart AI helps teachers, parents, schools,
+        and students understand learning performance and
+        provide personalized learning support.
+        """
+    )
+
+    st.divider()
+
+    st.subheader("👋 Welcome to LearnSmart AI")
+
+    role = st.selectbox(
+        "Choose your role",
+        [
+            "Teacher",
+            "Parent",
+            "School Admin",
+            "Student"
+        ]
+    )
+
+    # --------------------------------------------------------
+    # TEACHER
+    # --------------------------------------------------------
+
+    if role == "Teacher":
+
+        teachers = sorted(
+            demo_df["teacher_name"].unique().tolist()
+        )
+
+        selected_user = st.selectbox(
+            "Select teacher",
+            teachers
+        )
+
+    # --------------------------------------------------------
+    # PARENT
+    # --------------------------------------------------------
+
+    elif role == "Parent":
+
+        parents = sorted(
+            demo_df["parent_name"].unique().tolist()
+        )
+
+        selected_user = st.selectbox(
+            "Select parent account",
+            parents
+        )
+
+        children = demo_df[
+            demo_df["parent_name"] == selected_user
+        ]
+
+        st.info(
+            f"👨‍👩‍👧 This account has "
+            f"**{len(children)} child/children** linked to it."
+        )
+
+        for _, child in children.iterrows():
+
+            st.write(
+                f"👨‍🎓 **{child['student_name']}** — "
+                f"{child['class_name']}"
+            )
+
+    # --------------------------------------------------------
+    # SCHOOL ADMIN
+    # --------------------------------------------------------
+
+    elif role == "School Admin":
+
+        schools = sorted(
+            demo_df["school_name"].unique().tolist()
+        )
+
+        selected_user = st.selectbox(
+            "Select school",
+            schools
+        )
+
+    # --------------------------------------------------------
+    # STUDENT
+    # --------------------------------------------------------
+
+    else:
+
+        students = sorted(
+            demo_df["student_name"].unique().tolist()
+        )
+
+        selected_user = st.selectbox(
+            "Select student account",
+            students
+        )
+
+    st.divider()
+
+    if st.button(
+        "Continue →",
+        use_container_width=True,
+        type="primary"
+    ):
+
+        st.session_state.logged_in = True
+        st.session_state.role = role
+        st.session_state.user_name = selected_user
+
+        if role == "Student":
+            st.session_state.selected_student_name = selected_user
+
+        st.rerun()
+
+    st.stop()
+
+
+# ============================================================
+# CURRENT USER
+# ============================================================
+
+role = st.session_state.role
+user_name = st.session_state.user_name
+
+
+# ============================================================
+# SIDEBAR
+# ============================================================
+
+st.sidebar.title("🎓 LearnSmart AI")
+
+st.sidebar.markdown(
+    f"""
+    **Role:** {role}
+
+    **Account:**  
+    {user_name}
+    """
+)
+
+st.sidebar.divider()
+
+
+if role == "Teacher":
+
+    pages = [
+        "🏠 Home",
+        "👨‍🎓 Students",
+        "👩‍🏫 Teacher Dashboard",
+        "🤖 AI Assistant"
+    ]
+
+elif role == "Parent":
+
+    pages = [
+        "🏠 Home",
+        "👨‍👩‍👧 Parent Dashboard"
+    ]
+
+elif role == "School Admin":
+
+    pages = [
+        "🏠 Home",
+        "🏫 School Dashboard"
+    ]
+
+else:
+
+    pages = [
+        "🏠 Home",
+        "📚 My Learning"
+    ]
+
+
+page = st.sidebar.radio(
+    "Navigation",
+    pages
+)
+
+st.sidebar.divider()
+
+if st.sidebar.button(
+    "🔄 Change Role",
+    use_container_width=True
+):
+    reset_session()
+    st.rerun()
+
+
+# ============================================================
+# HOME
+# ============================================================
+
+if page == "🏠 Home":
+
+    st.title("🎓 LearnSmart AI")
+
+    st.subheader(
+        f"Welcome, {user_name} 👋"
+    )
+
+    st.write(
+        "AI-powered personalized learning for students, "
+        "teachers, parents, and schools."
+    )
+
+    st.divider()
+
+    # Role-specific students
+    if role == "Teacher":
+
+        current_students = demo_df[
+            demo_df["teacher_name"] == user_name
+        ]
+
+    elif role == "Parent":
+
+        current_students = demo_df[
+            demo_df["parent_name"] == user_name
+        ]
+
+    elif role == "School Admin":
+
+        current_students = demo_df[
+            demo_df["school_name"] == user_name
+        ]
+
+    else:
+
+        current_students = demo_df[
+            demo_df["student_name"] == user_name
+        ]
+
+    col1, col2, col3, col4 = st.columns(4)
+
+    with col1:
+        st.metric(
+            "👨‍🎓 My Students",
+            len(current_students)
+        )
+
+    with col2:
+        st.metric(
+            "📊 Average Score",
+            f"{current_students['overall_score'].mean():.1f}"
+        )
+
+    with col3:
+        at_risk = (
+            current_students["performance_level"] == "At Risk"
+        ).sum()
+
+        st.metric(
+            "⚠️ At Risk",
+            at_risk
+        )
+
+    with col4:
+        st.metric(
+            "📅 Avg Attendance",
+            f"{current_students['attendance_percentage'].mean():.1f}%"
+        )
+
+    st.divider()
+
+    if role == "Teacher":
+
+        st.info(
+            "👩‍🏫 You can view your assigned students, "
+            "analyze their performance, and generate "
+            "AI-powered personalized learning plans."
+        )
+
+    elif role == "Parent":
+
+        st.info(
+            "👨‍👩‍👧 You can view your children's academic "
+            "performance and learning progress."
+        )
+
+    elif role == "School Admin":
+
+        st.info(
+            "🏫 You can monitor students and performance "
+            "across your school."
+        )
+
+    else:
+
+        st.info(
+            "📚 You can view your learning performance "
+            "and personalized learning information."
+        )
+
+
+# ============================================================
+# STUDENTS PAGE - TEACHER ONLY
+# ============================================================
+
+elif page == "👨‍🎓 Students":
+
+    st.title("👨‍🎓 My Students")
+
+    teacher_students = demo_df[
+        demo_df["teacher_name"] == user_name
+    ].copy()
+
+    st.write(
+        f"You are viewing the students assigned to "
+        f"**{user_name}**."
+    )
+
+    search = st.text_input(
+        "🔍 Search student",
+        placeholder="Enter student name..."
+    )
+
+    if search:
+
+        teacher_students = teacher_students[
+            teacher_students["student_name"]
+            .str.contains(
+                search,
+                case=False,
+                na=False
+            )
+        ]
+
+    st.divider()
+
+    if teacher_students.empty:
+
+        st.warning("No students found.")
+
+    else:
+
+        for _, student in teacher_students.iterrows():
+
+            with st.expander(
+                f"👨‍🎓 {student['student_name']} — "
+                f"{performance_badge(student['performance_level'])}"
+            ):
+
+                col1, col2, col3 = st.columns(3)
+
+                with col1:
+                    st.metric(
+                        "Overall Score",
+                        f"{student['overall_score']:.1f}"
+                    )
+
+                with col2:
+                    st.metric(
+                        "Attendance",
+                        f"{student['attendance_percentage']:.1f}%"
+                    )
+
+                with col3:
+                    st.metric(
+                        "Study Hours",
+                        f"{student['study_hours_per_day']:.1f}"
+                    )
+
+                st.write(
+                    f"**Class:** {student['class_name']}"
+                )
+
+                st.write(
+                    f"**Parent:** {student['parent_name']}"
+                )
+
+                st.write(
+                    f"**School:** {student['school_name']}"
+                )
+
+
+# ============================================================
+# TEACHER DASHBOARD
+# ============================================================
+
+elif page == "👩‍🏫 Teacher Dashboard":
+
+    st.title("👩‍🏫 Teacher Dashboard")
+
+    teacher_students = demo_df[
+        demo_df["teacher_name"] == user_name
+    ].copy()
+
+    st.subheader(
+        f"Students of {user_name}"
+    )
+
+    col1, col2, col3, col4 = st.columns(4)
+
+    with col1:
+        st.metric(
+            "Students",
+            len(teacher_students)
+        )
+
+    with col2:
+        st.metric(
+            "Average Score",
+            f"{teacher_students['overall_score'].mean():.1f}"
+        )
+
+    with col3:
+        st.metric(
+            "Average Attendance",
+            f"{teacher_students['attendance_percentage'].mean():.1f}%"
+        )
+
+    with col4:
+        at_risk = (
+            teacher_students["performance_level"] == "At Risk"
+        ).sum()
+
+        st.metric(
+            "At Risk",
+            at_risk
+        )
+
+    st.divider()
+
+    st.subheader("📊 Class Performance")
+
+    display_columns = [
+        "student_name",
+        "class_name",
+        "overall_score",
+        "attendance_percentage",
+        "performance_level"
+    ]
+
+    table = teacher_students[display_columns].copy()
+
+    table.columns = [
+        "Student",
+        "Class",
+        "Overall Score",
+        "Attendance %",
+        "Performance"
+    ]
+
+    st.dataframe(
+        table,
+        use_container_width=True,
+        hide_index=True
+    )
+
+    st.divider()
+
+    st.subheader("📈 Performance Distribution")
+
+    performance_counts = (
+        teacher_students["performance_level"]
+        .value_counts()
+    )
+
+    st.bar_chart(performance_counts)
+
+
+# ============================================================
+# PARENT DASHBOARD
+# ============================================================
+
+elif page == "👨‍👩‍👧 Parent Dashboard":
+
+    st.title("👨‍👩‍👧 Parent Dashboard")
+
+    parent_children = demo_df[
+        demo_df["parent_name"] == user_name
+    ].copy()
+
+    st.success(
+        f"Welcome! Showing only the children linked "
+        f"to **{user_name}**."
+    )
+
+    st.subheader(
+        f"👨‍👩‍👧 My Children ({len(parent_children)})"
+    )
+
+    if parent_children.empty:
+
+        st.warning(
+            "No children are linked to this account."
+        )
+
+    else:
+
+        for _, child in parent_children.iterrows():
+
+            st.markdown("---")
+
+            st.subheader(
+                f"👨‍🎓 {child['student_name']}"
+            )
+
+            col1, col2, col3, col4 = st.columns(4)
+
+            with col1:
+                st.metric(
+                    "Overall Score",
+                    f"{child['overall_score']:.1f}"
+                )
+
+            with col2:
+                st.metric(
+                    "Attendance",
+                    f"{child['attendance_percentage']:.1f}%"
+                )
+
+            with col3:
+                st.metric(
+                    "Study Hours",
+                    f"{child['study_hours_per_day']:.1f}"
+                )
+
+            with col4:
+                st.metric(
+                    "Performance",
+                    child["performance_level"]
+                )
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+
+                st.write(
+                    f"🏫 **School:** {child['school_name']}"
+                )
+
+                st.write(
+                    f"📚 **Class:** {child['class_name']}"
+                )
+
+            with col2:
+
+                st.write(
+                    f"👩‍🏫 **Teacher:** {child['teacher_name']}"
+                )
+
+                st.write(
+                    f"📊 **Grade:** {child['grade']}"
+                )
+
+
+# ============================================================
+# SCHOOL DASHBOARD
+# ============================================================
+
+elif page == "🏫 School Dashboard":
+
+    st.title("🏫 School Dashboard")
+
+    school_students = demo_df[
+        demo_df["school_name"] == user_name
+    ].copy()
+
+    st.success(
+        f"Showing students from **{user_name}** only."
+    )
+
+    col1, col2, col3, col4 = st.columns(4)
+
+    with col1:
+        st.metric(
+            "👨‍🎓 Students",
+            len(school_students)
+        )
+
+    with col2:
+        st.metric(
+            "📊 Average Score",
+            f"{school_students['overall_score'].mean():.1f}"
+        )
+
+    with col3:
+        st.metric(
+            "📅 Avg Attendance",
+            f"{school_students['attendance_percentage'].mean():.1f}%"
+        )
+
+    with col4:
+
+        at_risk = (
+            school_students["performance_level"] == "At Risk"
+        ).sum()
+
+        st.metric(
+            "⚠️ At Risk",
+            at_risk
+        )
+
+    st.divider()
+
+    st.subheader("🏫 School Students")
+
+    display_columns = [
+        "student_name",
+        "class_name",
+        "teacher_name",
+        "overall_score",
+        "attendance_percentage",
+        "performance_level"
+    ]
+
+    table = school_students[display_columns].copy()
+
+    table.columns = [
+        "Student",
+        "Class",
+        "Teacher",
+        "Overall Score",
+        "Attendance %",
+        "Performance"
+    ]
+
+    st.dataframe(
+        table,
+        use_container_width=True,
+        hide_index=True
+    )
+
+    st.divider()
+
+    st.subheader("📚 Classes")
+
+    class_summary = (
+        school_students
+        .groupby("class_name")
+        .agg(
+            Students=("student_name", "count"),
+            Average_Score=("overall_score", "mean"),
+            Attendance=("attendance_percentage", "mean")
+        )
+        .reset_index()
+    )
+
+    class_summary["Average_Score"] = (
+        class_summary["Average_Score"].round(1)
+    )
+
+    class_summary["Attendance"] = (
+        class_summary["Attendance"].round(1)
+    )
+
+    class_summary.columns = [
+        "Class",
+        "Students",
+        "Average Score",
+        "Attendance %"
+    ]
+
+    st.dataframe(
+        class_summary,
+        use_container_width=True,
+        hide_index=True
+    )
+
+
+# ============================================================
+# STUDENT - MY LEARNING
+# ============================================================
+
+elif page == "📚 My Learning":
+
+    st.title("📚 My Learning")
+
+    student = get_student(user_name)
+
+    if student is None:
+
+        st.error("Student profile not found.")
+
+    else:
+
+        st.subheader(
+            f"Welcome, {student['student_name']} 👋"
+        )
+
+        st.write(
+            "Here is your current learning profile."
+        )
+
+        st.divider()
+
+        col1, col2, col3, col4 = st.columns(4)
+
+        with col1:
+            st.metric(
+                "Overall Score",
+                f"{student['overall_score']:.1f}"
+            )
+
+        with col2:
+            st.metric(
+                "Attendance",
+                f"{student['attendance_percentage']:.1f}%"
+            )
+
+        with col3:
+            st.metric(
+                "Study Hours",
+                f"{student['study_hours_per_day']:.1f}"
+            )
+
+        with col4:
+            st.metric(
+                "Performance",
+                student["performance_level"]
+            )
+
+        st.divider()
+
+        st.subheader("📊 Academic Performance")
+
+        scores = pd.DataFrame(
+            {
+                "Assessment": [
+                    "Assignment",
+                    "Midterm",
+                    "Final Exam",
+                    "Participation"
+                ],
+                "Score": [
+                    student["assignment_score"],
+                    student["midterm_score"],
+                    student["final_exam_score"],
+                    student["participation_score"]
+                ]
+            }
+        )
+
+        st.bar_chart(
+            scores.set_index("Assessment")
+        )
+
+        st.divider()
+
+        st.write(
+            f"🏫 **School:** {student['school_name']}"
+        )
+
+        st.write(
+            f"📚 **Class:** {student['class_name']}"
+        )
+
+        st.write(
+            f"👩‍🏫 **Teacher:** {student['teacher_name']}"
+        )
+
+
+# ============================================================
+# AI ASSISTANT
+# ============================================================
+
+elif page == "🤖 AI Assistant":
+
+    st.title("🤖 LearnSmart AI Assistant")
+
+    st.write(
+        "Generate a personalized learning plan using "
+        "ML + RAG + Gemini."
+    )
+
+    # --------------------------------------------------------
+    # ONLY TEACHER'S STUDENTS
+    # --------------------------------------------------------
+
+    teacher_students = demo_df[
+        demo_df["teacher_name"] == user_name
+    ].copy()
+
+    st.info(
+        f"👩‍🏫 You are logged in as **{user_name}**. "
+        "You can generate plans only for your assigned students."
+    )
+
+    selected_student_name = st.selectbox(
+        "👨‍🎓 Select student",
+        teacher_students["student_name"].tolist()
+    )
+
+    student = get_student(selected_student_name)
+
+    if student is None:
+
+        st.error("Student not found.")
+
+    else:
+
+        st.divider()
+
+        # ----------------------------------------------------
+        # STUDENT SUMMARY
+        # ----------------------------------------------------
+
+        st.subheader(
+            f"👨‍🎓 {student['student_name']}"
+        )
+
+        col1, col2, col3, col4 = st.columns(4)
+
+        with col1:
+            st.metric(
+                "Performance",
+                student["performance_level"]
+            )
+
+        with col2:
+            st.metric(
+                "Overall Score",
+                f"{student['overall_score']:.1f}"
+            )
+
+        with col3:
+            st.metric(
+                "Attendance",
+                f"{student['attendance_percentage']:.1f}%"
+            )
+
+        with col4:
+            st.metric(
+                "Study Hours",
+                f"{student['study_hours_per_day']:.1f}"
+            )
+
+        st.write(
+            f"🏫 **School:** {student['school_name']}"
+        )
+
+        st.write(
+            f"📚 **Class:** {student['class_name']}"
+        )
+
+        st.write(
+            f"👩‍🏫 **Teacher:** {student['teacher_name']}"
+        )
+
+        st.divider()
+
+        # ----------------------------------------------------
+        # STUDENT INPUTS
+        # ----------------------------------------------------
+
+        st.subheader("🧠 Student Learning Profile")
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+
+            age = st.number_input(
+                "Student Age",
+                min_value=5,
+                max_value=18,
+                value=10
+            )
+
+            learning_style = st.selectbox(
+                "Learning Style",
+                [
+                    "Visual",
+                    "Auditory",
+                    "Reading/Writing",
+                    "Kinesthetic"
+                ]
+            )
+
+        with col2:
+
+            preferred_topic = st.selectbox(
+                "Preferred Topic",
+                [
+                    "Math",
+                    "Science",
+                    "English",
+                    "Computer Science",
+                    "General"
+                ]
+            )
+
+        # ----------------------------------------------------
+        # AUTOMATIC WEAK AREA
+        # ----------------------------------------------------
+
+        score_columns = {
+            "Assignment": student["assignment_score"],
+            "Midterm": student["midterm_score"],
+            "Final Exam": student["final_exam_score"],
+            "Participation": student["participation_score"]
+        }
+
+        weakest_area = min(
+            score_columns,
+            key=score_columns.get
+        )
+
+        weakest_score = score_columns[weakest_area]
+
+        st.info(
+            f"🎯 Automatically detected weakest area: "
+            f"**{weakest_area} ({weakest_score:.1f})**"
+        )
+
+        st.divider()
+
+        # ----------------------------------------------------
+        # GENERATE
+        # ----------------------------------------------------
+
+        if st.button(
+            "✨ Generate Personalized Learning Plan",
+            use_container_width=True,
+            type="primary"
+        ):
+
+            student_profile = {
+                "performance_level": student["performance_level"],
+                "age": age,
+                "education_level": "Primary",
+                "learning_style": learning_style,
+                "preferred_topics": preferred_topic,
+                "weak_areas": f"Low {weakest_area} performance",
+                "study_hours": student["study_hours_per_day"],
+                "attendance": student["attendance_percentage"]
+            }
+
+            with st.spinner(
+                "🔎 Retrieving learning resources and generating AI plan..."
+            ):
+
+                try:
+
+                    # Add Rag directory to Python path
+                    rag_path = str(RAG_DIR)
+
+                    if rag_path not in sys.path:
+                        sys.path.insert(0, rag_path)
+
+                    from genai import generate_learning_plan
+
+                    result = generate_learning_plan(
+                        student_profile
+                    )
+
+                    st.success(
+                        "✅ Personalized learning plan generated!"
+                    )
+
+                    st.markdown("## 🧠 AI Learning Plan")
+
+                    st.markdown(result)
+
+                except Exception as e:
+
+                    st.error(
+                        "❌ Could not generate the AI learning plan."
+                    )
+
+                    st.exception(e)
+
+
+# ============================================================
+# FOOTER
+# ============================================================
+
+st.sidebar.divider()
+
+st.sidebar.caption(
+    "LearnSmart AI • Adaptive Learning Platform"
+)
