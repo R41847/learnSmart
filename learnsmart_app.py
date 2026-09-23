@@ -2,7 +2,10 @@ import streamlit as st
 import pandas as pd
 import joblib
 import sys
+import json
 from pathlib import Path
+
+from database import create_tables, get_connection
 
 
 # ============================================================
@@ -24,6 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent
 DATA_FILE = BASE_DIR / "student_performance_data (1).csv"
 MODEL_FILE = BASE_DIR / "learnsmart_model.joblib"
 RAG_DIR = BASE_DIR / "Rag"
+
+create_tables()
 
 
 # ============================================================
@@ -273,6 +278,117 @@ def performance_badge(level):
         return "🔴 At Risk"
 
 
+def get_teacher_assignments(teacher_name):
+    conn = get_connection()
+    assignments = conn.execute(
+        """
+        SELECT id, title, subject, instructions, created_at
+        FROM assignments
+        WHERE teacher_name = ?
+        ORDER BY created_at DESC, id DESC
+        """,
+        (teacher_name,)
+    ).fetchall()
+    conn.close()
+    return assignments
+
+
+def get_assignment_questions(assignment_id):
+    conn = get_connection()
+    questions = conn.execute(
+        """
+        SELECT id, question_order, question, model_answer, max_points
+        FROM assignment_questions
+        WHERE assignment_id = ?
+        ORDER BY question_order
+        """,
+        (assignment_id,)
+    ).fetchall()
+    conn.close()
+    return questions
+
+
+def get_student_submission(assignment_id, student_name):
+    conn = get_connection()
+    submission = conn.execute(
+        """
+        SELECT answers_json, grading_json, earned_points, max_points, percentage
+        FROM assignment_submissions
+        WHERE assignment_id = ? AND student_name = ?
+        """,
+        (assignment_id, student_name)
+    ).fetchone()
+    conn.close()
+    return submission
+
+
+def save_assignment(teacher_name, title, subject, instructions, questions):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        INSERT INTO assignments (teacher_name, title, subject, instructions)
+        VALUES (?, ?, ?, ?)
+        """,
+        (teacher_name, title, subject, instructions)
+    )
+    assignment_id = cursor.lastrowid
+    cursor.executemany(
+        """
+        INSERT INTO assignment_questions
+            (assignment_id, question_order, question, model_answer, max_points)
+        VALUES (?, ?, ?, ?, ?)
+        """,
+        [
+            (
+                assignment_id,
+                index,
+                question["question"],
+                question["model_answer"],
+                question["max_points"]
+            )
+            for index, question in enumerate(questions, 1)
+        ]
+    )
+    conn.commit()
+    conn.close()
+
+
+def save_submission(
+    assignment_id,
+    student_name,
+    answers,
+    grading
+):
+    conn = get_connection()
+    conn.execute(
+        """
+        INSERT INTO assignment_submissions
+            (
+                assignment_id,
+                student_name,
+                answers_json,
+                grading_json,
+                earned_points,
+                max_points,
+                percentage
+            )
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            assignment_id,
+            student_name,
+            json.dumps(answers),
+            json.dumps(grading),
+            grading["earned_points"],
+            grading["max_points"],
+            grading["percentage"]
+        )
+    )
+    conn.commit()
+    conn.close()
+
+
 # ============================================================
 # ROLE SELECTION SCREEN
 # ============================================================
@@ -432,6 +548,7 @@ if role == "Teacher":
     pages = [
         "🏠 Home",
         "👨‍🎓 Students",
+        "📝 Assignments",
         "👩‍🏫 Teacher Dashboard",
         "🤖 AI Assistant"
     ]
@@ -454,7 +571,8 @@ else:
 
     pages = [
         "🏠 Home",
-        "📚 My Learning"
+        "📚 My Learning",
+        "📝 Assignments"
     ]
 
 
@@ -658,6 +776,108 @@ elif page == "👨‍🎓 Students":
                 st.write(
                     f"**School:** {student['school_name']}"
                 )
+
+
+# ============================================================
+# TEACHER - ASSIGNMENTS
+# ============================================================
+
+elif page == "📝 Assignments" and role == "Teacher":
+
+    st.title("📝 Assignments")
+    st.write(
+        "Create assignments with model answers. Students will receive "
+        "automatic AI grading and written feedback after submission."
+    )
+
+    st.subheader("Create an assignment")
+
+    with st.form("create_assignment_form"):
+        title = st.text_input("Assignment title")
+        subject = st.text_input("Subject")
+        instructions = st.text_area("Instructions (optional)")
+        question_count = st.number_input(
+            "Number of questions",
+            min_value=1,
+            max_value=10,
+            value=3,
+            step=1
+        )
+
+        questions = []
+        for index in range(int(question_count)):
+            st.markdown(f"**Question {index + 1}**")
+            question = st.text_area(
+                "Question",
+                key=f"new_assignment_question_{index}"
+            )
+            model_answer = st.text_area(
+                "Model answer",
+                key=f"new_assignment_model_answer_{index}"
+            )
+            max_points = st.number_input(
+                "Maximum points",
+                min_value=0.5,
+                value=1.0,
+                step=0.5,
+                key=f"new_assignment_points_{index}"
+            )
+            questions.append(
+                {
+                    "question": question.strip(),
+                    "model_answer": model_answer.strip(),
+                    "max_points": float(max_points)
+                }
+            )
+
+        create_clicked = st.form_submit_button(
+            "Create Assignment",
+            use_container_width=True,
+            type="primary"
+        )
+
+    if create_clicked:
+        if not title.strip():
+            st.error("Please enter an assignment title.")
+        elif any(
+            not item["question"] or not item["model_answer"]
+            for item in questions
+        ):
+            st.error("Every question must include a question and model answer.")
+        else:
+            save_assignment(
+                user_name,
+                title.strip(),
+                subject.strip(),
+                instructions.strip(),
+                questions
+            )
+            st.success("Assignment created successfully.")
+            st.rerun()
+
+    st.divider()
+    st.subheader("Your assignments")
+
+    assignments = get_teacher_assignments(user_name)
+    if not assignments:
+        st.info("You have not created any assignments yet.")
+    else:
+        for assignment in assignments:
+            assignment_id, assignment_title, subject, instructions, created_at = assignment
+            with st.expander(
+                f"{assignment_title}"
+                + (f" — {subject}" if subject else "")
+            ):
+                st.caption(f"Created: {created_at}")
+                if instructions:
+                    st.write(instructions)
+                assignment_questions = get_assignment_questions(assignment_id)
+                for item in assignment_questions:
+                    st.markdown(
+                        f"**{item[1]}. {item[2]}** "
+                        f"({item[4]:g} points)"
+                    )
+                    st.write(f"Model answer: {item[3]}")
 
 
 # ============================================================
@@ -1036,6 +1256,139 @@ elif page == "📚 My Learning":
         st.write(
             f"👩‍🏫 **Teacher:** {student['teacher_name']}"
         )
+
+
+# ============================================================
+# STUDENT - ASSIGNMENTS
+# ============================================================
+
+elif page == "📝 Assignments" and role == "Student":
+
+    st.title("📝 Assignments")
+
+    student = get_student(user_name)
+    if student is None:
+        st.error("Student profile not found.")
+    else:
+        assignments = get_teacher_assignments(student["teacher_name"])
+
+        if not assignments:
+            st.info("There are no assignments from your teacher yet.")
+        else:
+            for assignment in assignments:
+                assignment_id, title, subject, instructions, created_at = assignment
+                assignment_questions = get_assignment_questions(assignment_id)
+                submission = get_student_submission(assignment_id, user_name)
+
+                with st.expander(
+                    f"{title}"
+                    + (f" — {subject}" if subject else ""),
+                    expanded=submission is None
+                ):
+                    st.caption(f"Created: {created_at}")
+                    if instructions:
+                        st.write(instructions)
+
+                    if submission is not None:
+                        (
+                            answers_json,
+                            grading_json,
+                            earned_points,
+                            max_points,
+                            percentage
+                        ) = submission
+                        answers = json.loads(answers_json)
+                        grading = json.loads(grading_json)
+
+                        st.success(
+                            f"Score: {earned_points:g} / {max_points:g} "
+                            f"({percentage:.1f}%)"
+                        )
+
+                        for index, item in enumerate(
+                            assignment_questions
+                        ):
+                            st.markdown(f"**{index + 1}. {item[2]}**")
+                            st.write(f"Your answer: {answers[index]}")
+                            feedback = grading["questions"][index]
+                            st.info(
+                                f"**{feedback['points_awarded']:g} / "
+                                f"{feedback['max_points']:g} points** — "
+                                f"{feedback['feedback']}"
+                            )
+
+                        if grading.get("overall_feedback"):
+                            st.write(
+                                f"**Overall feedback:** "
+                                f"{grading['overall_feedback']}"
+                            )
+                    else:
+                        with st.form(f"submit_assignment_{assignment_id}"):
+                            answers = []
+                            for index, item in enumerate(
+                                assignment_questions
+                            ):
+                                st.markdown(
+                                    f"**{index + 1}. {item[2]}** "
+                                    f"({item[4]:g} points)"
+                                )
+                                answers.append(
+                                    st.text_area(
+                                        "Your answer",
+                                        key=f"answer_{assignment_id}_{index}"
+                                    )
+                                )
+
+                            submit_clicked = st.form_submit_button(
+                                "Submit for AI Grading",
+                                use_container_width=True,
+                                type="primary"
+                            )
+
+                        if submit_clicked:
+                            if any(not answer.strip() for answer in answers):
+                                st.error("Please answer every question before submitting.")
+                            else:
+                                try:
+                                    rag_path = str(RAG_DIR)
+                                    if rag_path not in sys.path:
+                                        sys.path.insert(0, rag_path)
+
+                                    from genai import grade_assignment
+
+                                    questions_for_grading = [
+                                        {
+                                            "question": item[2],
+                                            "model_answer": item[3],
+                                            "max_points": item[4]
+                                        }
+                                        for item in assignment_questions
+                                    ]
+
+                                    with st.spinner(
+                                        "AI is grading your assignment..."
+                                    ):
+                                        grading = grade_assignment(
+                                            title,
+                                            questions_for_grading,
+                                            answers
+                                        )
+
+                                    save_submission(
+                                        assignment_id,
+                                        user_name,
+                                        answers,
+                                        grading
+                                    )
+                                    st.success(
+                                        "Assignment graded successfully."
+                                    )
+                                    st.rerun()
+                                except Exception as error:
+                                    st.error(
+                                        "Could not grade the assignment."
+                                    )
+                                    st.exception(error)
 
 
 # ============================================================

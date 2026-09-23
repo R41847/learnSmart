@@ -480,6 +480,53 @@ def create_tables():
     """)
 
     # =====================================================
+    # ASSIGNMENTS
+    # =====================================================
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS assignments (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            teacher_name TEXT NOT NULL,
+            title TEXT NOT NULL,
+            subject TEXT,
+            instructions TEXT,
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS assignment_questions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            assignment_id INTEGER NOT NULL,
+            question_order INTEGER NOT NULL,
+            question TEXT NOT NULL,
+            model_answer TEXT NOT NULL,
+            max_points REAL NOT NULL DEFAULT 1,
+            FOREIGN KEY (assignment_id)
+                REFERENCES assignments(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS assignment_submissions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            assignment_id INTEGER NOT NULL,
+            student_name TEXT NOT NULL,
+            answers_json TEXT NOT NULL,
+            grading_json TEXT NOT NULL,
+            earned_points REAL NOT NULL,
+            max_points REAL NOT NULL,
+            percentage REAL NOT NULL,
+            submitted_at TEXT DEFAULT CURRENT_TIMESTAMP,
+            UNIQUE (assignment_id, student_name),
+            FOREIGN KEY (assignment_id)
+                REFERENCES assignments(id)
+                ON DELETE CASCADE
+        )
+    """)
+
+    # =====================================================
     # INDEXES
     # =====================================================
 
@@ -516,6 +563,16 @@ def create_tables():
     cursor.execute("""
         CREATE INDEX IF NOT EXISTS idx_rag_chunks_source
         ON rag_chunks(source_id)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_assignments_teacher
+        ON assignments(teacher_name)
+    """)
+
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_assignment_submissions_student
+        ON assignment_submissions(student_name)
     """)
 
     conn.commit()
