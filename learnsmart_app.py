@@ -12,6 +12,7 @@ from database import (
     authenticate_user,
     create_tables,
     create_user,
+    get_student_records,
     get_connection
 )
 
@@ -229,6 +230,9 @@ if "role" not in st.session_state:
 if "user_name" not in st.session_state:
     st.session_state.user_name = None
 
+if "user_id" not in st.session_state:
+    st.session_state.user_id = None
+
 if "selected_student_name" not in st.session_state:
     st.session_state.selected_student_name = None
 
@@ -256,6 +260,7 @@ def reset_session():
     st.session_state.logged_in = False
     st.session_state.role = None
     st.session_state.user_name = None
+    st.session_state.user_id = None
     st.session_state.selected_student_name = None
 
 
@@ -268,6 +273,37 @@ def get_student(student_name):
         return None
 
     return result.iloc[0]
+
+
+def get_current_students():
+    """Use relational records when available, retaining demo data as fallback."""
+    database_role = {
+        "School Admin": "admin"
+    }.get(role, role.lower())
+
+    records = get_student_records(
+        st.session_state.user_id,
+        database_role,
+        user_name
+    )
+    if records:
+        return pd.DataFrame(records)
+
+    if role == "Teacher":
+        return demo_df[
+            demo_df["teacher_name"] == user_name
+        ].copy()
+    if role == "Parent":
+        return demo_df[
+            demo_df["parent_name"] == user_name
+        ].copy()
+    if role == "School Admin":
+        return demo_df[
+            demo_df["school_name"] == user_name
+        ].copy()
+    return demo_df[
+        demo_df["student_name"] == user_name
+    ].copy()
 
 
 def render_read_aloud_button(text, key):
@@ -485,6 +521,7 @@ if not st.session_state.logged_in:
             else:
                 role = "School Admin" if user["role"] == "admin" else user["role"].title()
                 st.session_state.logged_in = True
+                st.session_state.user_id = user["id"]
                 st.session_state.role = role
                 st.session_state.user_name = user["name"]
                 if role == "Student":
@@ -680,30 +717,7 @@ if page == "🏠 Home":
 
     st.divider()
 
-    # Role-specific students
-    if role == "Teacher":
-
-        current_students = demo_df[
-            demo_df["teacher_name"] == user_name
-        ]
-
-    elif role == "Parent":
-
-        current_students = demo_df[
-            demo_df["parent_name"] == user_name
-        ]
-
-    elif role == "School Admin":
-
-        current_students = demo_df[
-            demo_df["school_name"] == user_name
-        ]
-
-    else:
-
-        current_students = demo_df[
-            demo_df["student_name"] == user_name
-        ]
+    current_students = get_current_students()
 
     col1, col2, col3, col4 = st.columns(4)
 
@@ -775,9 +789,7 @@ elif page == "👨‍🎓 Students":
 
     st.title("👨‍🎓 My Students")
 
-    teacher_students = demo_df[
-        demo_df["teacher_name"] == user_name
-    ].copy()
+    teacher_students = get_current_students()
 
     st.write(
         f"You are viewing the students assigned to "
@@ -958,9 +970,7 @@ elif page == "👩‍🏫 Teacher Dashboard":
 
     st.title("👩‍🏫 Teacher Dashboard")
 
-    teacher_students = demo_df[
-        demo_df["teacher_name"] == user_name
-    ].copy()
+    teacher_students = get_current_students()
 
     st.subheader(
         f"Students of {user_name}"
@@ -1044,9 +1054,7 @@ elif page == "👨‍👩‍👧 Parent Dashboard":
 
     st.title("👨‍👩‍👧 Parent Dashboard")
 
-    parent_children = demo_df[
-        demo_df["parent_name"] == user_name
-    ].copy()
+    parent_children = get_current_students()
 
     st.success(
         f"Welcome! Showing only the children linked "
