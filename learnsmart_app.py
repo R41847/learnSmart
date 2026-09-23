@@ -12,6 +12,8 @@ from database import (
     authenticate_user,
     create_tables,
     create_user,
+    get_student_performance_trend,
+    get_student_profile,
     get_student_records,
     get_connection
 )
@@ -269,10 +271,10 @@ def get_student(student_name):
         demo_df["student_name"] == student_name
     ]
 
-    if result.empty:
-        return None
+    if not result.empty:
+        return result.iloc[0]
 
-    return result.iloc[0]
+    return get_student_profile(student_name)
 
 
 def get_current_students():
@@ -304,6 +306,41 @@ def get_current_students():
     return demo_df[
         demo_df["student_name"] == user_name
     ].copy()
+
+
+def render_performance_trend(student_name, key_suffix):
+    trend_data = get_student_performance_trend(
+        student_name=student_name
+    )
+    points = trend_data["points"]
+
+    st.subheader("📈 Performance Trend")
+    if not points:
+        st.info("No performance history or assignment submissions yet.")
+        return trend_data
+
+    chart_data = pd.DataFrame(
+        {
+            "Date": [point["date"] for point in points],
+            "Score": [point["score"] for point in points]
+        }
+    ).set_index("Date")
+    st.line_chart(chart_data, y="Score")
+
+    recent = trend_data["recent_average"]
+    earlier = trend_data["earlier_average"]
+    if earlier is None:
+        st.info(
+            f"Trend: **{trend_data['trend']}** "
+            f"(current average: {recent:.1f})"
+        )
+    else:
+        st.info(
+            f"Trend: **{trend_data['trend']}** — "
+            f"earlier average: **{earlier:.1f}**, "
+            f"recent average: **{recent:.1f}**"
+        )
+    return trend_data
 
 
 def render_read_aloud_button(text, key):
@@ -1045,6 +1082,17 @@ elif page == "👩‍🏫 Teacher Dashboard":
 
     st.bar_chart(performance_counts)
 
+    if not teacher_students.empty:
+        selected_trend_student = st.selectbox(
+            "Select a student to view performance trend",
+            teacher_students["student_name"].tolist(),
+            key="teacher_dashboard_trend_student"
+        )
+        render_performance_trend(
+            selected_trend_student,
+            "teacher_dashboard"
+        )
+
 
 # ============================================================
 # PARENT DASHBOARD
@@ -1323,6 +1371,13 @@ elif page == "📚 My Learning":
 
         st.divider()
 
+        render_performance_trend(
+            student["student_name"],
+            "student_learning"
+        )
+
+        st.divider()
+
         st.write(
             f"🏫 **School:** {student['school_name']}"
         )
@@ -1527,6 +1582,10 @@ elif page == "🤖 AI Assistant":
 
         st.divider()
 
+        performance_trend = get_student_performance_trend(
+            student_name=selected_student_name
+        )
+
         # ----------------------------------------------------
         # STUDENT SUMMARY
         # ----------------------------------------------------
@@ -1677,7 +1736,8 @@ elif page == "🤖 AI Assistant":
 
                     st.session_state.learning_plan = generate_learning_plan(
                         student_profile,
-                        language=st.session_state.language
+                        language=st.session_state.language,
+                        performance_trend=performance_trend
                     )
                     st.session_state.learning_plan_student = (
                         selected_student_name
