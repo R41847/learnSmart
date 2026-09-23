@@ -3,8 +3,10 @@ import pandas as pd
 import joblib
 import sys
 import json
+import io
 from pathlib import Path
 
+from gtts import gTTS
 from database import create_tables, get_connection
 
 
@@ -224,6 +226,15 @@ if "user_name" not in st.session_state:
 if "selected_student_name" not in st.session_state:
     st.session_state.selected_student_name = None
 
+if "accessibility_mode" not in st.session_state:
+    st.session_state.accessibility_mode = False
+
+if "learning_plan" not in st.session_state:
+    st.session_state.learning_plan = None
+
+if "learning_plan_student" not in st.session_state:
+    st.session_state.learning_plan_student = None
+
 
 # ============================================================
 # HELPER FUNCTIONS
@@ -245,6 +256,24 @@ def get_student(student_name):
         return None
 
     return result.iloc[0]
+
+
+def render_read_aloud_button(text, key):
+    if not text or not text.strip():
+        return
+
+    if st.button("🔊 Read Aloud", key=key):
+        try:
+            audio_buffer = io.BytesIO()
+            gTTS(text=text, lang="en").write_to_fp(audio_buffer)
+            st.audio(
+                audio_buffer.getvalue(),
+                format="audio/mp3",
+                autoplay=True
+            )
+        except Exception as error:
+            st.error("Could not generate audio for this text.")
+            st.exception(error)
 
 
 def student_card(student):
@@ -582,6 +611,51 @@ page = st.sidebar.radio(
 )
 
 st.sidebar.divider()
+
+st.session_state.accessibility_mode = st.sidebar.checkbox(
+    "♿ High contrast / larger text",
+    value=st.session_state.accessibility_mode
+)
+
+if st.session_state.accessibility_mode:
+    st.markdown(
+        """
+        <style>
+        [data-testid="stAppViewContainer"] {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        [data-testid="stSidebar"] {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        [data-testid="stAppViewContainer"] p,
+        [data-testid="stAppViewContainer"] label,
+        [data-testid="stAppViewContainer"] span,
+        [data-testid="stAppViewContainer"] h1,
+        [data-testid="stAppViewContainer"] h2,
+        [data-testid="stAppViewContainer"] h3 {
+            color: #ffffff;
+            font-size: 1.15rem;
+        }
+
+        [data-testid="stAppViewContainer"] button,
+        [data-testid="stAppViewContainer"] input,
+        [data-testid="stAppViewContainer"] textarea {
+            font-size: 1.1rem;
+            border: 2px solid #ffffff;
+        }
+
+        [data-testid="stAppViewContainer"] button {
+            background: #000000;
+            color: #ffffff;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 if st.sidebar.button(
     "🔄 Change Role",
@@ -1305,12 +1379,20 @@ elif page == "📝 Assignments" and role == "Student":
                             f"({percentage:.1f}%)"
                         )
 
+                        feedback_parts = []
+
                         for index, item in enumerate(
                             assignment_questions
                         ):
                             st.markdown(f"**{index + 1}. {item[2]}**")
                             st.write(f"Your answer: {answers[index]}")
                             feedback = grading["questions"][index]
+                            feedback_parts.append(
+                                f"Question {index + 1}: "
+                                f"{feedback['points_awarded']:g} out of "
+                                f"{feedback['max_points']:g} points. "
+                                f"{feedback['feedback']}"
+                            )
                             st.info(
                                 f"**{feedback['points_awarded']:g} / "
                                 f"{feedback['max_points']:g} points** — "
@@ -1318,10 +1400,19 @@ elif page == "📝 Assignments" and role == "Student":
                             )
 
                         if grading.get("overall_feedback"):
+                            feedback_parts.append(
+                                f"Overall feedback: "
+                                f"{grading['overall_feedback']}"
+                            )
                             st.write(
                                 f"**Overall feedback:** "
                                 f"{grading['overall_feedback']}"
                             )
+
+                        render_read_aloud_button(
+                            "\n".join(feedback_parts),
+                            key=f"read_feedback_{assignment_id}"
+                        )
                     else:
                         with st.form(f"submit_assignment_{assignment_id}"):
                             answers = []
@@ -1580,17 +1671,16 @@ elif page == "🤖 AI Assistant":
 
                     from genai import generate_learning_plan
 
-                    result = generate_learning_plan(
+                    st.session_state.learning_plan = generate_learning_plan(
                         student_profile
+                    )
+                    st.session_state.learning_plan_student = (
+                        selected_student_name
                     )
 
                     st.success(
                         "✅ Personalized learning plan generated!"
                     )
-
-                    st.markdown("## 🧠 AI Learning Plan")
-
-                    st.markdown(result)
 
                 except Exception as e:
 
@@ -1599,6 +1689,18 @@ elif page == "🤖 AI Assistant":
                     )
 
                     st.exception(e)
+
+        if (
+            st.session_state.learning_plan
+            and st.session_state.learning_plan_student
+            == selected_student_name
+        ):
+            st.markdown("## 🧠 AI Learning Plan")
+            st.markdown(st.session_state.learning_plan)
+            render_read_aloud_button(
+                st.session_state.learning_plan,
+                key="read_learning_plan"
+            )
 
 
 # ============================================================
