@@ -229,11 +229,17 @@ if "selected_student_name" not in st.session_state:
 if "accessibility_mode" not in st.session_state:
     st.session_state.accessibility_mode = False
 
+if "language" not in st.session_state:
+    st.session_state.language = "en"
+
 if "learning_plan" not in st.session_state:
     st.session_state.learning_plan = None
 
 if "learning_plan_student" not in st.session_state:
     st.session_state.learning_plan_student = None
+
+if "learning_plan_language" not in st.session_state:
+    st.session_state.learning_plan_language = None
 
 
 # ============================================================
@@ -615,6 +621,15 @@ st.sidebar.divider()
 st.session_state.accessibility_mode = st.sidebar.checkbox(
     "♿ High contrast / larger text",
     value=st.session_state.accessibility_mode
+)
+
+st.session_state.language = st.sidebar.radio(
+    "🌐 Language",
+    options=["en", "ar"],
+    format_func=lambda value: (
+        "English" if value == "en" else "العربية"
+    ),
+    horizontal=True
 )
 
 if st.session_state.accessibility_mode:
@@ -1672,10 +1687,14 @@ elif page == "🤖 AI Assistant":
                     from genai import generate_learning_plan
 
                     st.session_state.learning_plan = generate_learning_plan(
-                        student_profile
+                        student_profile,
+                        language=st.session_state.language
                     )
                     st.session_state.learning_plan_student = (
                         selected_student_name
+                    )
+                    st.session_state.learning_plan_language = (
+                        st.session_state.language
                     )
 
                     st.success(
@@ -1694,12 +1713,23 @@ elif page == "🤖 AI Assistant":
             st.session_state.learning_plan
             and st.session_state.learning_plan_student
             == selected_student_name
+            and st.session_state.learning_plan_language
+            == st.session_state.language
         ):
             st.markdown("## 🧠 AI Learning Plan")
             st.markdown(st.session_state.learning_plan)
             render_read_aloud_button(
                 st.session_state.learning_plan,
                 key="read_learning_plan"
+            )
+        elif (
+            st.session_state.learning_plan
+            and st.session_state.learning_plan_student
+            == selected_student_name
+        ):
+            st.info(
+                "Generate the learning plan again to view it in the "
+                "selected language."
             )
 
 
