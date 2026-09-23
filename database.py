@@ -1,13 +1,220 @@
+import hashlib
+import secrets
 import sqlite3
 
 
 DATABASE_NAME = "learnsmart.db"
+PASSWORD_ITERATIONS = 100_000
 
 
 def get_connection():
     conn = sqlite3.connect(DATABASE_NAME)
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
+
+
+def hash_password(password):
+    """Return a salted password hash suitable for storing in the users table."""
+    salt = secrets.token_bytes(16)
+    password_hash = hashlib.pbkdf2_hmac(
+        "sha256",
+        password.encode("utf-8"),
+        salt,
+        PASSWORD_ITERATIONS
+    )
+    return f"{salt.hex()}${password_hash.hex()}"
+
+
+def verify_password(password, stored_password):
+    """Check a plaintext password against a stored salt and hash."""
+    try:
+        salt_hex, hash_hex = stored_password.split("$", 1)
+        salt = bytes.fromhex(salt_hex)
+        expected_hash = bytes.fromhex(hash_hex)
+    except (AttributeError, ValueError):
+        return False
+
+    actual_hash = hashlib.pbkdf2_hmac(
+        "sha256",
+        password.encode("utf-8"),
+        salt,
+        PASSWORD_ITERATIONS
+    )
+    return secrets.compare_digest(actual_hash, expected_hash)
+
+
+def create_user(name, email, password, role):
+    """Create a user with a normalized email and a salted password hash."""
+    normalized_name = name.strip()
+    normalized_email = email.strip().lower()
+    conn = get_connection()
+    try:
+        cursor = conn.execute(
+            """
+            INSERT INTO users (name, email, password, role)
+            VALUES (?, ?, ?, ?)
+            """,
+            (
+                normalized_name,
+                normalized_email,
+                hash_password(password),
+                role
+            )
+        )
+        user_id = cursor.lastrowid
+
+        if role == "student":
+            conn.execute(
+                """
+                UPDATE students
+                SET user_id = ?
+                WHERE user_id IS NULL
+                AND lower(trim(student_name)) = lower(trim(?))
+                """,
+                (user_id, normalized_name)
+            )
+        elif role == "teacher":
+            # Existing teacher rows currently have no teacher_name column.
+            # Student.teacher_name remains the source for migrated assignments.
+            conn.execute(
+                """
+                UPDATE teachers
+                SET user_id = ?
+                WHERE user_id IS NULL
+                AND teacher_code = ?
+                """,
+                (user_id, normalized_name)
+            )
+        elif role == "parent":
+            conn.execute(
+                """
+                INSERT INTO parents (user_id)
+                VALUES (?)
+                """,
+                (user_id,)
+            )
+
+        conn.commit()
+        return user_id
+    finally:
+        conn.close()
+
+
+def authenticate_user(email, password):
+    """Return the matching user, or None when credentials are invalid."""
+    conn = get_connection()
+    try:
+        user = conn.execute(
+            """
+            SELECT id, name, email, role, password
+            FROM users
+            WHERE email = ?
+            """,
+            (email.strip().lower(),)
+        ).fetchone()
+    finally:
+        conn.close()
+
+    if user is None or not verify_password(password, user[4]):
+        return None
+
+    return {
+        "id": user[0],
+        "name": user[1],
+        "email": user[2],
+        "role": user[3]
+    }
+
+
+def get_student_records(user_id, role, name):
+    """Return dashboard-ready student records from the relational database."""
+    filters = []
+    parameters = []
+
+    if role == "student":
+        filters.append("s.user_id = ?")
+        parameters.append(user_id)
+    elif role == "teacher":
+        filters.append(
+            """
+            (
+                lower(trim(s.teacher_name)) = lower(trim(?))
+                OR s.teacher_id IN (
+                    SELECT id FROM teachers WHERE user_id = ?
+                )
+            )
+            """
+        )
+        parameters.extend([name, user_id])
+    elif role == "parent":
+        filters.append(
+            """
+            s.id IN (
+                SELECT ps.student_id
+                FROM parent_student ps
+                JOIN parents p ON p.id = ps.parent_id
+                WHERE p.user_id = ?
+            )
+            """
+        )
+        parameters.append(user_id)
+    else:
+        return []
+
+    conn = get_connection()
+    try:
+        rows = conn.execute(
+            f"""
+            SELECT
+                s.student_name,
+                s.class_name,
+                s.school_name,
+                s.teacher_name,
+                COALESCE(
+                    (
+                        SELECT group_concat(u.name, ', ')
+                        FROM parent_student ps
+                        JOIN parents p ON p.id = ps.parent_id
+                        JOIN users u ON u.id = p.user_id
+                        WHERE ps.student_id = s.id
+                    ),
+                    'Not linked'
+                ) AS parent_name,
+                h.overall_score,
+                h.grade,
+                h.attendance_percentage,
+                h.study_hours_per_day,
+                COALESCE(h.performance_level, 'At Risk') AS performance_level
+            FROM students s
+            LEFT JOIN student_history h
+                ON h.id = (
+                    SELECT latest.id
+                    FROM student_history latest
+                    WHERE latest.student_id = s.id
+                    ORDER BY latest.date DESC, latest.id DESC
+                    LIMIT 1
+                )
+            WHERE {" AND ".join(filters)}
+            ORDER BY s.student_name
+            """,
+            parameters
+        ).fetchall()
+    finally:
+        conn.close()
+
+    columns = [
+        "student_name",
+        "class_name",
+        "school_name",
+        "teacher_name",
+        "parent_name",
+        "overall_score",
+        "grade",
+        "attendance_percentage",
+        "study_hours_per_day",
+        "performance_level"
+    ]
+    return [dict(zip(columns, row)) for row in rows]
 
 
 def create_tables():
