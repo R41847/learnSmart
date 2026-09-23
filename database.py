@@ -1,6 +1,7 @@
 import hashlib
 import secrets
 import sqlite3
+from statistics import mean
 
 
 DATABASE_NAME = "learnsmart.db"
@@ -215,6 +216,161 @@ def get_student_records(user_id, role, name):
         "performance_level"
     ]
     return [dict(zip(columns, row)) for row in rows]
+
+
+def get_student_performance_trend(student_name=None, student_id=None):
+    """Combine history and assignment scores into a simple performance trend."""
+    conn = get_connection()
+    try:
+        if student_id is None and student_name:
+            student = conn.execute(
+                """
+                SELECT id, student_name
+                FROM students
+                WHERE lower(trim(student_name)) = lower(trim(?))
+                """,
+                (student_name,)
+            ).fetchone()
+            if student:
+                student_id = student[0]
+                student_name = student[1]
+
+        history_rows = []
+        if student_id is not None:
+            history_rows = conn.execute(
+                """
+                SELECT date, overall_score
+                FROM student_history
+                WHERE student_id = ?
+                AND overall_score IS NOT NULL
+                """,
+                (student_id,)
+            ).fetchall()
+
+        submission_rows = []
+        if student_name:
+            submission_rows = conn.execute(
+                """
+                SELECT submitted_at, percentage
+                FROM assignment_submissions
+                WHERE lower(trim(student_name)) = lower(trim(?))
+                AND percentage IS NOT NULL
+                """,
+                (student_name,)
+            ).fetchall()
+    finally:
+        conn.close()
+
+    points = [
+        {"date": str(date), "score": float(score), "source": "history"}
+        for date, score in history_rows
+    ]
+    points.extend(
+        {
+            "date": str(date),
+            "score": float(score),
+            "source": "assignment"
+        }
+        for date, score in submission_rows
+    )
+    points.sort(key=lambda item: item["date"])
+
+    if not points:
+        return {
+            "points": [],
+            "trend": "stable",
+            "recent_average": None,
+            "earlier_average": None
+        }
+
+    if len(points) == 1:
+        recent_average = points[0]["score"]
+        earlier_average = None
+        trend = "stable"
+    else:
+        split_index = max(1, len(points) // 2)
+        earlier_scores = [
+            point["score"] for point in points[:split_index]
+        ]
+        recent_scores = [
+            point["score"] for point in points[split_index:]
+        ]
+        earlier_average = mean(earlier_scores)
+        recent_average = mean(recent_scores)
+        difference = recent_average - earlier_average
+
+        if difference >= 5:
+            trend = "improving"
+        elif difference <= -5:
+            trend = "declining"
+        else:
+            trend = "stable"
+
+    return {
+        "points": points,
+        "trend": trend,
+        "recent_average": recent_average,
+        "earlier_average": earlier_average
+    }
+
+
+def get_student_profile(student_name):
+    """Return a student's current profile from the relational database."""
+    conn = get_connection()
+    try:
+        row = conn.execute(
+            """
+            SELECT
+                s.student_name,
+                s.class_name,
+                s.school_name,
+                s.teacher_name,
+                h.overall_score,
+                h.grade,
+                h.performance_level,
+                h.attendance_percentage,
+                h.study_hours_per_day,
+                h.assignment_score,
+                h.midterm_score,
+                h.final_exam_score,
+                h.participation_score,
+                h.sleep_hours
+            FROM students s
+            LEFT JOIN student_history h
+                ON h.id = (
+                    SELECT latest.id
+                    FROM student_history latest
+                    WHERE latest.student_id = s.id
+                    ORDER BY latest.date DESC, latest.id DESC
+                    LIMIT 1
+                )
+            WHERE lower(trim(s.student_name)) = lower(trim(?))
+            """,
+            (student_name,)
+        ).fetchone()
+    finally:
+        conn.close()
+
+    if row is None:
+        return None
+
+    columns = [
+        "student_name",
+        "class_name",
+        "school_name",
+        "teacher_name",
+        "overall_score",
+        "grade",
+        "performance_level",
+        "attendance_percentage",
+        "study_hours_per_day",
+        "assignment_score",
+        "midterm_score",
+        "final_exam_score",
+        "participation_score",
+        "sleep_hours"
+    ]
+    return dict(zip(columns, row))
 
 
 def create_tables():

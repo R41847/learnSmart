@@ -136,7 +136,11 @@ Rules:
 # Generate Personalized Plan
 # =========================
 
-def generate_learning_plan(student_profile, language="en"):
+def generate_learning_plan(
+    student_profile,
+    language="en",
+    performance_trend=None
+):
 
     # Retrieve relevant resources
     resources = retrieve_resources(
@@ -229,6 +233,17 @@ Study Hours:
 
 Attendance:
 {student_profile.get("attendance")}
+
+Performance Trend:
+{performance_trend or "No performance trend data is available."}
+
+Use the performance trend explicitly in the learning plan:
+- If the student is improving, reinforce what is working and recommend
+  gradually more challenging practice.
+- If the student is declining, focus on fundamentals, targeted review,
+  and manageable practice steps.
+- If the student is stable, recommend consistent practice and one or two
+  focused areas for growth.
 
 
 Retrieved Learning Resources:
