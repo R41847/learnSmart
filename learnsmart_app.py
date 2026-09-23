@@ -1,13 +1,19 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import sqlite3
 import sys
 import json
 import io
 from pathlib import Path
 
 from gtts import gTTS
-from database import create_tables, get_connection
+from database import (
+    authenticate_user,
+    create_tables,
+    create_user,
+    get_connection
+)
 
 
 # ============================================================
@@ -442,112 +448,87 @@ if not st.session_state.logged_in:
         """
     )
 
+    st.info(
+        "Accounts are separate from the migrated student performance dataset. "
+        "The existing dashboards still use the built-in demo relationships "
+        "until those records are explicitly linked to user accounts."
+    )
+
     st.divider()
 
     st.subheader("👋 Welcome to LearnSmart AI")
 
-    role = st.selectbox(
-        "Choose your role",
-        [
-            "Teacher",
-            "Parent",
-            "School Admin",
-            "Student"
-        ]
+    view = st.radio(
+        "Account access",
+        ["Login", "Sign Up"],
+        horizontal=True
     )
 
-    # --------------------------------------------------------
-    # TEACHER
-    # --------------------------------------------------------
-
-    if role == "Teacher":
-
-        teachers = sorted(
-            demo_df["teacher_name"].unique().tolist()
-        )
-
-        selected_user = st.selectbox(
-            "Select teacher",
-            teachers
-        )
-
-    # --------------------------------------------------------
-    # PARENT
-    # --------------------------------------------------------
-
-    elif role == "Parent":
-
-        parents = sorted(
-            demo_df["parent_name"].unique().tolist()
-        )
-
-        selected_user = st.selectbox(
-            "Select parent account",
-            parents
-        )
-
-        children = demo_df[
-            demo_df["parent_name"] == selected_user
-        ]
-
-        st.info(
-            f"👨‍👩‍👧 This account has "
-            f"**{len(children)} child/children** linked to it."
-        )
-
-        for _, child in children.iterrows():
-
-            st.write(
-                f"👨‍🎓 **{child['student_name']}** — "
-                f"{child['class_name']}"
+    if view == "Login":
+        with st.form("login_form"):
+            email = st.text_input("Email", autocomplete="email")
+            password = st.text_input(
+                "Password",
+                type="password",
+                autocomplete="current-password"
+            )
+            submitted = st.form_submit_button(
+                "Login",
+                use_container_width=True,
+                type="primary"
             )
 
-    # --------------------------------------------------------
-    # SCHOOL ADMIN
-    # --------------------------------------------------------
-
-    elif role == "School Admin":
-
-        schools = sorted(
-            demo_df["school_name"].unique().tolist()
-        )
-
-        selected_user = st.selectbox(
-            "Select school",
-            schools
-        )
-
-    # --------------------------------------------------------
-    # STUDENT
-    # --------------------------------------------------------
-
+        if submitted:
+            user = authenticate_user(email, password)
+            if user is None:
+                st.error("Invalid email or password.")
+            else:
+                role = "School Admin" if user["role"] == "admin" else user["role"].title()
+                st.session_state.logged_in = True
+                st.session_state.role = role
+                st.session_state.user_name = user["name"]
+                if role == "Student":
+                    st.session_state.selected_student_name = user["name"]
+                st.rerun()
     else:
+        with st.form("signup_form"):
+            role = st.selectbox(
+                "Choose your role",
+                ["Teacher", "Parent", "School Admin", "Student"]
+            )
+            name = st.text_input("Name")
+            email = st.text_input("Email", autocomplete="email")
+            password = st.text_input(
+                "Password",
+                type="password",
+                autocomplete="new-password"
+            )
+            confirm_password = st.text_input(
+                "Confirm password",
+                type="password",
+                autocomplete="new-password"
+            )
+            submitted = st.form_submit_button(
+                "Create account",
+                use_container_width=True,
+                type="primary"
+            )
 
-        students = sorted(
-            demo_df["student_name"].unique().tolist()
-        )
-
-        selected_user = st.selectbox(
-            "Select student account",
-            students
-        )
-
-    st.divider()
-
-    if st.button(
-        "Continue →",
-        use_container_width=True,
-        type="primary"
-    ):
-
-        st.session_state.logged_in = True
-        st.session_state.role = role
-        st.session_state.user_name = selected_user
-
-        if role == "Student":
-            st.session_state.selected_student_name = selected_user
-
-        st.rerun()
+        if submitted:
+            if not name.strip() or not email.strip() or not password:
+                st.error("Name, email, and password are required.")
+            elif password != confirm_password:
+                st.error("Passwords do not match.")
+            elif len(password) < 6:
+                st.error("Password must be at least 6 characters.")
+            else:
+                db_role = "admin" if role == "School Admin" else role.lower()
+                try:
+                    create_user(name, email, password, db_role)
+                except sqlite3.IntegrityError:
+                    st.error("An account with that email already exists.")
+                else:
+                    st.success("Account created. Switch to Login to continue.")
 
     st.stop()
 

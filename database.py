@@ -1,13 +1,93 @@
+import hashlib
+import secrets
 import sqlite3
 
 
 DATABASE_NAME = "learnsmart.db"
+PASSWORD_ITERATIONS = 100_000
 
 
 def get_connection():
     conn = sqlite3.connect(DATABASE_NAME)
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
+
+
+def hash_password(password):
+    """Return a salted password hash suitable for storing in the users table."""
+    salt = secrets.token_bytes(16)
+    password_hash = hashlib.pbkdf2_hmac(
+        "sha256",
+        password.encode("utf-8"),
+        salt,
+        PASSWORD_ITERATIONS
+    )
+    return f"{salt.hex()}${password_hash.hex()}"
+
+
+def verify_password(password, stored_password):
+    """Check a plaintext password against a stored salt and hash."""
+    try:
+        salt_hex, hash_hex = stored_password.split("$", 1)
+        salt = bytes.fromhex(salt_hex)
+        expected_hash = bytes.fromhex(hash_hex)
+    except (AttributeError, ValueError):
+        return False
+
+    actual_hash = hashlib.pbkdf2_hmac(
+        "sha256",
+        password.encode("utf-8"),
+        salt,
+        PASSWORD_ITERATIONS
+    )
+    return secrets.compare_digest(actual_hash, expected_hash)
+
+
+def create_user(name, email, password, role):
+    """Create a user with a normalized email and a salted password hash."""
+    conn = get_connection()
+    try:
+        conn.execute(
+            """
+            INSERT INTO users (name, email, password, role)
+            VALUES (?, ?, ?, ?)
+            """,
+            (
+                name.strip(),
+                email.strip().lower(),
+                hash_password(password),
+                role
+            )
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def authenticate_user(email, password):
+    """Return the matching user, or None when credentials are invalid."""
+    conn = get_connection()
+    try:
+        user = conn.execute(
+            """
+            SELECT id, name, email, role, password
+            FROM users
+            WHERE email = ?
+            """,
+            (email.strip().lower(),)
+        ).fetchone()
+    finally:
+        conn.close()
+
+    if user is None or not verify_password(password, user[4]):
+        return None
+
+    return {
+        "id": user[0],
+        "name": user[1],
+        "email": user[2],
+        "role": user[3]
+    }
 
 
 def create_tables():
