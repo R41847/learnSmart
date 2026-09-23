@@ -9,7 +9,9 @@ from sentence_transformers import SentenceTransformer
 # =========================
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CSV_FILE = BASE_DIR / "optimized_learning_resource_recommendations_200.csv"
+CSV_FILE = BASE_DIR / "optimized_learning_resource_recommendations_200_bilingual.csv"
+if not CSV_FILE.exists():
+    CSV_FILE = BASE_DIR / "optimized_learning_resource_recommendations_200.csv"
 
 CHROMA_DIR = Path(__file__).resolve().parent / "chroma_db"
 
@@ -28,6 +30,7 @@ print(f"Dataset loaded: {len(df)} rows")
 # Create text documents
 # =========================
 documents = []
+arabic_documents = []
 
 for _, row in df.iterrows():
 
@@ -57,6 +60,33 @@ Feedback Score: {row['feedback_score']}
 """
 
     documents.append(text.strip())
+
+    arabic_text = f"""
+معلومات مورد التعلم:
+
+معرّف الدورة: {row['course_id']}
+عنوان الدورة: {row.get('title_ar', row['title'])}
+الموضوع: {row.get('topic_ar', row['topic'])}
+مستوى الصعوبة: {row.get('difficulty_ar', row['difficulty'])}
+نوع المحتوى: {row.get('content_type_ar', row['content_type'])}
+
+معلومات المتعلم:
+
+العمر: {row['age']}
+المرحلة التعليمية: {row['education_level']}
+أسلوب التعلم: {row.get('learning_style_ar', row['learning_style'])}
+المواضيع المفضلة: {row.get('preferred_topics_ar', row['preferred_topics'])}
+
+معلومات الأداء:
+
+درجة التفاعل: {row['engagement_score']}
+حالة الإكمال: {row['completion_status']}
+درجة التفاعل المتوقعة: {row['predicted_engagement_score']}
+درجة التقييم: {row['assessment_score']}
+درجة الملاحظات: {row['feedback_score']}
+"""
+
+    arabic_documents.append(arabic_text.strip())
 
 
 # =========================
@@ -119,11 +149,24 @@ for _, row in df.iterrows():
     metadata = {
         "course_id": str(row["course_id"]),
         "title": str(row["title"]),
+        "title_ar": str(row.get("title_ar", row["title"])),
         "topic": str(row["topic"]),
+        "topic_ar": str(row.get("topic_ar", row["topic"])),
         "difficulty": str(row["difficulty"]),
+        "difficulty_ar": str(row.get("difficulty_ar", row["difficulty"])),
         "content_type": str(row["content_type"]),
+        "content_type_ar": str(
+            row.get("content_type_ar", row["content_type"])
+        ),
         "learning_style": str(row["learning_style"]),
-        "preferred_topics": str(row["preferred_topics"])
+        "learning_style_ar": str(
+            row.get("learning_style_ar", row["learning_style"])
+        ),
+        "preferred_topics": str(row["preferred_topics"]),
+        "preferred_topics_ar": str(
+            row.get("preferred_topics_ar", row["preferred_topics"])
+        ),
+        "content_ar": arabic_documents[len(metadatas)]
     }
 
     metadatas.append(metadata)

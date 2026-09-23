@@ -83,7 +83,8 @@ def retrieve_resources(
     for i in range(len(results["documents"][0])):
 
         resource = {
-            "content": results["documents"][0][i],
+            "content_en": results["documents"][0][i],
+            "content_ar": results["metadatas"][0][i].get("content_ar", ""),
             "metadata": results["metadatas"][0][i],
             "distance": results["distances"][0][i]
             if "distances" in results
@@ -127,8 +128,6 @@ if __name__ == "__main__":
             resource["metadata"]
         )
 
-        print(
-            resource["content"]
-        )
+        print(resource["content_en"])
 
         print()

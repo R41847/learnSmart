@@ -1,0 +1,1008 @@
+﻿user_id,course_id,timestamp,engagement_score,completion_status,predicted_engagement_score,assessment_score,feedback_score,age,education_level,learning_style,preferred_topics,title,topic,difficulty,content_type,title_ar,topic_ar,difficulty_ar,content_type_ar,learning_style_ar,preferred_topics_ar
+U133,C015,2023-07-02,0.3488205339694793,In Progress,0.1621833724078774,64,4.4,49,Bachelor,Kinesthetic,Math,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,حركي,الرياضيات
+U029,C029,2023-06-02,0.1109980987913148,Completed,0.4864423871418745,81,4.43,45,Master,Visual,Art,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,بصري,الفن
+U132,C029,2023-11-11,0.8082352100092222,In Progress,0.7385390394759076,64,4.69,56,Bachelor,Visual,Music,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,بصري,الموسيقى
+U138,C011,2023-11-30,0.9476880259644708,In Progress,0.866855213027066,63,2.57,56,Master,Visual,AI,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,بصري,الذكاء الاصطناعي
+U184,C032,2023-05-04,0.0723164752579386,In Progress,0.6262592746624267,68,3.9,19,High School,Reading,Music,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,الموسيقى
+U145,C002,2023-04-24,0.9551152072917014,Not Started,0.6690535153169479,88,3.04,39,Bachelor,Visual,Math,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,الرياضيات
+U074,C047,2023-10-05,0.5225765993367452,In Progress,0.1262834725845689,81,3.35,35,Master,Reading,Art,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,قرائي,الفن
+U017,C014,2023-08-01,0.2995656779538739,Not Started,0.9457764972463472,86,4.46,19,Bachelor,Kinesthetic,History,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,حركي,التاريخ
+U084,C020,2023-06-21,0.0768620752761635,Completed,0.1325740774844823,69,2.98,26,PhD,Reading,AI,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U069,C022,2023-10-15,0.5006242680704178,Completed,0.7746729371817983,75,4.1,31,Master,Auditory,AI,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,سمعي,الذكاء الاصطناعي
+U034,C011,2023-06-23,0.7945155444907487,Not Started,0.2648163217783188,69,4.14,24,High School,Reading,Data Science,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,قرائي,علم البيانات
+U006,C027,2023-04-23,0.7070864772666982,Not Started,0.9335931437012516,65,4.89,56,Bachelor,Kinesthetic,AI,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الذكاء الاصطناعي
+U053,C003,2023-05-02,0.0502260114639737,Not Started,0.7199595393694795,64,4.44,57,PhD,Auditory,Math,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الرياضيات
+U194,C017,2023-02-01,0.0729018353679035,In Progress,0.753813712978369,65,4.51,43,Bachelor,Auditory,Data Science,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,سمعي,علم البيانات
+U126,C044,2023-08-10,0.4028732826326371,Completed,0.2190591730598833,84,3.83,32,PhD,Visual,Math,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,بصري,الرياضيات
+U043,C028,2023-04-29,0.2952904940479433,Not Started,0.4430399766351608,63,2.97,43,PhD,Reading,Art,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,قرائي,الفن
+U115,C029,2023-02-08,0.2323843230560478,In Progress,0.6178131945892864,91,3.56,52,High School,Visual,Data Science,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,بصري,علم البيانات
+U111,C021,2023-09-25,0.2810044989087136,Completed,0.7699736182066009,94,3.87,39,High School,Kinesthetic,Math,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الرياضيات
+U151,C047,2023-08-21,0.8034827432968846,In Progress,0.1039593759123895,69,4.2,45,High School,Visual,Data Science,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,بصري,علم البيانات
+U183,C016,2023-01-18,0.929228053631854,Completed,0.9623653164545284,93,4.02,34,Master,Auditory,Art,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,الفن
+U080,C037,2023-05-29,0.4051026945275664,In Progress,0.890220670554556,95,3.48,32,Bachelor,Kinesthetic,Art,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,حركي,الفن
+U095,C020,2023-05-29,0.9061110021324972,Completed,0.2703485904955843,65,3.16,22,Bachelor,Reading,History,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,قرائي,التاريخ
+U118,C006,2023-05-06,0.3214957012478819,Completed,0.822760243032332,75,2.92,20,PhD,Auditory,AI,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,سمعي,الذكاء الاصطناعي
+U144,C019,2023-10-29,0.4764369863437916,In Progress,0.5183239230398234,78,4.23,24,High School,Kinesthetic,History,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,حركي,التاريخ
+U008,C005,2023-12-26,0.2260289978159997,Not Started,0.4618064815620186,93,4.11,40,Bachelor,Kinesthetic,Math,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,حركي,الرياضيات
+U132,C003,2023-08-26,0.640476042175844,Completed,0.3144341058114054,84,4.22,56,Bachelor,Visual,Music,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,بصري,الموسيقى
+U104,C001,2023-05-15,0.9789811151748088,Not Started,0.5809685866315925,90,3.43,51,Bachelor,Auditory,Data Science,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U132,C038,2023-05-31,0.6034930960433786,In Progress,0.7298891177035978,76,3.16,56,Bachelor,Visual,Music,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,بصري,الموسيقى
+U184,C015,2023-08-24,0.3578140841135488,Not Started,0.4109329049627582,89,4.4,19,High School,Reading,Music,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,قرائي,الموسيقى
+U025,C034,2023-08-12,0.6478174459905284,Not Started,0.6292191930082921,90,4.43,39,Master,Kinesthetic,Data Science,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,حركي,علم البيانات
+U195,C035,2023-07-22,0.1229206784653875,Not Started,0.6993129211553037,78,3.64,49,Master,Visual,AI,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,بصري,الذكاء الاصطناعي
+U096,C049,2023-09-13,0.8886590802653986,Not Started,0.7111218170152859,94,4.03,59,High School,Auditory,Math,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U195,C025,2023-03-27,0.5030839507798364,Not Started,0.0519660981311802,99,1.683254825224843,49,Master,Visual,AI,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U155,C024,2023-05-30,0.449349742039642,Completed,0.8597478056850669,88,3.43,45,Master,Auditory,Art,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,سمعي,الفن
+U093,C012,2023-08-23,0.5858647884535192,Completed,0.4582533147650479,60,4.25,52,Master,Visual,History,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,بصري,التاريخ
+U160,C018,2023-12-11,0.6247838627894025,Completed,0.2624160816962144,58,4.633640429074278,44,PhD,Reading,Data Science,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,قرائي,علم البيانات
+U178,C015,2023-01-22,0.071775806226513,In Progress,0.2417645074796816,63,4.59,29,Master,Reading,Data Science,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,قرائي,علم البيانات
+U061,C044,2023-12-14,0.6826172212234024,Not Started,0.4830141128439504,87,4.22,43,Bachelor,Auditory,History,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,التاريخ
+U122,C016,2023-10-12,0.2419316803155295,Completed,0.8868315394689592,77,3.78,31,Master,Reading,Art,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,قرائي,الفن
+U051,C027,2023-09-26,0.7139526325065898,In Progress,0.3783475816826469,85,3.65,34,Master,Kinesthetic,Art,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الفن
+U147,C008,2023-09-15,0.8225347943841967,Completed,0.7497257467835433,78,4.11,19,PhD,Visual,History,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,التاريخ
+U021,C046,2023-01-29,0.8039585075525203,Completed,0.0968187309872186,65,4.2,19,PhD,Visual,Music,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,بصري,الموسيقى
+U005,C025,2023-08-01,0.5525009674078891,Not Started,0.4760567021510618,60,3.9,38,PhD,Auditory,AI,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,سمعي,الذكاء الاصطناعي
+U092,C017,2023-10-10,0.5201698923107512,In Progress,0.9916861403927356,77,2.7442819208772504,52,Bachelor,Reading,Math,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,قرائي,الرياضيات
+U170,C029,2023-02-19,0.1428759613394117,Not Started,0.770437802792337,67,4.06,50,PhD,Visual,AI,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,بصري,الذكاء الاصطناعي
+U061,C008,2023-04-05,0.7753461504031356,Not Started,0.210528488440613,92,2.74,43,Bachelor,Auditory,History,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,سمعي,التاريخ
+U022,C015,2023-03-29,0.2714093804467143,Completed,0.5014414736979107,80,4.88,38,PhD,Auditory,Data Science,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,علم البيانات
+U149,C027,2023-02-13,0.4966954228179465,Not Started,0.2336247636485665,83,4.48,23,PhD,Auditory,Math,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U070,C046,2023-10-05,0.2842740929275167,In Progress,0.4095609272625092,84,3.43,40,Master,Kinesthetic,Music,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,حركي,الموسيقى
+U001,C050,2023-06-20,0.1338283629996931,Not Started,0.7800840237349648,82,4.162054430134591,56,Master,Reading,History,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,قرائي,التاريخ
+U133,C007,2023-07-08,0.6295576968917366,Not Started,0.7712248152904037,78,3.91,49,Bachelor,Kinesthetic,Math,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,حركي,الرياضيات
+U012,C003,2023-12-19,0.0543320348229038,Not Started,0.2281003779023851,88,2.62,53,PhD,Auditory,Math,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الرياضيات
+U090,C029,2023-07-03,0.7486452341262,Completed,0.92222331815486,69,2.6,34,PhD,Reading,Art,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,قرائي,الفن
+U046,C044,2023-01-03,0.3175867952611166,In Progress,0.5925681827648268,71,3.13,45,Bachelor,Kinesthetic,Art,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,حركي,الفن
+U034,C024,2023-07-10,0.0001346930044853,Completed,0.3799242909620145,92,4.22,24,High School,Reading,Data Science,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,قرائي,علم البيانات
+U177,C003,2023-04-28,0.5111291392372298,Completed,0.5019355807808606,58,3.8520571674469632,58,High School,Auditory,Music,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الموسيقى
+U078,C020,2023-01-19,0.0468519085276031,Completed,0.6050712534377437,66,4.63,58,PhD,Reading,History,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,قرائي,التاريخ
+U045,C046,2023-01-23,0.2761695578208994,Completed,0.5598905318457854,76,3.9,37,High School,Kinesthetic,AI,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U155,C015,2023-01-30,0.7069764874557162,Completed,0.4864050355361782,69,3.83,45,Master,Auditory,Art,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,الفن
+U073,C025,2023-10-22,0.0626896216218658,In Progress,0.5049328040894001,90,3.51,33,Master,Visual,Music,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,بصري,الموسيقى
+U026,C030,2023-04-18,0.8393384923560023,Not Started,0.1764119104278861,65,2.9,42,Bachelor,Auditory,Math,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,سمعي,الرياضيات
+U047,C014,2023-10-08,0.0038199226585831,Completed,0.8127329043046794,76,2.8,24,Master,Reading,Art,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,قرائي,الفن
+U121,C007,2023-05-08,0.2468238692019022,Completed,0.5417603199410154,56,1.433601490866491,43,Master,Auditory,Music,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,سمعي,الموسيقى
+U056,C017,2023-08-17,0.7409040561520714,In Progress,0.1310798617047031,77,4.4,23,PhD,Auditory,History,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,سمعي,التاريخ
+U094,C044,2023-04-21,0.3162701497293068,In Progress,0.7661571015827779,85,4.82,50,PhD,Auditory,AI,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,الذكاء الاصطناعي
+U107,C020,2023-05-16,0.1018923880660135,Not Started,0.9324439783773508,75,3.65,41,PhD,Visual,Art,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,بصري,الفن
+U063,C036,2023-12-28,0.3602339188004279,In Progress,0.947306899236962,67,4.15,27,PhD,Auditory,Art,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,سمعي,الفن
+U048,C009,2023-07-05,0.2703932863845255,Not Started,0.3690177324111727,97,1.942263738378005,25,Master,Auditory,AI,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U061,C038,2023-05-24,0.8427119021605549,Completed,0.135516873560754,83,4.79,43,Bachelor,Auditory,History,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,سمعي,التاريخ
+U081,C048,2023-03-13,0.3133479175851431,Completed,0.5183996266330652,72,2.73,18,PhD,Reading,AI,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U026,C022,2023-05-09,0.7889324717760072,Not Started,0.1126092293492206,88,4.43,42,Bachelor,Auditory,Math,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,سمعي,الرياضيات
+U036,C002,2023-12-30,0.8918721448107347,In Progress,0.9339874185126172,91,4.04,26,PhD,Reading,AI,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,قرائي,الذكاء الاصطناعي
+U001,C024,2023-09-18,0.4338174195765295,Not Started,0.183579627355146,61,3.552559610065077,56,Master,Reading,History,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,قرائي,التاريخ
+U008,C008,2023-01-03,0.909943143854392,In Progress,0.2527658599511641,83,4.0,40,Bachelor,Kinesthetic,Math,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,حركي,الرياضيات
+U113,C011,2023-04-14,0.3773180539631928,Completed,0.4066365268849704,75,3.23,52,High School,Visual,History,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,بصري,التاريخ
+U099,C013,2023-08-12,0.9640784164901082,In Progress,0.3831644685591258,70,4.21,45,High School,Visual,Art,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,بصري,الفن
+U180,C017,2023-11-16,0.0892895245255729,Not Started,0.794662892397889,91,4.49,19,PhD,Auditory,Art,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,سمعي,الفن
+U047,C008,2023-12-28,0.6870192665032427,Not Started,0.4563168205509623,65,2.78,24,Master,Reading,Art,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,قرائي,الفن
+U127,C021,2023-12-20,0.4938140404569286,Completed,0.1707682600033369,94,3.83,32,PhD,Reading,Data Science,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,علم البيانات
+U056,C018,2023-01-10,0.387648805455647,In Progress,0.2672098954860741,92,2.75,23,PhD,Auditory,History,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,سمعي,التاريخ
+U014,C030,2023-10-29,0.6327118787486009,In Progress,0.509113385187522,77,4.68,41,High School,Reading,AI,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U028,C018,2023-08-19,0.7038570916343312,In Progress,0.1474539174261349,68,2.929972242110652,59,Master,Reading,Data Science,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,قرائي,علم البيانات
+U078,C046,2023-08-07,0.004363269650309,Completed,0.6116556756460141,72,3.77,58,PhD,Reading,History,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,قرائي,التاريخ
+U130,C047,2023-03-07,0.1669530887471987,In Progress,0.5657473065511459,69,4.52,30,Bachelor,Visual,Art,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,بصري,الفن
+U109,C031,2023-04-22,0.7130460506343187,Not Started,0.7147023163822577,85,3.42,52,High School,Visual,Art,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,بصري,الفن
+U154,C038,2023-01-13,0.6663854135782065,In Progress,0.9377046153793676,76,2.81,28,PhD,Auditory,Math,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U014,C032,2023-03-27,0.9660475051286772,Completed,0.9122545611011555,60,2.6,41,High School,Reading,AI,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U187,C011,2023-08-22,0.761037790250783,In Progress,0.9460756180688312,84,3.2,40,Master,Visual,History,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,بصري,التاريخ
+U056,C045,2023-03-31,0.950772707731338,In Progress,0.2447155970237009,93,3.11,23,PhD,Auditory,History,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,سمعي,التاريخ
+U115,C025,2023-11-10,0.702540501534807,Not Started,0.1315653066393546,69,3.9,52,High School,Visual,Data Science,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,بصري,علم البيانات
+U007,C033,2023-02-23,0.2980522086394431,In Progress,0.3022767004964485,79,2.55,36,Bachelor,Auditory,Art,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,سمعي,الفن
+U003,C038,2023-01-12,0.1053649222508564,Not Started,0.8950851727663146,66,3.8,32,PhD,Reading,Math,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,قرائي,الرياضيات
+U111,C041,2023-07-28,0.7818238633449356,Not Started,0.9720534746234882,55,2.489228394292191,39,High School,Kinesthetic,Math,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,حركي,الرياضيات
+U151,C008,2023-01-14,0.6441492214759159,Completed,0.859324951070476,75,3.48,45,High School,Visual,Data Science,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,علم البيانات
+U107,C011,2023-05-01,0.0481860123932962,Not Started,0.1100177211275436,88,3.94,41,PhD,Visual,Art,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,بصري,الفن
+U018,C022,2023-01-20,0.3600504659009783,Not Started,0.9474279980597932,71,4.26,41,PhD,Auditory,Art,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,سمعي,الفن
+U038,C024,2023-03-16,0.9567998154842862,Completed,0.423358027350786,76,4.09,35,Master,Reading,Data Science,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,قرائي,علم البيانات
+U115,C041,2023-08-31,0.5004011457102012,Not Started,0.0093102907623536,79,4.96,52,High School,Visual,Data Science,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,بصري,علم البيانات
+U015,C017,2023-08-11,0.4327291360197046,Completed,0.4423937407481936,72,1.9866257873791116,20,PhD,Visual,Data Science,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,بصري,علم البيانات
+U192,C012,2023-03-11,0.457699605159294,In Progress,0.0460691696754675,85,2.85,36,Bachelor,Reading,History,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,قرائي,التاريخ
+U119,C046,2023-11-08,0.2088827240051637,Completed,0.5438779211611176,78,3.57,18,PhD,Visual,Art,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,بصري,الفن
+U028,C032,2023-07-30,0.3687071708647952,Not Started,0.3385540274370513,71,3.56,59,Master,Reading,Data Science,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,علم البيانات
+U039,C015,2023-04-11,0.3698132559871766,Completed,0.4734349335940487,76,4.575892229850019,21,Bachelor,Reading,Art,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,قرائي,الفن
+U185,C016,2023-07-05,0.0523550201874724,Not Started,0.613170360743117,80,3.54,19,High School,Visual,Art,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,بصري,الفن
+U017,C022,2023-05-12,0.7675676285179183,In Progress,0.8688010958178203,93,4.16,19,Bachelor,Kinesthetic,History,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,حركي,التاريخ
+U086,C028,2023-04-21,0.416504431903879,Completed,0.6619015764719286,66,3.72,18,High School,Auditory,Music,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,سمعي,الموسيقى
+U126,C020,2023-05-12,0.8221798868164233,In Progress,0.4340488684781807,94,3.79,32,PhD,Visual,Math,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,بصري,الرياضيات
+U044,C033,2023-01-20,0.8503480011198954,Not Started,0.8194278536703651,74,3.58,19,High School,Kinesthetic,History,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,حركي,التاريخ
+U025,C010,2023-01-24,0.211994054698658,Not Started,0.9055821375731322,60,4.98,39,Master,Kinesthetic,Data Science,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,حركي,علم البيانات
+U145,C040,2023-08-15,0.6573534821701286,In Progress,0.1197599664321972,85,4.82,39,Bachelor,Visual,Math,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,بصري,الرياضيات
+U013,C032,2023-06-03,0.4722818041629817,Completed,0.5319329775527915,94,3.27,57,High School,Visual,AI,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U025,C050,2023-10-20,0.8801567379214851,Completed,0.2845119597424441,84,2.78,39,Master,Kinesthetic,Data Science,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,حركي,علم البيانات
+U068,C033,2023-08-18,0.2157406791764541,Not Started,0.0470611978769474,74,4.6,25,PhD,Kinesthetic,AI,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U138,C002,2023-11-06,0.6778132003100442,In Progress,0.6685466951139853,81,4.99,56,Master,Visual,AI,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,الذكاء الاصطناعي
+U067,C033,2023-12-25,0.6077521222527226,In Progress,0.8627707774592256,65,3.23,32,High School,Auditory,Music,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,سمعي,الموسيقى
+U109,C033,2023-07-21,0.2953014775718328,Completed,0.162902654477394,74,3.39,52,High School,Visual,Art,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,بصري,الفن
+U146,C041,2023-02-07,0.1366009036511726,Completed,0.8124136576239005,83,4.85,45,High School,Auditory,Art,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,سمعي,الفن
+U111,C013,2023-09-17,0.6516397604772766,Completed,0.8533957335369416,80,4.28,39,High School,Kinesthetic,Math,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,حركي,الرياضيات
+U111,C030,2023-07-07,0.7385974581323307,In Progress,0.9143404426664836,66,3.24,39,High School,Kinesthetic,Math,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,حركي,الرياضيات
+U034,C033,2023-02-26,0.31562734376335,Completed,0.2652850890860524,88,3.95,24,High School,Reading,Data Science,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,قرائي,علم البيانات
+U111,C013,2023-01-20,0.6448326040223138,Completed,0.9039530651898892,91,4.86,39,High School,Kinesthetic,Math,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,حركي,الرياضيات
+U008,C026,2023-09-30,0.3951309076115032,Not Started,0.3206627547364322,91,4.53,40,Bachelor,Kinesthetic,Math,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,حركي,الرياضيات
+U168,C022,2023-04-29,0.7132068832826177,Completed,0.5523380134555028,64,4.35,26,Bachelor,Auditory,History,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,سمعي,التاريخ
+U113,C039,2023-03-12,0.1992152748940531,Completed,0.0505074708322821,95,3.163062525202172,52,High School,Visual,History,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,بصري,التاريخ
+U083,C002,2023-01-04,0.8902150026361744,In Progress,0.0438810883687436,63,4.34,24,PhD,Visual,History,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,التاريخ
+U042,C038,2023-08-09,0.2874095964655797,In Progress,0.7203732127322029,81,2.95,26,Master,Auditory,Math,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U169,C039,2023-01-14,0.3677859877561529,Not Started,0.444479977977791,77,4.56,54,Master,Auditory,Music,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,سمعي,الموسيقى
+U101,C026,2023-01-03,0.0580919520803497,Completed,0.2562923753692175,94,3.19,26,PhD,Kinesthetic,Art,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,حركي,الفن
+U006,C046,2023-08-04,0.1115122123212764,Not Started,0.1904134960249102,76,4.83,56,Bachelor,Kinesthetic,AI,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U180,C050,2023-08-17,0.5158619027123281,In Progress,0.6699534908592181,83,3.41,19,PhD,Auditory,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,سمعي,الفن
+U026,C015,2023-12-02,0.2675926767279715,Not Started,0.0004015440253398,51,2.955803705753808,42,Bachelor,Auditory,Math,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,الرياضيات
+U064,C034,2023-07-05,0.8354802257421944,In Progress,0.8058911691968542,61,4.64,53,Bachelor,Visual,AI,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U187,C042,2023-02-24,0.0146933886549538,Not Started,0.0792496061299288,72,3.17,40,Master,Visual,History,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,بصري,التاريخ
+U184,C044,2023-09-11,0.3790940486719362,Not Started,0.1914896149081194,74,3.79,19,High School,Reading,Music,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,قرائي,الموسيقى
+U059,C049,2023-01-24,0.3373455467690927,Completed,0.3862363952990896,64,2.77,46,PhD,Visual,Music,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,الموسيقى
+U109,C040,2023-06-11,0.019327630917601,Not Started,0.4848587397161036,62,4.15,52,High School,Visual,Art,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,بصري,الفن
+U198,C011,2023-06-07,0.1243683990005102,Completed,0.3549951158139418,62,4.59,21,Master,Reading,AI,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,قرائي,الذكاء الاصطناعي
+U121,C003,2023-03-23,0.4136426749186352,Completed,0.3207121649842939,94,2.316295117842912,43,Master,Auditory,Music,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الموسيقى
+U121,C003,2023-03-23,0.4136426749186352,Completed,0.3207121649842939,55,1.2876268692657824,43,Master,Auditory,Music,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الموسيقى
+U033,C006,2023-06-08,0.4928645844474466,Completed,0.9639160120731884,94,4.3,54,PhD,Visual,Music,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,بصري,الموسيقى
+U181,C009,2023-07-07,0.4042897472548691,Completed,0.6415796812433943,82,3.81,20,High School,Auditory,Art,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,سمعي,الفن
+U150,C006,2023-03-01,0.5309376784120938,Not Started,0.0234329553673882,87,2.61,45,High School,Reading,Data Science,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,قرائي,علم البيانات
+U021,C009,2023-11-01,0.5951316749056815,In Progress,0.4301759084443132,89,4.83,19,PhD,Visual,Music,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,بصري,الموسيقى
+U198,C039,2023-11-15,0.0099238211278356,In Progress,0.8750086997439702,77,4.26,21,Master,Reading,AI,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U070,C031,2024-01-01,0.4640951594535039,In Progress,0.3014561864106679,95,4.36,40,Master,Kinesthetic,Music,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,حركي,الموسيقى
+U112,C032,2023-07-30,0.9634992408875884,Not Started,0.0945563447743882,92,4.49,44,PhD,Kinesthetic,Data Science,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,حركي,علم البيانات
+U004,C041,2023-06-01,0.5190322801295487,Completed,0.7583847715899178,85,4.37,25,High School,Kinesthetic,History,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,حركي,التاريخ
+U094,C050,2023-04-19,0.6775422674589532,In Progress,0.6060138319360813,76,3.6,50,PhD,Auditory,AI,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,سمعي,الذكاء الاصطناعي
+U075,C012,2023-03-17,0.3118638579168832,Not Started,0.5703125078265039,66,4.33,41,PhD,Visual,Math,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,بصري,الرياضيات
+U190,C008,2023-01-30,0.7739913781527625,Completed,0.0535765596074079,67,4.06,50,Master,Reading,Math,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,قرائي,الرياضيات
+U062,C008,2023-11-10,0.7729214818761151,In Progress,0.1404990097955173,90,4.64,51,High School,Auditory,AI,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,سمعي,الذكاء الاصطناعي
+U094,C050,2023-04-27,0.521296047654139,Completed,0.6225493962131138,71,4.51,50,PhD,Auditory,AI,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,سمعي,الذكاء الاصطناعي
+U095,C028,2023-12-22,0.9760138232792136,In Progress,0.2078238414588358,70,1.3258955908517676,22,Bachelor,Reading,History,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,قرائي,التاريخ
+U152,C020,2023-07-11,0.1255502147626533,In Progress,0.5040700797484243,90,2.6,37,PhD,Kinesthetic,Math,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,حركي,الرياضيات
+U055,C047,2023-01-19,0.0169476648895809,In Progress,0.5448816860293935,78,3.45,19,Bachelor,Visual,Math,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,بصري,الرياضيات
+U137,C007,2023-06-22,0.770158211757096,Completed,0.2835071902709394,69,2.59,40,High School,Auditory,History,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,سمعي,التاريخ
+U131,C011,2023-08-16,0.8071555373648825,Not Started,0.9484251555414928,71,2.76,49,Master,Reading,Art,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,قرائي,الفن
+U031,C020,2023-12-16,0.1202072291205762,Completed,0.8424641068355752,79,4.0,32,PhD,Auditory,Data Science,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U040,C016,2023-07-02,0.2655828329586061,In Progress,0.7223735076327985,66,4.68,42,PhD,Auditory,Data Science,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,علم البيانات
+U036,C004,2023-04-23,0.0175523633666289,Completed,0.077993866409409,73,2.8,26,PhD,Reading,AI,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U152,C006,2023-07-02,0.2933086107805647,Not Started,0.1061300193090194,70,3.63,37,PhD,Kinesthetic,Math,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,حركي,الرياضيات
+U006,C022,2023-05-26,0.7731418739186715,Completed,0.4927813458649557,63,4.873676522001631,56,Bachelor,Kinesthetic,AI,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,حركي,الذكاء الاصطناعي
+U066,C026,2023-11-15,0.5179605277125789,Not Started,0.1607133491909856,85,3.880445334059783,48,High School,Auditory,AI,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,سمعي,الذكاء الاصطناعي
+U075,C003,2023-04-26,0.3480955931682881,Not Started,0.978265463529474,66,4.78,41,PhD,Visual,Math,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,بصري,الرياضيات
+U004,C041,2023-04-23,0.3717392949063303,Completed,0.1585202340274094,88,4.54,25,High School,Kinesthetic,History,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,حركي,التاريخ
+U079,C042,2023-09-08,0.0013536257154681,In Progress,0.487467835463974,69,3.8,46,PhD,Visual,History,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,بصري,التاريخ
+U134,C014,2023-09-08,0.2998005275652359,Not Started,0.3641210568415054,88,4.43,21,Bachelor,Reading,Art,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,قرائي,الفن
+U118,C011,2023-10-30,0.6464587416379305,Completed,0.639386421454098,68,3.81,20,PhD,Auditory,AI,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,سمعي,الذكاء الاصطناعي
+U113,C018,2023-11-09,0.9741944438163572,Not Started,0.1290364088894249,95,2.9,52,High School,Visual,History,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,بصري,التاريخ
+U094,C012,2023-04-28,0.8470608269838995,In Progress,0.4303164280423909,69,2.81,50,PhD,Auditory,AI,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,الذكاء الاصطناعي
+U179,C023,2023-10-28,0.0235949646455291,Completed,0.2747050328071436,78,2.97,56,Master,Kinesthetic,History,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,حركي,التاريخ
+U062,C012,2023-06-10,0.8985606046748393,Completed,0.887751524671688,90,3.38,51,High School,Auditory,AI,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,الذكاء الاصطناعي
+U185,C013,2023-07-17,0.7831984132986259,Completed,0.040585712134695,76,4.83,19,High School,Visual,Art,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,بصري,الفن
+U194,C025,2023-09-17,0.7803761235709804,In Progress,0.9137274940064593,68,4.5,43,Bachelor,Auditory,Data Science,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,سمعي,علم البيانات
+U079,C045,2023-05-28,0.4579957590035715,Not Started,0.8329941385530004,52,4.585026865886316,46,PhD,Visual,History,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,بصري,التاريخ
+U079,C045,2023-05-28,0.4579957590035715,Not Started,0.8329941385530004,86,2.1125745617956437,46,PhD,Visual,History,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,بصري,التاريخ
+U136,C019,2023-08-28,0.3980052929545028,Completed,0.2975707164408154,98,2.8792172857947262,54,Bachelor,Visual,Music,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,بصري,الموسيقى
+U026,C046,2023-02-16,0.3029157288331926,Not Started,0.7892906546771047,92,3.58,42,Bachelor,Auditory,Math,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,سمعي,الرياضيات
+U179,C036,2023-07-17,0.0656948589543657,Not Started,0.0312135603387475,93,3.73,56,Master,Kinesthetic,History,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,حركي,التاريخ
+U173,C045,2023-02-16,0.2282353634936991,In Progress,0.9668655502933936,83,3.16,32,PhD,Auditory,AI,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U044,C008,2023-03-19,0.2466036349780246,Completed,0.5265949425897893,68,4.26,19,High School,Kinesthetic,History,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,حركي,التاريخ
+U133,C029,2023-05-04,0.4840770697102016,Not Started,0.3032810260654452,66,4.51,49,Bachelor,Kinesthetic,Math,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,حركي,الرياضيات
+U070,C032,2023-03-16,0.747444406596694,Completed,0.3625832125946771,75,3.1,40,Master,Kinesthetic,Music,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,حركي,الموسيقى
+U154,C044,2023-12-25,0.4738098283979466,Completed,0.0664053534604973,78,2.6,28,PhD,Auditory,Math,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,الرياضيات
+U118,C018,2023-05-17,0.0578444494471606,In Progress,0.9893495140420392,65,4.06,20,PhD,Auditory,AI,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,سمعي,الذكاء الاصطناعي
+U068,C006,2023-03-31,0.957789800988204,Completed,0.0392919451506924,70,3.91,25,PhD,Kinesthetic,AI,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U019,C018,2023-11-21,0.9427243190941124,Completed,0.654907123147859,71,3.51,47,High School,Reading,Art,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,قرائي,الفن
+U020,C019,2023-03-02,0.7851895431484084,Not Started,0.4427359277064583,72,4.11,55,Master,Kinesthetic,History,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,حركي,التاريخ
+U113,C022,2023-05-18,0.9913279015642206,In Progress,0.9489162181887152,71,3.88,52,High School,Visual,History,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,بصري,التاريخ
+U140,C037,2023-02-19,0.5444823328002629,Completed,0.2459997403067951,80,3.13,46,PhD,Kinesthetic,Art,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,حركي,الفن
+U047,C032,2023-09-16,0.962768350253206,Not Started,0.5320868239380113,69,3.49,24,Master,Reading,Art,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,الفن
+U001,C041,2023-04-17,0.0756050406167507,In Progress,0.4823562085827529,79,3.57,56,Master,Reading,History,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,قرائي,التاريخ
+U090,C003,2023-04-23,0.3656807482613713,In Progress,0.7028664440501013,95,4.7,34,PhD,Reading,Art,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,قرائي,الفن
+U142,C028,2023-12-16,0.2253812680067658,Not Started,0.0680102319524205,87,4.9,30,Master,Auditory,History,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,سمعي,التاريخ
+U064,C010,2023-09-11,0.19583308413427,Not Started,0.1937891300233548,83,4.73,53,Bachelor,Visual,AI,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,بصري,الذكاء الاصطناعي
+U038,C035,2023-04-28,0.140802948892676,Not Started,0.2145648200928498,64,4.3,35,Master,Reading,Data Science,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,قرائي,علم البيانات
+U037,C029,2023-07-17,0.6224136415659967,Not Started,0.7381507548416897,71,3.96,56,PhD,Visual,History,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,بصري,التاريخ
+U126,C015,2023-12-03,0.7813218557473051,Not Started,0.18913869632674,94,4.22,32,PhD,Visual,Math,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,بصري,الرياضيات
+U139,C033,2023-12-31,0.5782983994203607,Completed,0.5734917638909767,61,4.85,32,Bachelor,Kinesthetic,AI,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U100,C007,2023-02-20,0.1469627095882096,Completed,0.2152438205009537,68,3.12,24,Bachelor,Reading,AI,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,قرائي,الذكاء الاصطناعي
+U077,C012,2023-09-02,0.8111237699334709,In Progress,0.8616249500839784,81,3.84,42,Master,Reading,AI,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,قرائي,الذكاء الاصطناعي
+U003,C049,2023-02-04,0.6359547071637285,Completed,0.9421854544896384,64,4.22,32,PhD,Reading,Math,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الرياضيات
+U161,C030,2023-10-29,0.3881657061269955,Completed,0.5184929749422404,71,4.2,30,High School,Auditory,History,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,سمعي,التاريخ
+U134,C021,2023-03-10,0.674130295536063,Completed,0.3523088842091783,60,3.13,21,Bachelor,Reading,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الفن
+U178,C031,2023-12-15,0.2599049792428328,Not Started,0.2340577750174991,81,3.97,29,Master,Reading,Data Science,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,قرائي,علم البيانات
+U010,C024,2023-11-16,0.3451922084942105,In Progress,0.0497810015230437,72,4.000643331818404,28,Master,Auditory,Art,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,سمعي,الفن
+U005,C020,2023-02-18,0.9174858431319902,In Progress,0.2685000761974954,78,4.49,38,PhD,Auditory,AI,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U151,C037,2023-03-15,0.2905045056714204,In Progress,0.6542357799453179,75,3.69,45,High School,Visual,Data Science,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,بصري,علم البيانات
+U138,C004,2023-07-11,0.4699882681579366,In Progress,0.5336169313092108,90,4.48,56,Master,Visual,AI,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U172,C028,2023-09-18,0.8901411373960146,Completed,0.9440412782809274,62,3.4,41,High School,Auditory,AI,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,سمعي,الذكاء الاصطناعي
+U130,C044,2023-12-22,0.7077213502675275,Completed,0.3962772624917006,82,4.85,30,Bachelor,Visual,Art,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,بصري,الفن
+U013,C020,2023-03-11,0.0622032261647027,Not Started,0.6938633423283945,77,3.83,57,High School,Visual,AI,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,بصري,الذكاء الاصطناعي
+U168,C024,2023-03-31,0.1473030442789703,In Progress,0.4893227474751214,85,3.99,26,Bachelor,Auditory,History,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,سمعي,التاريخ
+U130,C050,2023-09-17,0.0078415907719168,Completed,0.5125762159242117,72,2.58,30,Bachelor,Visual,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,الفن
+U084,C049,2023-05-06,0.6309217902291634,Completed,0.2677743146041175,77,2.93,26,PhD,Reading,AI,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U065,C032,2023-08-19,0.4476734254104183,Not Started,0.4549507768419997,62,4.08,31,PhD,Reading,Math,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,الرياضيات
+U063,C041,2023-10-22,0.1342748509022755,Not Started,0.4707849970127072,82,3.55,27,PhD,Auditory,Art,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,سمعي,الفن
+U101,C036,2023-05-09,0.9579341210567704,Not Started,0.7066425217489339,62,3.77,26,PhD,Kinesthetic,Art,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,حركي,الفن
+U073,C034,2023-10-07,0.5296597239456199,Completed,0.940639999186114,84,2.66,33,Master,Visual,Music,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,بصري,الموسيقى
+U017,C036,2023-11-09,0.2418932941128891,Completed,0.3293212774825043,86,4.59,19,Bachelor,Kinesthetic,History,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,حركي,التاريخ
+U009,C002,2023-04-10,0.5006035711547075,Not Started,0.0422004685812984,86,4.46,28,Master,Kinesthetic,Math,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,حركي,الرياضيات
+U143,C015,2023-11-22,0.6796203327351078,In Progress,0.4962951255006397,84,2.96,49,Bachelor,Reading,Music,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,قرائي,الموسيقى
+U152,C034,2023-10-24,0.0762392179735644,Not Started,0.5444613321491686,83,4.09,37,PhD,Kinesthetic,Math,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,حركي,الرياضيات
+U038,C036,2023-07-01,0.274703815047892,Not Started,0.1684405511319152,67,4.55,35,Master,Reading,Data Science,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,قرائي,علم البيانات
+U163,C006,2023-06-23,0.8069654908839936,Not Started,0.7604646062760667,68,4.1,20,PhD,Reading,Art,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,قرائي,الفن
+U094,C039,2023-11-12,0.4596648704026612,Not Started,0.9849291084414916,89,3.28,50,PhD,Auditory,AI,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U095,C042,2023-12-30,0.5465771420322949,Completed,0.9457747170084608,78,4.14,22,Bachelor,Reading,History,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,قرائي,التاريخ
+U049,C012,2023-07-07,0.4328160022094692,In Progress,0.1971060388236521,75,3.03,52,Bachelor,Auditory,History,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,التاريخ
+U069,C003,2023-02-26,0.0438999426430051,Not Started,0.8753632399007607,83,3.3,31,Master,Auditory,AI,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الذكاء الاصطناعي
+U062,C045,2023-01-31,0.1657497798201559,In Progress,0.7044936364116847,73,4.053179647989126,51,High School,Auditory,AI,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U188,C018,2023-03-25,0.4455416387418909,In Progress,0.4538465638069116,80,3.1,54,High School,Visual,Art,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,بصري,الفن
+U178,C040,2023-06-01,0.2091854654079278,In Progress,0.540610994324729,95,3.89,29,Master,Reading,Data Science,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,قرائي,علم البيانات
+U078,C021,2023-02-05,0.0499790286596787,Not Started,0.8496001749824581,65,2.77,58,PhD,Reading,History,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,التاريخ
+U117,C015,2023-08-01,0.8436496640518237,Completed,0.4801349396383731,64,4.83,31,PhD,Auditory,History,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,التاريخ
+U120,C033,2023-12-30,0.9811925291641158,Not Started,0.3732073691051268,73,3.33,22,PhD,Kinesthetic,Music,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,حركي,الموسيقى
+U137,C035,2023-04-16,0.7931428739967394,In Progress,0.4932474930259858,63,3.05,40,High School,Auditory,History,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,سمعي,التاريخ
+U162,C026,2023-12-08,0.853784921704667,In Progress,0.5791298040350491,67,3.74,58,PhD,Auditory,History,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,سمعي,التاريخ
+U076,C008,2023-08-08,0.2419771303170453,Completed,0.1890776537783488,50,3.855831791459086,43,PhD,Reading,Math,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,قرائي,الرياضيات
+U035,C036,2023-06-12,0.9606269755131998,Not Started,0.9009077302669908,80,4.683083398544301,38,High School,Visual,Math,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,بصري,الرياضيات
+U001,C048,2023-08-08,0.1969257044534283,In Progress,0.6741869488296138,83,3.19,56,Master,Reading,History,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,قرائي,التاريخ
+U040,C030,2023-09-27,0.9514298103618324,Completed,0.6332689173374889,82,3.0873235012207574,42,PhD,Auditory,Data Science,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,سمعي,علم البيانات
+U064,C023,2023-04-30,0.994819293965951,In Progress,0.0994962261806381,70,3.84,53,Bachelor,Visual,AI,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,بصري,الذكاء الاصطناعي
+U150,C042,2023-12-02,0.7117228057460487,Completed,0.6041739381725918,76,3.37,45,High School,Reading,Data Science,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,قرائي,علم البيانات
+U060,C044,2023-07-01,0.981143731791822,Completed,0.1209606622384923,80,2.83,35,High School,Auditory,Art,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,الفن
+U064,C014,2023-04-16,0.5695397795671037,Not Started,0.078697675195399,85,3.16,53,Bachelor,Visual,AI,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U093,C014,2023-08-05,0.2595417831760903,In Progress,0.5273108956423933,86,3.6,52,Master,Visual,History,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,بصري,التاريخ
+U072,C002,2023-07-24,0.4369958856656208,Not Started,0.402785534046495,75,2.58,38,High School,Visual,AI,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,الذكاء الاصطناعي
+U011,C037,2023-03-11,0.593560935378786,In Progress,0.5888102701562232,85,4.43,41,PhD,Auditory,History,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,سمعي,التاريخ
+U105,C005,2023-02-13,0.0730815620270149,Not Started,0.0892221680572386,92,4.05,50,Bachelor,Kinesthetic,Music,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,حركي,الموسيقى
+U014,C038,2023-11-25,0.6223432646172461,In Progress,0.4309830628472584,64,4.795161990767673,41,High School,Reading,AI,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U014,C038,2023-11-25,0.6223432646172461,In Progress,0.4309830628472584,88,4.831917412995562,41,High School,Reading,AI,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U060,C045,2023-10-28,0.9811778367622944,Not Started,0.1747867150451579,90,4.0,35,High School,Auditory,Art,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,سمعي,الفن
+U030,C041,2023-08-16,0.1901076497837276,Completed,0.9871000859241166,65,3.87,33,PhD,Reading,Data Science,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,قرائي,علم البيانات
+U035,C047,2023-07-03,0.7925951162883833,In Progress,0.5611502124351744,67,3.98,38,High School,Visual,Math,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,بصري,الرياضيات
+U165,C014,2023-04-17,0.9078987937796194,In Progress,0.6874368609408673,90,1.208289624885079,23,High School,Kinesthetic,AI,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U005,C039,2023-03-25,0.9437015928202208,Completed,0.3254182806826078,56,2.6423947889530663,38,PhD,Auditory,AI,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U083,C025,2023-12-04,0.9601356044054472,Not Started,0.0947389147793441,79,2.50724251109685,24,PhD,Visual,History,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,بصري,التاريخ
+U123,C020,2023-09-07,0.5214596387214719,In Progress,0.9758708627835366,66,4.84,56,High School,Auditory,Data Science,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U078,C002,2023-12-29,0.9773079079915036,In Progress,0.2862590353831832,93,2.52,58,PhD,Reading,History,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,قرائي,التاريخ
+U154,C039,2023-01-21,0.7573102071344389,Not Started,0.4238081851735742,73,2.62,28,PhD,Auditory,Math,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U062,C006,2023-07-15,0.1616714362369619,Completed,0.649863921702575,75,2.98,51,High School,Auditory,AI,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,سمعي,الذكاء الاصطناعي
+U132,C017,2023-06-27,0.47690010646797,Not Started,0.0246972976861112,68,2.92,56,Bachelor,Visual,Music,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,بصري,الموسيقى
+U089,C025,2023-01-07,0.718331175372004,Not Started,0.8102591305172869,69,2.95,28,Bachelor,Kinesthetic,Data Science,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,حركي,علم البيانات
+U042,C028,2023-03-11,0.2473403158190833,Not Started,0.5365781900286203,76,4.18,26,Master,Auditory,Math,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,سمعي,الرياضيات
+U089,C002,2023-05-07,0.6406151835488874,In Progress,0.2782171870688221,71,3.65,28,Bachelor,Kinesthetic,Data Science,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,حركي,علم البيانات
+U146,C035,2023-06-09,0.6666004790466192,Completed,0.0616079852924692,65,4.98,45,High School,Auditory,Art,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,سمعي,الفن
+U040,C037,2023-09-05,0.1626997438085659,Completed,0.1624984154744414,78,3.07,42,PhD,Auditory,Data Science,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,سمعي,علم البيانات
+U072,C005,2023-07-22,0.5650853124527563,Not Started,0.8950338588534369,88,3.28,38,High School,Visual,AI,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,بصري,الذكاء الاصطناعي
+U039,C001,2023-05-28,0.7716269109786077,In Progress,0.686024223935891,65,4.96,21,Bachelor,Reading,Art,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,قرائي,الفن
+U104,C040,2023-05-23,0.4988956645359419,Not Started,0.2499017216368898,84,4.58,51,Bachelor,Auditory,Data Science,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,سمعي,علم البيانات
+U014,C012,2023-07-18,0.0121031167761074,In Progress,0.0656007649450295,83,3.67,41,High School,Reading,AI,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,قرائي,الذكاء الاصطناعي
+U032,C036,2023-06-03,0.0090384690792921,In Progress,0.6906153123866363,84,3.89,20,Master,Kinesthetic,Data Science,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,حركي,علم البيانات
+U179,C045,2023-05-22,0.3570293439700122,In Progress,0.5724077259677651,75,4.61,56,Master,Kinesthetic,History,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,حركي,التاريخ
+U125,C023,2023-11-09,0.926194068431782,In Progress,0.404519524458235,83,2.7084497856773364,26,High School,Reading,Data Science,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,قرائي,علم البيانات
+U166,C047,2023-06-14,0.2286767796036087,Completed,0.3636114491900638,75,3.7,25,Bachelor,Reading,Math,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,قرائي,الرياضيات
+U097,C031,2023-11-10,0.6343636888716871,In Progress,0.2168142759291083,65,3.02,56,Master,Auditory,Art,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,سمعي,الفن
+U023,C011,2023-01-21,0.2220758706933205,In Progress,0.6696112565375176,80,4.57,50,Master,Kinesthetic,Art,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,حركي,الفن
+U063,C010,2023-03-23,0.3216699896595486,Not Started,0.9706680277938704,63,3.84,27,PhD,Auditory,Art,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,سمعي,الفن
+U143,C003,2023-03-10,0.848042089601484,Not Started,0.1757152458368258,93,2.88,49,Bachelor,Reading,Music,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,قرائي,الموسيقى
+U153,C014,2023-05-11,0.7288614422699469,Completed,0.5971166200155034,87,3.76,47,High School,Visual,Music,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,بصري,الموسيقى
+U145,C016,2023-03-28,0.0953992773132106,Not Started,0.4241850557459762,87,3.53,39,Bachelor,Visual,Math,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,بصري,الرياضيات
+U194,C010,2023-08-06,0.4287020209864336,In Progress,0.4466887217446649,76,4.69,43,Bachelor,Auditory,Data Science,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,سمعي,علم البيانات
+U053,C029,2023-11-01,0.0291697636452644,Not Started,0.2541472801278144,73,2.82,57,PhD,Auditory,Math,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,سمعي,الرياضيات
+U104,C010,2023-12-11,0.480890146603009,Completed,0.8251348756614191,66,4.69,51,Bachelor,Auditory,Data Science,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,سمعي,علم البيانات
+U104,C012,2023-12-07,0.6624340117010681,Not Started,0.4852556041472411,81,3.78,51,Bachelor,Auditory,Data Science,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,علم البيانات
+U179,C030,2023-06-10,0.1185026235981515,Not Started,0.5434058521982641,60,3.51,56,Master,Kinesthetic,History,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,حركي,التاريخ
+U039,C041,2023-06-27,0.2888849389091656,Completed,0.3047609127973257,88,2.9,21,Bachelor,Reading,Art,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,قرائي,الفن
+U179,C001,2023-04-27,0.3978366255021569,Completed,0.1818084656669497,90,4.25,56,Master,Kinesthetic,History,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,حركي,التاريخ
+U198,C005,2023-07-15,0.9195310246560496,In Progress,0.0859103882028204,89,4.82,21,Master,Reading,AI,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,قرائي,الذكاء الاصطناعي
+U134,C020,2023-11-23,0.993255015422964,Not Started,0.7141191409249159,58,4.382043243362242,21,Bachelor,Reading,Art,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,قرائي,الفن
+U067,C008,2023-03-27,0.0449112989956158,In Progress,0.1962342816878556,83,3.0607689045528548,32,High School,Auditory,Music,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,سمعي,الموسيقى
+U135,C043,2023-10-16,0.761007923495392,Not Started,0.6900753541887977,74,3.44,47,Bachelor,Kinesthetic,AI,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U179,C012,2023-03-22,0.3717240664023432,Not Started,0.3903764460469539,77,3.1,56,Master,Kinesthetic,History,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,حركي,التاريخ
+U200,C001,2023-06-01,0.39245818622948,In Progress,0.4157748009896514,94,3.89,34,Bachelor,Reading,Music,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,قرائي,الموسيقى
+U042,C020,2023-03-02,0.7542649733470227,Not Started,0.4691774960927717,65,2.842848685393102,26,Master,Auditory,Math,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U192,C028,2023-03-02,0.9184264321454086,Not Started,0.3677085081275432,89,4.49,36,Bachelor,Reading,History,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,قرائي,التاريخ
+U015,C043,2023-12-20,0.9509285945025484,Not Started,0.10061997722259,93,2.51,20,PhD,Visual,Data Science,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,بصري,علم البيانات
+U111,C037,2023-01-28,0.5771225860383208,Completed,0.3096318100028458,70,4.08,39,High School,Kinesthetic,Math,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,حركي,الرياضيات
+U157,C047,2023-02-12,0.3571211593005028,In Progress,0.6637343606939384,86,3.99,56,Master,Reading,Data Science,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,قرائي,علم البيانات
+U033,C037,2023-06-18,0.7875490858587793,Completed,0.665784401468871,83,3.3,54,PhD,Visual,Music,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,بصري,الموسيقى
+U155,C012,2023-03-27,0.2510013832623002,In Progress,0.2862243072399943,94,3.63,45,Master,Auditory,Art,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,الفن
+U164,C037,2023-06-26,0.5640740288335178,In Progress,0.4601026265576879,67,3.12,56,Bachelor,Visual,AI,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,بصري,الذكاء الاصطناعي
+U157,C049,2023-01-17,0.3585784615248731,Not Started,0.1934472280119374,77,4.47,56,Master,Reading,Data Science,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,علم البيانات
+U038,C049,2023-04-08,0.6566310737078761,In Progress,0.2103720815298357,72,4.09,35,Master,Reading,Data Science,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,علم البيانات
+U185,C044,2023-07-17,0.2403989128935069,Completed,0.0230470884066074,83,3.83,19,High School,Visual,Art,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,بصري,الفن
+U097,C028,2023-04-08,0.1915929457348257,Completed,0.8967465499077446,82,3.48,56,Master,Auditory,Art,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,سمعي,الفن
+U155,C047,2023-03-06,0.9182390866754372,Completed,0.2107066650749062,71,3.23,45,Master,Auditory,Art,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,سمعي,الفن
+U183,C015,2023-11-26,0.1018036829495369,In Progress,0.2275338769364633,89,4.56,34,Master,Auditory,Art,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,الفن
+U033,C006,2023-12-07,0.5059579077349317,Completed,0.2796014326451318,90,3.63,54,PhD,Visual,Music,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,بصري,الموسيقى
+U196,C044,2023-01-05,0.2208527829630089,In Progress,0.127408071695429,87,3.75,23,Bachelor,Reading,AI,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,قرائي,الذكاء الاصطناعي
+U086,C020,2023-01-02,0.0389299633256674,Completed,0.6392628831813628,81,3.8,18,High School,Auditory,Music,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,سمعي,الموسيقى
+U066,C050,2023-01-22,0.0360188182914263,Completed,0.0751429531775865,87,3.62,48,High School,Auditory,AI,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,سمعي,الذكاء الاصطناعي
+U010,C014,2023-04-22,0.1752217721058273,In Progress,0.1342024263263502,72,3.14,28,Master,Auditory,Art,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,سمعي,الفن
+U005,C002,2023-02-26,0.8667703545060003,Completed,0.6447567265900929,84,2.8,38,PhD,Auditory,AI,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,سمعي,الذكاء الاصطناعي
+U123,C009,2023-03-07,0.2824787439770266,Not Started,0.3396606204814427,66,2.75,56,High School,Auditory,Data Science,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U074,C037,2023-11-26,0.9504591705752956,In Progress,0.707947826701189,65,4.39,35,Master,Reading,Art,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,قرائي,الفن
+U097,C020,2023-04-08,0.5816222929891935,In Progress,0.557424744670142,83,3.06,56,Master,Auditory,Art,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,سمعي,الفن
+U118,C026,2023-05-24,0.4366141897687661,In Progress,0.256021173061513,78,2.64,20,PhD,Auditory,AI,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,سمعي,الذكاء الاصطناعي
+U038,C029,2023-05-05,0.5800888346694546,Not Started,0.6508279504893281,78,4.49,35,Master,Reading,Data Science,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,قرائي,علم البيانات
+U141,C001,2023-06-16,0.5166983852262678,In Progress,0.1162736802928806,95,2.89,53,Master,Reading,History,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,قرائي,التاريخ
+U159,C035,2023-03-27,0.7587762537573252,Completed,0.5364103830800304,68,4.06,18,High School,Reading,Music,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,قرائي,الموسيقى
+U047,C006,2023-03-17,0.2824960659728522,Completed,0.4371481050450346,95,3.35,24,Master,Reading,Art,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,قرائي,الفن
+U109,C037,2023-12-10,0.3530503916003024,Completed,0.2678735828174408,88,2.82,52,High School,Visual,Art,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,بصري,الفن
+U180,C005,2023-10-21,0.8940943025332507,In Progress,0.6040049977395001,83,3.54,19,PhD,Auditory,Art,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,سمعي,الفن
+U184,C033,2023-02-28,0.9464565131504056,Completed,0.8713335923402825,64,2.54,19,High School,Reading,Music,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,قرائي,الموسيقى
+U015,C049,2023-05-18,0.8925582274864745,In Progress,0.9989046997630768,85,4.6,20,PhD,Visual,Data Science,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,علم البيانات
+U157,C014,2023-04-09,0.4194479939573136,Completed,0.6077627687434245,90,2.0946655396858307,56,Master,Reading,Data Science,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,قرائي,علم البيانات
+U157,C014,2023-04-09,0.4194479939573136,Completed,0.6077627687434245,72,3.173937714332058,56,Master,Reading,Data Science,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,قرائي,علم البيانات
+U157,C014,2023-04-09,0.4194479939573136,Completed,0.6077627687434245,82,4.737643178284859,56,Master,Reading,Data Science,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,قرائي,علم البيانات
+U136,C012,2023-07-11,0.7803655030068817,Not Started,0.4047058743291701,73,3.78,54,Bachelor,Visual,Music,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,بصري,الموسيقى
+U005,C042,2023-08-31,0.4763357333010988,Not Started,0.2252071002162016,88,2.85,38,PhD,Auditory,AI,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,سمعي,الذكاء الاصطناعي
+U157,C020,2023-11-15,0.4975398521461022,Not Started,0.2570960893951117,65,3.09,56,Master,Reading,Data Science,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,قرائي,علم البيانات
+U047,C050,2023-02-18,0.2046801090572839,Not Started,0.4794549781497657,66,3.62,24,Master,Reading,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,قرائي,الفن
+U068,C024,2023-02-01,0.5911303032585165,In Progress,0.3672777012807092,77,2.97,25,PhD,Kinesthetic,AI,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,حركي,الذكاء الاصطناعي
+U076,C043,2023-10-04,0.1861358977533479,Completed,0.9138145226249442,82,3.17,43,PhD,Reading,Math,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,قرائي,الرياضيات
+U173,C034,2023-01-20,0.3315646990671937,Not Started,0.3682954676557095,60,3.84,32,PhD,Auditory,AI,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,سمعي,الذكاء الاصطناعي
+U130,C025,2023-06-03,0.8550302016199351,In Progress,0.3734445911454355,63,4.58,30,Bachelor,Visual,Art,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,بصري,الفن
+U155,C050,2023-03-09,0.2070758092108552,Not Started,0.3835345124339769,94,3.5,45,Master,Auditory,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,سمعي,الفن
+U095,C029,2024-01-01,0.0711582851734328,Not Started,0.8366202103676581,82,4.29,22,Bachelor,Reading,History,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,قرائي,التاريخ
+U115,C039,2023-08-02,0.0690075926128163,In Progress,0.6507883208469019,86,4.69,52,High School,Visual,Data Science,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,بصري,علم البيانات
+U164,C031,2023-05-23,0.940784520503108,In Progress,0.6141688503188927,71,2.382508148144636,56,Bachelor,Visual,AI,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,بصري,الذكاء الاصطناعي
+U036,C047,2023-08-20,0.5069204379618346,Completed,0.3341430223838622,71,4.525943278355642,26,PhD,Reading,AI,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,قرائي,الذكاء الاصطناعي
+U026,C043,2023-08-01,0.4094120718170183,Completed,0.8179041768324394,85,3.04,42,Bachelor,Auditory,Math,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,سمعي,الرياضيات
+U043,C050,2023-03-20,0.8108785810079184,Not Started,0.0383638613557011,67,4.52,43,PhD,Reading,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,قرائي,الفن
+U027,C023,2023-08-02,0.835825927910516,Not Started,0.8707971723381132,75,4.39,44,Master,Visual,AI,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,بصري,الذكاء الاصطناعي
+U069,C044,2023-04-26,0.3321910331156046,Completed,0.5127498997939296,62,3.39,31,Master,Auditory,AI,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,الذكاء الاصطناعي
+U148,C038,2023-04-02,0.6936180574737952,Completed,0.3982502348634128,91,4.97,59,Master,Visual,Music,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,بصري,الموسيقى
+U011,C020,2023-09-27,0.7711228158518866,In Progress,0.4971672807176857,64,3.16,41,PhD,Auditory,History,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,سمعي,التاريخ
+U074,C023,2023-06-17,0.6546506868659545,Completed,0.6674155305338311,79,3.14,35,Master,Reading,Art,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,قرائي,الفن
+U104,C045,2023-02-27,0.1515950748000993,Completed,0.0127654265178973,73,4.43,51,Bachelor,Auditory,Data Science,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U038,C016,2023-10-11,0.875883083517057,Not Started,0.8715518564582477,91,3.59,35,Master,Reading,Data Science,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,قرائي,علم البيانات
+U134,C050,2023-01-26,0.5390945527360087,Completed,0.4467395253113928,85,3.33,21,Bachelor,Reading,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,قرائي,الفن
+U200,C042,2023-03-07,0.2824724263700037,Not Started,0.3429665197000782,65,2.95,34,Bachelor,Reading,Music,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,قرائي,الموسيقى
+U023,C008,2023-09-05,0.4252281854376939,Completed,0.1382455656340571,95,4.41,50,Master,Kinesthetic,Art,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,حركي,الفن
+U047,C050,2023-09-11,0.0375710903989073,In Progress,0.4394653743584421,64,4.47,24,Master,Reading,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,قرائي,الفن
+U090,C021,2023-02-13,0.1278668012224175,Completed,0.4963227712843788,72,3.92,34,PhD,Reading,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الفن
+U046,C001,2023-04-07,0.7655467505158609,Completed,0.4036466944934778,91,4.89,45,Bachelor,Kinesthetic,Art,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,حركي,الفن
+U107,C008,2023-02-11,1.1634755366141114e-05,Completed,0.6786600938268971,97,4.923044697555406,41,PhD,Visual,Art,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,الفن
+U140,C029,2023-08-15,0.4165658284822922,Not Started,0.420896528759226,75,3.3,46,PhD,Kinesthetic,Art,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,حركي,الفن
+U141,C032,2023-09-19,0.5225101810855884,In Progress,0.9614175778465732,60,3.05,53,Master,Reading,History,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,التاريخ
+U104,C038,2023-06-16,0.0546344200009722,Completed,0.5992775178235918,72,4.19,51,Bachelor,Auditory,Data Science,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U190,C005,2023-10-06,0.9730781629723328,Not Started,0.807477935651909,70,4.4,50,Master,Reading,Math,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,قرائي,الرياضيات
+U111,C047,2023-03-30,0.2261253312496719,In Progress,0.1093559031094788,67,3.06,39,High School,Kinesthetic,Math,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,حركي,الرياضيات
+U104,C022,2023-06-27,0.3041987196362808,Not Started,0.3972912929459057,84,2.69,51,Bachelor,Auditory,Data Science,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,سمعي,علم البيانات
+U060,C047,2023-07-16,0.3039425122550273,Not Started,0.3368477014471527,91,4.53,35,High School,Auditory,Art,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,سمعي,الفن
+U171,C034,2023-11-03,0.2304166621173499,In Progress,0.5694823881365918,83,4.94,59,High School,Kinesthetic,History,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,حركي,التاريخ
+U100,C001,2023-09-24,0.0014738220863114,Completed,0.8611135200614256,87,4.11,24,Bachelor,Reading,AI,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U068,C026,2023-09-25,0.7293447940879964,Not Started,0.0783382177620066,73,3.19,25,PhD,Kinesthetic,AI,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,حركي,الذكاء الاصطناعي
+U133,C043,2023-03-15,0.9668454997992854,Not Started,0.0725747980447107,62,4.99,49,Bachelor,Kinesthetic,Math,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,حركي,الرياضيات
+U120,C010,2023-01-08,0.224293483285045,Completed,0.8503177081575989,95,4.73,22,PhD,Kinesthetic,Music,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,حركي,الموسيقى
+U037,C030,2023-10-24,0.6630471918034224,Completed,0.2128500860383574,86,3.78,56,PhD,Visual,History,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,بصري,التاريخ
+U072,C050,2023-06-13,0.7418963269587151,In Progress,0.6687532544498137,79,4.56,38,High School,Visual,AI,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,الذكاء الاصطناعي
+U127,C018,2023-03-26,0.8484253790905247,In Progress,0.5428781323608052,74,4.54,32,PhD,Reading,Data Science,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,قرائي,علم البيانات
+U106,C017,2023-03-13,0.4226291970136091,In Progress,0.8328935948872295,86,4.84,40,Master,Auditory,Data Science,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,سمعي,علم البيانات
+U092,C026,2023-02-24,0.3029309056404292,Completed,0.1250889098364035,87,4.6,52,Bachelor,Reading,Math,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,قرائي,الرياضيات
+U031,C008,2023-02-16,0.3252951340230311,Not Started,0.1297829657226112,84,4.11,32,PhD,Auditory,Data Science,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,سمعي,علم البيانات
+U122,C047,2023-08-26,0.7126213330985128,Not Started,0.5568183602783076,92,4.02,31,Master,Reading,Art,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,قرائي,الفن
+U137,C040,2023-04-14,0.816779466505636,In Progress,0.9463786533583708,73,3.67,40,High School,Auditory,History,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,سمعي,التاريخ
+U051,C049,2023-07-29,0.1816139677566026,Completed,0.4149977583707542,67,4.07,34,Master,Kinesthetic,Art,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الفن
+U029,C012,2023-02-11,0.3709410081577652,Not Started,0.3269421002546949,73,4.49,45,Master,Visual,Art,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,بصري,الفن
+U040,C027,2023-11-12,0.90194019674915,In Progress,0.6066893231978858,60,4.92,42,PhD,Auditory,Data Science,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U041,C008,2023-09-25,0.8066935196947392,Not Started,0.9304486005450312,75,3.67,31,High School,Reading,Art,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,قرائي,الفن
+U011,C025,2023-09-20,0.9848584027624758,Not Started,0.8369278328446237,77,3.93,41,PhD,Auditory,History,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,سمعي,التاريخ
+U151,C046,2023-12-02,0.7542482596820808,Completed,0.99548361073322,66,3.61,45,High School,Visual,Data Science,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,بصري,علم البيانات
+U001,C004,2023-12-31,0.3931952010279222,Completed,0.022568583202377,74,4.17,56,Master,Reading,History,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,قرائي,التاريخ
+U046,C033,2023-09-16,0.5906378339946378,Not Started,0.1128581447127622,96,1.3390646177053327,45,Bachelor,Kinesthetic,Art,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,حركي,الفن
+U101,C001,2023-10-10,0.6610142542473203,In Progress,0.609467763366622,83,4.07,26,PhD,Kinesthetic,Art,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,حركي,الفن
+U149,C019,2023-04-24,0.0784558163171239,Completed,0.8205764393338497,72,2.54,23,PhD,Auditory,Math,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,سمعي,الرياضيات
+U090,C031,2023-12-29,0.5444969591038651,Not Started,0.2852443423067665,68,3.85,34,PhD,Reading,Art,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,قرائي,الفن
+U110,C016,2023-02-09,0.7093208284726096,Completed,0.2392110880342187,74,2.72,57,PhD,Auditory,Math,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,الرياضيات
+U164,C014,2023-08-08,0.1673213040010603,Completed,0.7869757993812009,94,2.57,56,Bachelor,Visual,AI,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U182,C048,2023-05-09,0.7806317174255571,Completed,0.0563818538532315,72,3.4860292445523364,54,PhD,Kinesthetic,Art,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,حركي,الفن
+U057,C005,2023-01-08,0.5837727805141116,Not Started,0.3693826475825851,83,4.48,59,High School,Kinesthetic,Data Science,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,حركي,علم البيانات
+U001,C041,2023-04-11,0.9522217856975946,In Progress,0.5058092225923297,92,3.15,56,Master,Reading,History,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,قرائي,التاريخ
+U063,C026,2023-06-25,0.0424222982068916,In Progress,0.5603486743503234,75,3.35,27,PhD,Auditory,Art,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,سمعي,الفن
+U182,C028,2023-04-17,0.2653261375554669,In Progress,0.7286151567927769,67,2.66,54,PhD,Kinesthetic,Art,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,حركي,الفن
+U055,C002,2023-04-11,0.6015538792998241,Completed,0.3548457234306582,88,2.95,19,Bachelor,Visual,Math,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,الرياضيات
+U115,C050,2023-09-17,0.2965599122059307,Not Started,0.6126843446746072,63,3.0339161412321043,52,High School,Visual,Data Science,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,علم البيانات
+U168,C006,2024-01-01,0.7144241640712422,Completed,0.5853754227909563,82,4.41,26,Bachelor,Auditory,History,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,سمعي,التاريخ
+U143,C009,2023-09-03,0.759005282521931,In Progress,0.5476161006537471,90,3.73,49,Bachelor,Reading,Music,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,قرائي,الموسيقى
+U149,C033,2023-10-02,0.1025159640664744,In Progress,0.6404832931422122,73,4.7,23,PhD,Auditory,Math,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,سمعي,الرياضيات
+U175,C041,2023-02-01,0.5138544642067677,Not Started,0.2594491710680763,89,3.49,49,High School,Visual,Music,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,بصري,الموسيقى
+U053,C025,2023-05-17,0.5088905555910559,Completed,0.0846487535846289,86,3.17,57,PhD,Auditory,Math,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,سمعي,الرياضيات
+U137,C048,2023-01-12,0.369280770215541,In Progress,0.1192716720397434,75,3.37,40,High School,Auditory,History,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,سمعي,التاريخ
+U180,C013,2023-10-29,0.932924862569672,Not Started,0.224582382653901,65,4.28,19,PhD,Auditory,Art,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,سمعي,الفن
+U057,C009,2023-01-16,0.8275063198732212,Completed,0.5001979355227852,92,3.89,59,High School,Kinesthetic,Data Science,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,حركي,علم البيانات
+U117,C013,2023-05-09,0.6972093819096368,Completed,0.8404427505460201,77,4.76,31,PhD,Auditory,History,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,سمعي,التاريخ
+U154,C031,2023-03-04,0.7143266357349976,In Progress,0.7012933420883841,75,4.01,28,PhD,Auditory,Math,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,سمعي,الرياضيات
+U169,C041,2023-04-19,0.4617161438131191,In Progress,0.7890406042020471,71,3.73,54,Master,Auditory,Music,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,سمعي,الموسيقى
+U035,C011,2023-01-21,0.920994521096576,Completed,0.3509756239260914,79,4.46,38,High School,Visual,Math,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,بصري,الرياضيات
+U063,C004,2023-06-07,0.6945954272532854,Completed,0.4046537416485501,88,4.87,27,PhD,Auditory,Art,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,سمعي,الفن
+U025,C034,2023-09-26,0.7289810616558164,In Progress,0.3936818859906128,89,3.39,39,Master,Kinesthetic,Data Science,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,حركي,علم البيانات
+U090,C038,2023-06-11,0.8616909037873453,Completed,0.1918731844045015,85,3.12,34,PhD,Reading,Art,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,قرائي,الفن
+U075,C046,2023-09-17,0.274071589342191,In Progress,0.061216658143572,81,4.04,41,PhD,Visual,Math,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,بصري,الرياضيات
+U038,C004,2023-04-12,0.807070903866703,Completed,0.5909160928272268,92,3.75,35,Master,Reading,Data Science,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,قرائي,علم البيانات
+U130,C038,2023-08-11,0.195240602956492,In Progress,0.989216683420586,88,4.97,30,Bachelor,Visual,Art,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,بصري,الفن
+U135,C019,2023-02-28,0.3453419522448878,Not Started,0.1668297049502628,81,3.66,47,Bachelor,Kinesthetic,AI,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,حركي,الذكاء الاصطناعي
+U162,C006,2023-09-04,0.3356104542698427,In Progress,0.0466848198992737,72,2.69,58,PhD,Auditory,History,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,سمعي,التاريخ
+U091,C034,2023-05-08,0.9785254683891406,In Progress,0.779531681823933,68,4.94,25,PhD,Reading,Art,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,قرائي,الفن
+U017,C018,2023-10-10,0.8565372237479268,Not Started,0.2525860066847242,83,4.61,19,Bachelor,Kinesthetic,History,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,حركي,التاريخ
+U128,C013,2023-11-21,0.7011698615902597,Completed,0.8296438053529284,74,2.95,43,Master,Visual,Data Science,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,بصري,علم البيانات
+U171,C041,2023-01-25,0.7270567616153901,Not Started,0.7039366670345154,95,4.76,59,High School,Kinesthetic,History,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,حركي,التاريخ
+U187,C023,2023-05-11,0.5620727944025711,In Progress,0.9456735370508046,72,3.35,40,Master,Visual,History,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,بصري,التاريخ
+U108,C019,2023-12-19,0.9470906671085192,Completed,0.408927235756672,50,2.460190266770406,54,High School,Auditory,Math,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,سمعي,الرياضيات
+U179,C045,2023-07-15,0.4962587528823615,Not Started,0.6619698394506341,86,3.44,56,Master,Kinesthetic,History,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,حركي,التاريخ
+U182,C011,2023-10-08,0.3805177098698945,Completed,0.4648547808132707,66,4.77,54,PhD,Kinesthetic,Art,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,حركي,الفن
+U152,C001,2023-06-03,0.163035336931591,Completed,0.6305886973085435,67,3.83,37,PhD,Kinesthetic,Math,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,حركي,الرياضيات
+U025,C024,2023-05-13,0.786205652261058,Not Started,0.4495989060077373,82,1.1171977724136737,39,Master,Kinesthetic,Data Science,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,حركي,علم البيانات
+U199,C007,2023-08-15,0.7344439320755914,Completed,0.1886322464240748,73,2.84,28,PhD,Kinesthetic,Art,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,حركي,الفن
+U180,C025,2023-07-08,0.3843550385241349,Not Started,0.5078974160033809,71,3.42,19,PhD,Auditory,Art,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,سمعي,الفن
+U198,C021,2023-09-22,0.0251934139592293,In Progress,0.5285842014374423,95,4.31,21,Master,Reading,AI,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U088,C015,2023-05-14,0.8389973277180107,Completed,0.8106038482601611,76,2.94,41,PhD,Kinesthetic,Math,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,حركي,الرياضيات
+U161,C001,2023-07-30,0.0114179834540736,In Progress,0.7355207057935812,88,3.98,30,High School,Auditory,History,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,سمعي,التاريخ
+U177,C012,2023-03-01,0.703699779629051,In Progress,0.6637916239414441,86,4.24,58,High School,Auditory,Music,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,الموسيقى
+U029,C007,2023-12-30,0.970257109726057,Completed,0.1133870955525725,60,3.36,45,Master,Visual,Art,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,بصري,الفن
+U063,C015,2023-12-30,0.4376613281482034,Not Started,0.720616290663715,93,4.23,27,PhD,Auditory,Art,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,الفن
+U150,C021,2023-08-01,0.2349734049959527,Completed,0.5003051563545148,63,4.71,45,High School,Reading,Data Science,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,علم البيانات
+U154,C019,2023-08-04,0.7048710100433817,In Progress,0.8940995361061592,83,3.68,28,PhD,Auditory,Math,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,سمعي,الرياضيات
+U156,C029,2023-08-14,0.8171281420155851,In Progress,0.9198709341305428,58,2.5609541983359803,42,PhD,Auditory,Art,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,سمعي,الفن
+U114,C025,2023-05-11,0.5464303160778473,Not Started,0.0551565906017854,80,3.46,18,Bachelor,Reading,AI,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U049,C033,2023-03-17,0.9670352752561462,Completed,0.8206415603544788,92,3.13,52,Bachelor,Auditory,History,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,سمعي,التاريخ
+U199,C049,2023-10-13,0.0516687216579611,In Progress,0.0376973904226706,66,4.01,28,PhD,Kinesthetic,Art,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الفن
+U081,C032,2023-10-04,0.5047955983045281,In Progress,0.3671696256950226,60,4.7,18,PhD,Reading,AI,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U084,C049,2023-06-05,0.7184539473225501,In Progress,0.5422999756210791,62,3.31,26,PhD,Reading,AI,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U105,C035,2023-09-05,0.862640471149179,Not Started,0.1481007986271274,73,4.468608604004488,50,Bachelor,Kinesthetic,Music,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,حركي,الموسيقى
+U177,C044,2023-08-06,0.17925561190779,In Progress,0.7463138125690768,74,3.49,58,High School,Auditory,Music,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,الموسيقى
+U148,C038,2023-07-09,0.8000034817636814,In Progress,0.0083547041721385,90,3.52,59,Master,Visual,Music,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,بصري,الموسيقى
+U118,C026,2023-06-12,0.5527070757185453,Completed,0.1685990484340368,75,3.9,20,PhD,Auditory,AI,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,سمعي,الذكاء الاصطناعي
+U086,C011,2023-06-29,0.3965536819899632,Completed,0.5807968298534757,69,3.07,18,High School,Auditory,Music,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,سمعي,الموسيقى
+U063,C035,2023-02-03,0.1317150285790935,In Progress,0.7143875620372924,88,4.56,27,PhD,Auditory,Art,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,سمعي,الفن
+U189,C008,2023-02-10,0.8652957589089124,In Progress,0.916643102693916,98,2.282270344065996,49,PhD,Reading,History,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,قرائي,التاريخ
+U104,C046,2023-11-03,0.1572732081797153,Completed,0.7054966519346239,65,3.24,51,Bachelor,Auditory,Data Science,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,سمعي,علم البيانات
+U049,C014,2023-12-04,0.3097878592090992,Not Started,0.671779270254866,88,4.26,52,Bachelor,Auditory,History,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,سمعي,التاريخ
+U071,C010,2023-11-10,0.2900455319624369,Not Started,0.3943411463506643,76,3.78,57,High School,Reading,History,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,قرائي,التاريخ
+U001,C002,2023-03-16,0.8714140341908543,Not Started,0.0012844255268014,77,3.4783303713083478,56,Master,Reading,History,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,قرائي,التاريخ
+U141,C046,2023-10-06,0.672702994208898,Not Started,0.1201592587356219,81,3.96,53,Master,Reading,History,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,قرائي,التاريخ
+U179,C009,2023-06-25,0.7966813971913723,Not Started,0.5345545447560391,83,2.95,56,Master,Kinesthetic,History,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,حركي,التاريخ
+U123,C003,2023-05-30,0.250467898792499,Not Started,0.6751298858444197,76,4.34,56,High School,Auditory,Data Science,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,علم البيانات
+U184,C021,2023-09-30,0.6248740996069989,Not Started,0.4174482838964625,80,2.97,19,High School,Reading,Music,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الموسيقى
+U062,C026,2023-11-21,0.5717459831437487,Not Started,0.7306790115283902,70,2.78,51,High School,Auditory,AI,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,سمعي,الذكاء الاصطناعي
+U032,C008,2023-04-18,0.8328303767882711,Completed,0.5218622953321788,66,3.87,20,Master,Kinesthetic,Data Science,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,حركي,علم البيانات
+U158,C048,2023-05-19,0.9060870604812604,Not Started,0.0741761955943122,64,4.27,50,PhD,Visual,History,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,بصري,التاريخ
+U029,C002,2023-12-16,0.0121567714773868,Not Started,0.1920162509679488,80,2.63,45,Master,Visual,Art,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,الفن
+U049,C006,2023-09-28,0.6740199190587927,Not Started,0.8399982232439429,77,2.67,52,Bachelor,Auditory,History,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,سمعي,التاريخ
+U173,C028,2023-12-13,0.051835799119729,In Progress,0.7249127466244395,94,4.51,32,PhD,Auditory,AI,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,سمعي,الذكاء الاصطناعي
+U030,C029,2023-10-16,0.5488586650773559,Completed,0.894761987012495,79,4.52,33,PhD,Reading,Data Science,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,قرائي,علم البيانات
+U144,C026,2023-07-31,0.2876327290436782,Completed,0.1175572491209365,74,3.11,24,High School,Kinesthetic,History,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,حركي,التاريخ
+U168,C025,2023-09-29,0.3067765995221412,Completed,0.990222534615074,64,4.04,26,Bachelor,Auditory,History,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,سمعي,التاريخ
+U019,C012,2023-03-07,0.3529585034523566,Not Started,0.2094067139499336,72,3.61,47,High School,Reading,Art,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,قرائي,الفن
+U018,C005,2023-09-05,0.6212924490496101,Not Started,0.011779876286642,71,4.08,41,PhD,Auditory,Art,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,سمعي,الفن
+U001,C034,2023-06-05,0.3340499656687692,In Progress,0.9974229390535542,80,4.66,56,Master,Reading,History,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,قرائي,التاريخ
+U078,C048,2023-02-16,0.7326990505902804,Completed,0.2810738854451131,65,2.7,58,PhD,Reading,History,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,قرائي,التاريخ
+U115,C037,2023-07-20,0.4045273855738697,Not Started,0.6680194525125599,66,4.44,52,High School,Visual,Data Science,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,بصري,علم البيانات
+U175,C015,2023-05-28,0.0683532003099586,Completed,0.1766823141763052,78,4.067073425353343,49,High School,Visual,Music,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,بصري,الموسيقى
+U194,C044,2023-05-04,0.7837598424841072,In Progress,0.5802285321991417,85,3.73,43,Bachelor,Auditory,Data Science,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,علم البيانات
+U113,C036,2023-01-01,0.285758324592706,In Progress,0.9040349864545592,67,3.91,52,High School,Visual,History,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,بصري,التاريخ
+U114,C015,2023-09-04,0.4327668795992626,In Progress,0.3201811674284386,68,4.13,18,Bachelor,Reading,AI,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U166,C043,2023-12-09,0.6854438832219015,Completed,0.6702539760443592,86,4.81,25,Bachelor,Reading,Math,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,قرائي,الرياضيات
+U179,C048,2023-05-08,0.332456157148712,Not Started,0.1879035887984165,78,4.320811537383048,56,Master,Kinesthetic,History,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,حركي,التاريخ
+U063,C023,2023-07-10,0.0565856561467156,Not Started,0.6247953987187252,63,2.64,27,PhD,Auditory,Art,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,سمعي,الفن
+U132,C006,2023-03-08,0.3739210470128136,In Progress,0.3364503518175101,80,2.57,56,Bachelor,Visual,Music,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,بصري,الموسيقى
+U129,C046,2023-01-04,0.9444485826943034,Not Started,0.2112082585879516,90,2.95,59,Master,Visual,Art,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,بصري,الفن
+U008,C050,2023-10-30,0.6417343972985582,In Progress,0.3131820507036351,80,4.97,40,Bachelor,Kinesthetic,Math,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,حركي,الرياضيات
+U157,C044,2023-10-21,0.6714791486672069,Completed,0.1788410685077993,84,4.29,56,Master,Reading,Data Science,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,قرائي,علم البيانات
+U055,C043,2023-05-23,0.6322821536376398,In Progress,0.9019161078378828,74,4.04,19,Bachelor,Visual,Math,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,بصري,الرياضيات
+U103,C045,2023-07-10,0.1989921389594368,Completed,0.3971868863171288,94,2.62,29,Bachelor,Reading,Data Science,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,قرائي,علم البيانات
+U131,C021,2023-01-21,0.4183338641022801,In Progress,0.2452793049743673,87,4.7,49,Master,Reading,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الفن
+U032,C023,2023-08-15,0.7509397983633183,Not Started,0.4484078410159329,73,4.53,20,Master,Kinesthetic,Data Science,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,حركي,علم البيانات
+U010,C043,2023-11-09,0.1013728975531591,Not Started,0.3205361668064955,63,4.16,28,Master,Auditory,Art,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,سمعي,الفن
+U110,C016,2023-04-27,0.2778527760897122,In Progress,0.744419253813326,79,3.35,57,PhD,Auditory,Math,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,الرياضيات
+U162,C047,2023-10-29,0.2763191084658536,Not Started,0.9712199118854944,93,2.68,58,PhD,Auditory,History,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,سمعي,التاريخ
+U124,C015,2023-05-22,0.432018927594506,Not Started,0.4380336566976468,71,3.95,44,PhD,Auditory,AI,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,الذكاء الاصطناعي
+U087,C025,2023-02-08,0.9803687409421852,Not Started,0.8610333999722404,92,4.3,25,PhD,Kinesthetic,History,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,حركي,التاريخ
+U055,C036,2023-12-21,0.0675025466838219,Completed,0.5658630735596195,83,2.74,19,Bachelor,Visual,Math,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,بصري,الرياضيات
+U032,C011,2023-09-09,0.518700994380595,Not Started,0.1572356650942334,79,4.08,20,Master,Kinesthetic,Data Science,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,حركي,علم البيانات
+U178,C015,2023-11-29,0.1793646820122104,Completed,0.6906227420813416,64,3.22,29,Master,Reading,Data Science,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,قرائي,علم البيانات
+U135,C004,2023-07-26,0.970676545409744,In Progress,0.5134344971258201,89,4.41,47,Bachelor,Kinesthetic,AI,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U093,C021,2023-07-29,0.1133035047274642,Not Started,0.6506065232521034,83,3.85,52,Master,Visual,History,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,التاريخ
+U008,C013,2023-04-25,0.4036010023615912,Not Started,0.889687412571665,66,2.82,40,Bachelor,Kinesthetic,Math,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,حركي,الرياضيات
+U065,C022,2023-08-13,0.7378849848346062,Not Started,0.4404345706560461,95,3.82,31,PhD,Reading,Math,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,قرائي,الرياضيات
+U057,C019,2023-05-14,0.7045544280274453,In Progress,0.9011776232173556,75,3.49,59,High School,Kinesthetic,Data Science,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,حركي,علم البيانات
+U067,C034,2023-09-08,0.4227286368939322,Completed,0.7506690142816549,74,2.95,32,High School,Auditory,Music,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,سمعي,الموسيقى
+U187,C014,2023-08-07,0.3465241679527182,Completed,0.4886049258779847,82,4.6,40,Master,Visual,History,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,بصري,التاريخ
+U072,C004,2023-04-01,0.3976123785528705,Not Started,0.6032221356579637,71,2.53,38,High School,Visual,AI,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U054,C048,2023-12-20,0.2642762631586393,In Progress,0.3255811325190114,88,3.28,21,PhD,Kinesthetic,AI,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U067,C046,2023-02-15,0.2053329387067998,In Progress,0.9835972997387742,74,2.53,32,High School,Auditory,Music,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,سمعي,الموسيقى
+U051,C027,2023-02-07,0.48303969755889,In Progress,0.667351163050396,88,2.74,34,Master,Kinesthetic,Art,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الفن
+U097,C029,2023-05-22,0.2685337560676073,In Progress,0.0438468524966298,80,3.24,56,Master,Auditory,Art,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,سمعي,الفن
+U092,C047,2023-04-10,0.2874616648972501,In Progress,0.3266219057480087,74,2.64,52,Bachelor,Reading,Math,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,قرائي,الرياضيات
+U008,C028,2023-11-24,0.6567560634745571,Completed,0.6233144337590575,73,3.99,40,Bachelor,Kinesthetic,Math,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,حركي,الرياضيات
+U162,C035,2023-07-09,0.9685373316998922,Completed,0.0563332777992398,75,2.72,58,PhD,Auditory,History,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,سمعي,التاريخ
+U035,C008,2023-02-04,0.6036372005593751,Completed,0.0238841913191427,74,4.25,38,High School,Visual,Math,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,الرياضيات
+U096,C016,2023-05-27,0.0769794670649662,Not Started,0.4500242395278025,63,2.63,59,High School,Auditory,Math,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,الرياضيات
+U088,C042,2023-01-30,0.0755836138540669,In Progress,0.33269017969267,86,2.65,41,PhD,Kinesthetic,Math,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,حركي,الرياضيات
+U078,C036,2023-11-30,0.951423220845566,Not Started,0.4382986080331659,57,1.2180371096548783,58,PhD,Reading,History,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,قرائي,التاريخ
+U032,C030,2023-03-25,0.2972907903073336,In Progress,0.2626933098800051,82,3.26,20,Master,Kinesthetic,Data Science,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,حركي,علم البيانات
+U120,C018,2023-10-08,0.0920669860824754,Completed,0.1647177469429809,79,4.230809476176228,22,PhD,Kinesthetic,Music,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,حركي,الموسيقى
+U046,C002,2023-12-10,0.5990445871503816,Not Started,0.6891433569803377,64,4.526541396701642,45,Bachelor,Kinesthetic,Art,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,حركي,الفن
+U144,C049,2023-09-27,0.6236487782902661,Completed,0.5145711162678005,88,4.74,24,High School,Kinesthetic,History,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,التاريخ
+U196,C013,2023-06-03,0.6485048201186882,In Progress,0.2001542112493668,68,4.1,23,Bachelor,Reading,AI,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,قرائي,الذكاء الاصطناعي
+U165,C004,2023-04-12,0.2674020278575413,In Progress,0.3195894262599983,66,4.43,23,High School,Kinesthetic,AI,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U182,C026,2023-08-03,0.015110684214475,In Progress,0.5918079076633259,63,2.85,54,PhD,Kinesthetic,Art,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,حركي,الفن
+U142,C025,2023-05-30,0.965015369454472,Completed,0.0722293482724778,64,4.59,30,Master,Auditory,History,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,سمعي,التاريخ
+U055,C030,2023-03-24,0.2508930456911025,In Progress,0.1474530092661795,64,2.52,19,Bachelor,Visual,Math,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,بصري,الرياضيات
+U176,C011,2023-04-20,0.6760262880525475,Completed,0.0732456041073901,70,3.03,41,Bachelor,Reading,Art,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,قرائي,الفن
+U007,C007,2023-10-02,0.7066298698787096,Not Started,0.8123173327141189,54,2.653369839484769,36,Bachelor,Auditory,Art,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,سمعي,الفن
+U074,C031,2023-07-20,0.6100074170794857,In Progress,0.7524092332120093,87,4.04,35,Master,Reading,Art,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,قرائي,الفن
+U007,C044,2023-10-11,0.3129073942136482,In Progress,0.7533129318792571,75,3.44,36,Bachelor,Auditory,Art,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,الفن
+U161,C010,2023-06-22,0.2710962537640657,In Progress,0.716325343476028,89,4.96,30,High School,Auditory,History,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,سمعي,التاريخ
+U151,C039,2023-11-23,0.5976682827027031,Not Started,0.6693854236698692,63,2.58,45,High School,Visual,Data Science,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,بصري,علم البيانات
+U085,C013,2023-07-25,0.8660956336116915,In Progress,0.476991915378175,61,5.0,41,Master,Reading,History,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,قرائي,التاريخ
+U147,C031,2023-03-04,0.9467337289233956,Completed,0.642278163507115,62,4.06,19,PhD,Visual,History,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,بصري,التاريخ
+U112,C007,2023-03-14,0.1059058044037576,Completed,0.0383615547879746,80,3.9,44,PhD,Kinesthetic,Data Science,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,حركي,علم البيانات
+U125,C049,2023-09-08,0.1548286125977198,In Progress,0.6214644226567846,65,2.65,26,High School,Reading,Data Science,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,علم البيانات
+U147,C042,2023-05-04,0.9447362587830797,In Progress,0.7778777055368772,77,3.18,19,PhD,Visual,History,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,بصري,التاريخ
+U036,C042,2023-05-01,0.7365352283347926,Not Started,0.5003583603843902,64,4.81,26,PhD,Reading,AI,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,قرائي,الذكاء الاصطناعي
+U029,C036,2023-10-02,0.8829938248297731,Not Started,0.3575133284272369,68,3.39,45,Master,Visual,Art,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,بصري,الفن
+U188,C020,2023-04-30,0.2026326341353431,Not Started,0.2774267348009791,79,4.15,54,High School,Visual,Art,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,بصري,الفن
+U082,C004,2023-11-13,0.5875858711094019,In Progress,0.6428020501620825,87,5.0,42,High School,Auditory,Math,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,سمعي,الرياضيات
+U002,C007,2023-06-13,0.7011395944174736,Not Started,0.6928011986299087,85,3.16,46,Bachelor,Auditory,Data Science,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,سمعي,علم البيانات
+U129,C001,2023-10-13,0.6801118854469727,Not Started,0.8709675998625426,81,2.464113062986061,59,Master,Visual,Art,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,بصري,الفن
+U047,C044,2023-09-22,0.4081516908666981,Completed,0.3423340824609907,77,3.94,24,Master,Reading,Art,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,قرائي,الفن
+U197,C045,2023-11-16,0.0153948916913084,Not Started,0.7697723073855856,78,4.24,49,Bachelor,Reading,Music,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,قرائي,الموسيقى
+U148,C042,2023-06-10,0.5829260568042631,Completed,0.5613558241893379,62,2.91,59,Master,Visual,Music,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,بصري,الموسيقى
+U011,C047,2023-11-04,0.2531015391796087,Completed,0.8828364906780791,68,2.87,41,PhD,Auditory,History,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,سمعي,التاريخ
+U130,C013,2023-03-30,0.4502542461428903,Not Started,0.5278121082956208,95,3.64,30,Bachelor,Visual,Art,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,بصري,الفن
+U195,C022,2023-05-22,0.9575810150838172,Completed,0.5176298283979672,90,3.46,49,Master,Visual,AI,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,بصري,الذكاء الاصطناعي
+U119,C021,2023-07-22,0.3990353176424347,In Progress,0.5778770814409091,76,4.29,18,PhD,Visual,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,الفن
+U140,C022,2023-11-05,0.8398016066644267,In Progress,0.7493153551424344,82,2.67,46,PhD,Kinesthetic,Art,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,حركي,الفن
+U020,C028,2023-08-15,0.1885406057492511,Not Started,0.9646904788284608,93,4.93,55,Master,Kinesthetic,History,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,حركي,التاريخ
+U005,C009,2023-11-30,0.6724604980250288,In Progress,0.0735633542157656,64,2.54,38,PhD,Auditory,AI,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U037,C026,2023-08-10,0.9770069544389436,Completed,0.0534346023910171,74,4.0,56,PhD,Visual,History,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,بصري,التاريخ
+U166,C009,2023-02-10,0.1018931008729367,In Progress,0.9375503374073384,62,3.91,25,Bachelor,Reading,Math,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,قرائي,الرياضيات
+U137,C015,2023-07-15,0.008319942227192,Not Started,0.5298756255182061,78,2.84,40,High School,Auditory,History,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,التاريخ
+U053,C010,2023-03-09,0.4335827926326143,Not Started,0.6149030145669361,87,2.88,57,PhD,Auditory,Math,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,سمعي,الرياضيات
+U172,C024,2023-09-21,0.0926254830513672,Completed,0.4824236015947288,62,4.48,41,High School,Auditory,AI,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,سمعي,الذكاء الاصطناعي
+U099,C042,2023-01-02,0.7483843496762314,Not Started,0.0936574526074744,72,2.001931786999054,45,High School,Visual,Art,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,بصري,الفن
+U086,C008,2023-12-27,0.9145486638485588,In Progress,0.7680893784186665,63,4.72,18,High School,Auditory,Music,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,سمعي,الموسيقى
+U108,C024,2023-05-05,0.4340209727087588,Not Started,0.7472246450885869,83,3.21,54,High School,Auditory,Math,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,سمعي,الرياضيات
+U024,C016,2023-04-20,0.2587116421554409,Completed,0.311703321492812,90,3.59,29,PhD,Auditory,Math,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,الرياضيات
+U081,C049,2023-03-27,0.4344033190066098,Not Started,0.3062392452284004,78,3.289260742520306,18,PhD,Reading,AI,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U158,C026,2023-04-30,0.723447817850001,In Progress,0.8378413809055185,51,1.667149340734697,50,PhD,Visual,History,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,بصري,التاريخ
+U120,C027,2023-05-07,0.0090541615803709,Completed,0.0723572577413266,70,3.39,22,PhD,Kinesthetic,Music,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الموسيقى
+U059,C037,2023-09-12,0.5894539894846972,In Progress,0.8811051483565658,60,2.68,46,PhD,Visual,Music,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,بصري,الموسيقى
+U128,C004,2023-07-02,0.6132916848873791,Completed,0.2566616898959144,54,2.1647858199864967,43,Master,Visual,Data Science,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,بصري,علم البيانات
+U128,C004,2023-07-02,0.6132916848873791,Completed,0.2566616898959144,63,4.32498322035977,43,Master,Visual,Data Science,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,بصري,علم البيانات
+U114,C050,2023-01-16,0.6376882468959355,Not Started,0.5929847477554939,68,4.18,18,Bachelor,Reading,AI,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,قرائي,الذكاء الاصطناعي
+U115,C024,2023-03-03,0.2420220799808772,Completed,0.9359941790017776,76,4.56,52,High School,Visual,Data Science,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,بصري,علم البيانات
+U014,C019,2023-06-07,0.7140527233781268,Completed,0.6781225015366464,78,4.8630817755371485,41,High School,Reading,AI,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,قرائي,الذكاء الاصطناعي
+U009,C036,2023-09-25,0.0913914863317764,Not Started,0.4144298124670366,60,3.26,28,Master,Kinesthetic,Math,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,حركي,الرياضيات
+U040,C039,2023-02-04,0.1992703364668008,In Progress,0.6895342089054152,62,4.98,42,PhD,Auditory,Data Science,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U194,C010,2023-09-24,0.8774700466544819,Not Started,0.3439796363163702,85,2.69,43,Bachelor,Auditory,Data Science,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,سمعي,علم البيانات
+U025,C025,2023-03-05,0.7387231507265664,Completed,0.2772584163491861,90,4.15,39,Master,Kinesthetic,Data Science,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,حركي,علم البيانات
+U103,C018,2023-02-19,0.0137455540113452,Not Started,0.9966832779346796,54,2.237474248320052,29,Bachelor,Reading,Data Science,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,قرائي,علم البيانات
+U022,C019,2023-09-12,0.2483762603698002,Completed,0.7507902311797877,85,3.62,38,PhD,Auditory,Data Science,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,سمعي,علم البيانات
+U004,C036,2023-05-29,0.2144064829931645,Not Started,0.6447199773818176,82,3.62,25,High School,Kinesthetic,History,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,حركي,التاريخ
+U154,C010,2023-11-21,0.2708063280369726,Not Started,0.3552896432193188,89,3.64,28,PhD,Auditory,Math,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,سمعي,الرياضيات
+U186,C033,2023-10-31,0.2475597702798864,In Progress,0.0491608291550481,65,4.13169445703029,45,PhD,Reading,Math,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,قرائي,الرياضيات
+U029,C050,2023-10-03,0.0625262957428457,Completed,0.0310568760351556,69,3.15,45,Master,Visual,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,الفن
+U109,C005,2023-12-23,0.4589405165968203,In Progress,0.5541812554487988,67,4.29,52,High School,Visual,Art,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,بصري,الفن
+U098,C047,2023-06-21,0.7327334747861651,Completed,0.7620327210390511,84,4.3,58,High School,Kinesthetic,History,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,حركي,التاريخ
+U037,C049,2023-07-20,0.6067317247174364,Not Started,0.5373791904438551,81,3.21,56,PhD,Visual,History,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,التاريخ
+U075,C035,2023-11-20,0.6728716685980798,Completed,0.8407850719391146,74,4.59,41,PhD,Visual,Math,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,بصري,الرياضيات
+U070,C044,2023-02-04,0.0811491785362391,In Progress,0.0334265330932216,69,3.29,40,Master,Kinesthetic,Music,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,حركي,الموسيقى
+U146,C034,2023-08-04,0.9514907101767872,In Progress,0.3667520764259401,79,4.31,45,High School,Auditory,Art,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,سمعي,الفن
+U128,C033,2023-03-06,0.8384918338430248,In Progress,0.237070391174178,82,2.8,43,Master,Visual,Data Science,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,بصري,علم البيانات
+U085,C021,2023-01-08,0.8050903184956627,Completed,0.447272968157122,60,2.92,41,Master,Reading,History,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,التاريخ
+U042,C017,2023-10-28,0.8229838050417675,In Progress,0.0723763931941224,61,3.29,26,Master,Auditory,Math,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,سمعي,الرياضيات
+U100,C022,2023-12-09,0.9327105081327614,In Progress,0.9541316415710726,78,3.98,24,Bachelor,Reading,AI,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,قرائي,الذكاء الاصطناعي
+U041,C048,2023-11-28,0.5442539661136977,In Progress,0.2232554010693609,73,4.11,31,High School,Reading,Art,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,قرائي,الفن
+U166,C037,2023-03-17,0.2002820178676259,Not Started,0.9223077754835848,67,3.49,25,Bachelor,Reading,Math,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,قرائي,الرياضيات
+U034,C015,2023-06-23,0.6167836078525412,Not Started,0.4258931550366818,71,2.69,24,High School,Reading,Data Science,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,قرائي,علم البيانات
+U017,C035,2023-02-16,0.742881493667939,Completed,0.985524133255218,85,3.43,19,Bachelor,Kinesthetic,History,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,حركي,التاريخ
+U165,C028,2023-01-15,0.7379173933540254,Completed,0.5540583834602107,86,4.22,23,High School,Kinesthetic,AI,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,حركي,الذكاء الاصطناعي
+U153,C007,2023-12-27,0.5214490241668801,In Progress,0.9308328641758076,88,4.18,47,High School,Visual,Music,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,بصري,الموسيقى
+U122,C032,2023-05-27,0.068458719333578,Not Started,0.0053489886942228,74,2.9,31,Master,Reading,Art,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,الفن
+U076,C011,2023-01-26,0.3711129384301278,In Progress,0.7482388061809001,60,2.52,43,PhD,Reading,Math,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,قرائي,الرياضيات
+U087,C010,2023-11-04,0.9207666084633572,In Progress,0.9030506531025154,53,1.8775575567849847,25,PhD,Kinesthetic,History,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,حركي,التاريخ
+U117,C009,2023-04-03,0.584448909757426,Not Started,0.139720566978954,87,2.481965748238057,31,PhD,Auditory,History,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,سمعي,التاريخ
+U106,C014,2023-08-20,0.5383319432557134,Not Started,0.0961258517321514,87,4.38,40,Master,Auditory,Data Science,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,سمعي,علم البيانات
+U086,C013,2023-01-21,0.2688535143821935,Not Started,0.4245726071859556,62,2.77,18,High School,Auditory,Music,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,سمعي,الموسيقى
+U027,C025,2023-11-03,0.3684489199165789,Completed,0.9336789061329352,77,2.71,44,Master,Visual,AI,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U057,C002,2023-02-07,0.8953460891531693,Completed,0.5423865601904387,93,2.51,59,High School,Kinesthetic,Data Science,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,حركي,علم البيانات
+U031,C035,2023-10-03,0.6664630475268357,In Progress,0.5274564637217322,91,3.58,32,PhD,Auditory,Data Science,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,سمعي,علم البيانات
+U134,C007,2023-06-06,0.7873870267523329,Completed,0.1411261182993218,88,3.76,21,Bachelor,Reading,Art,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,قرائي,الفن
+U168,C021,2023-06-28,0.4543454230676551,Not Started,0.0007895110932187,84,4.09,26,Bachelor,Auditory,History,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,التاريخ
+U098,C018,2023-05-12,0.6302472194561579,Not Started,0.8101400907454612,81,2.425618943398659,58,High School,Kinesthetic,History,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,حركي,التاريخ
+U012,C003,2023-11-07,0.2483836087432075,Completed,0.0875745629862382,85,3.24,53,PhD,Auditory,Math,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الرياضيات
+U053,C042,2023-12-14,0.7054608302834863,In Progress,0.633849818735324,67,4.28,57,PhD,Auditory,Math,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,سمعي,الرياضيات
+U199,C039,2023-01-28,0.4276013337033373,In Progress,0.9146164545151916,78,2.92,28,PhD,Kinesthetic,Art,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,حركي,الفن
+U138,C041,2023-09-17,0.4425455148147456,Completed,0.208651913158431,81,4.58,56,Master,Visual,AI,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U173,C049,2023-03-17,0.6493223245768817,In Progress,0.6652728362369108,88,3.93,32,PhD,Auditory,AI,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U145,C011,2023-03-08,0.9362806214689268,In Progress,0.0786985767075094,73,1.204897185617253,39,Bachelor,Visual,Math,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,بصري,الرياضيات
+U154,C039,2023-12-08,0.0640063466086209,In Progress,0.603755143837613,92,3.96,28,PhD,Auditory,Math,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U190,C024,2023-07-13,0.8247432373470076,Not Started,0.1639317209532027,94,3.02,50,Master,Reading,Math,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,قرائي,الرياضيات
+U122,C046,2023-06-11,0.2923831104121931,Not Started,0.735953560515178,62,2.69,31,Master,Reading,Art,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,قرائي,الفن
+U046,C019,2023-12-13,0.4439194545063778,Completed,0.3012312947939082,78,3.66,45,Bachelor,Kinesthetic,Art,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,حركي,الفن
+U064,C004,2023-12-27,0.0219133287750089,Not Started,0.4633910088046462,69,4.04,53,Bachelor,Visual,AI,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,بصري,الذكاء الاصطناعي
+U130,C026,2023-09-14,0.301046077834313,In Progress,0.5994305420276217,86,2.74,30,Bachelor,Visual,Art,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,بصري,الفن
+U054,C038,2023-03-13,0.5026312426301305,Not Started,0.1712734106662395,74,4.88,21,PhD,Kinesthetic,AI,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,حركي,الذكاء الاصطناعي
+U107,C042,2023-03-28,0.056176077347439,Completed,0.7416378186176209,70,4.95,41,PhD,Visual,Art,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,بصري,الفن
+U193,C032,2023-09-19,0.4910957293831651,Not Started,0.3026403406368145,85,3.86,19,High School,Kinesthetic,AI,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U051,C039,2023-08-02,0.9271106288584272,In Progress,0.6623718599127535,83,4.88,34,Master,Kinesthetic,Art,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,حركي,الفن
+U181,C045,2023-06-02,0.1053932181078052,In Progress,0.1582830506993736,72,2.95,20,High School,Auditory,Art,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,سمعي,الفن
+U036,C046,2023-07-29,0.7644407280755043,Completed,0.6881176592063503,91,2.56,26,PhD,Reading,AI,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U115,C036,2023-03-02,0.4096710533759926,Not Started,0.1281880728104617,63,2.6,52,High School,Visual,Data Science,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,بصري,علم البيانات
+U026,C040,2023-09-25,0.655173714524338,Not Started,0.4253564962699836,72,3.97,42,Bachelor,Auditory,Math,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,سمعي,الرياضيات
+U029,C037,2023-09-19,0.2602365979852293,Not Started,0.2472060737388768,68,2.65,45,Master,Visual,Art,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,بصري,الفن
+U149,C033,2023-08-06,0.1594922625413583,In Progress,0.7483752494281826,93,4.9,23,PhD,Auditory,Math,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,سمعي,الرياضيات
+U011,C036,2023-10-10,0.1604626142712264,Completed,0.2620350045068745,66,2.85,41,PhD,Auditory,History,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,سمعي,التاريخ
+U040,C003,2023-05-16,0.0704919456431446,Not Started,0.8817173063953962,60,3.26,42,PhD,Auditory,Data Science,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,علم البيانات
+U011,C009,2023-12-28,0.185646704901243,In Progress,0.8918202114066128,71,4.56,41,PhD,Auditory,History,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,سمعي,التاريخ
+U164,C008,2023-04-03,0.6642193849889683,In Progress,0.1964413152227858,80,3.05,56,Bachelor,Visual,AI,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,الذكاء الاصطناعي
+U113,C033,2023-04-19,0.881690611843508,In Progress,0.6138459450077243,70,3.11,52,High School,Visual,History,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,بصري,التاريخ
+U187,C006,2023-08-29,0.8141256855911618,Not Started,0.0877176417199643,73,4.11,40,Master,Visual,History,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,بصري,التاريخ
+U039,C041,2023-12-21,0.6851343098744841,Not Started,0.3915370996016292,93,3.19,21,Bachelor,Reading,Art,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,قرائي,الفن
+U054,C039,2023-05-22,0.1104318634111026,Not Started,0.7133217295012723,93,3.04,21,PhD,Kinesthetic,AI,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,حركي,الذكاء الاصطناعي
+U098,C004,2023-10-18,0.2891874462959498,Not Started,0.6594232468499163,84,3.14,58,High School,Kinesthetic,History,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,حركي,التاريخ
+U055,C013,2023-08-25,0.309806875322469,Not Started,0.624700669406608,63,3.73,19,Bachelor,Visual,Math,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,بصري,الرياضيات
+U111,C049,2023-12-06,0.2499569463976212,Not Started,0.2825408636624436,85,4.92,39,High School,Kinesthetic,Math,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الرياضيات
+U152,C002,2023-11-08,0.5150056597097231,Not Started,0.378024949434402,75,4.58,37,PhD,Kinesthetic,Math,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,حركي,الرياضيات
+U150,C005,2023-06-26,0.5355538148796726,Not Started,0.1029461447002861,69,3.21,45,High School,Reading,Data Science,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,قرائي,علم البيانات
+U069,C044,2023-05-21,0.3568859751711102,Not Started,0.719022820433601,61,3.41,31,Master,Auditory,AI,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,الذكاء الاصطناعي
+U056,C027,2023-07-08,0.353789158736436,In Progress,0.5038887967912735,94,3.66,23,PhD,Auditory,History,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,التاريخ
+U033,C032,2023-02-18,0.8285555979060814,Not Started,0.7087656323456546,78,4.95,54,PhD,Visual,Music,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,بصري,الموسيقى
+U036,C021,2023-10-29,0.7892928483196856,Completed,0.2489435247968727,65,2.93,26,PhD,Reading,AI,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U148,C008,2023-07-09,0.3077958316807456,In Progress,0.3244382286350662,78,3.39,59,Master,Visual,Music,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,الموسيقى
+U081,C038,2023-05-16,0.9137884438732592,Not Started,0.3342153372601146,67,4.32,18,PhD,Reading,AI,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U190,C008,2023-02-12,0.952815017002506,Completed,0.0257424097472162,73,4.91,50,Master,Reading,Math,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,قرائي,الرياضيات
+U109,C050,2023-12-19,0.3267425420300408,Not Started,0.3410478728306235,69,2.89,52,High School,Visual,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,الفن
+U154,C003,2023-03-31,0.3544249487930548,Completed,0.8033045735180335,62,3.07,28,PhD,Auditory,Math,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الرياضيات
+U194,C044,2023-10-22,0.5056341534219588,Completed,0.8972984957497385,88,3.06,43,Bachelor,Auditory,Data Science,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,سمعي,علم البيانات
+U073,C003,2023-12-07,0.9411208125336736,Completed,0.5182183156359275,74,2.55,33,Master,Visual,Music,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,بصري,الموسيقى
+U040,C022,2023-09-02,0.8763194331423115,Completed,0.4555016952192202,82,4.01,42,PhD,Auditory,Data Science,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,سمعي,علم البيانات
+U017,C006,2023-07-11,0.1025679625835898,In Progress,0.0308246186993702,58,3.7083751391345774,19,Bachelor,Kinesthetic,History,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,حركي,التاريخ
+U129,C002,2023-11-14,0.3927307432714162,In Progress,0.8792043375853826,82,4.18,59,Master,Visual,Art,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,الفن
+U061,C023,2023-04-16,0.5533711897497718,Completed,0.0130102134258727,77,4.01,43,Bachelor,Auditory,History,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,سمعي,التاريخ
+U171,C044,2023-12-29,0.50313247255154,Not Started,0.9447500802102118,78,2.68,59,High School,Kinesthetic,History,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,حركي,التاريخ
+U104,C002,2023-11-06,0.1938630679368926,Completed,0.4892162486880906,87,2.67,51,Bachelor,Auditory,Data Science,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,سمعي,علم البيانات
+U042,C038,2023-08-21,0.8588167711681547,In Progress,0.3419344935747266,85,3.03,26,Master,Auditory,Math,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U025,C017,2023-09-22,0.6769407829968374,Not Started,0.92421843484266,69,3.23,39,Master,Kinesthetic,Data Science,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,حركي,علم البيانات
+U039,C035,2023-12-10,0.8379083748518036,In Progress,0.0243909931100967,63,4.47,21,Bachelor,Reading,Art,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,قرائي,الفن
+U035,C034,2023-02-06,0.8587642793494722,In Progress,0.5814248948690871,61,2.9,38,High School,Visual,Math,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,بصري,الرياضيات
+U131,C023,2023-11-01,0.7483558536657398,Not Started,0.5489325244993376,63,1.7744952391818432,49,Master,Reading,Art,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,قرائي,الفن
+U108,C030,2023-02-10,0.4392106012497173,Completed,0.219320401211382,62,2.61,54,High School,Auditory,Math,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,سمعي,الرياضيات
+U172,C008,2023-01-17,0.6105467550154245,Completed,0.4288874313502105,51,1.3525689735631683,41,High School,Auditory,AI,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,سمعي,الذكاء الاصطناعي
+U179,C022,2023-12-10,0.1603654061197431,Completed,0.6522640059437702,84,3.9180856879057537,56,Master,Kinesthetic,History,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,حركي,التاريخ
+U102,C044,2023-10-04,0.6736454174749077,Completed,0.7271311968819275,66,3.48,25,Bachelor,Kinesthetic,Art,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,حركي,الفن
+U098,C036,2023-11-03,0.1792532557392807,Not Started,0.0007168587065797,75,3.54,58,High School,Kinesthetic,History,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,حركي,التاريخ
+U012,C005,2023-02-28,0.6939495905101568,Not Started,0.9368534300910152,90,3.63,53,PhD,Auditory,Math,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,سمعي,الرياضيات
+U019,C013,2023-07-02,0.2295981607539686,Not Started,0.1645253723928124,69,4.57,47,High School,Reading,Art,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,قرائي,الفن
+U101,C029,2023-02-10,0.1175513001502199,In Progress,0.2335804342223592,78,2.75,26,PhD,Kinesthetic,Art,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,حركي,الفن
+U044,C031,2023-02-08,0.1652844901429574,Not Started,0.2634734456938482,87,4.26,19,High School,Kinesthetic,History,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,حركي,التاريخ
+U187,C047,2023-07-11,0.0019921352190702,Completed,0.0378201365520353,78,2.514813422324637,40,Master,Visual,History,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,بصري,التاريخ
+U049,C016,2023-09-24,0.7187396178535302,In Progress,0.1230521235903249,76,3.34,52,Bachelor,Auditory,History,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,التاريخ
+U189,C042,2023-05-27,0.7324010490583791,Completed,0.986349922944162,87,3.27,49,PhD,Reading,History,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,قرائي,التاريخ
+U017,C030,2023-11-29,0.5149333499132595,Completed,0.315216737377286,78,4.83,19,Bachelor,Kinesthetic,History,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,حركي,التاريخ
+U074,C016,2023-05-07,0.1613628010553837,Not Started,0.1153010903390493,82,3.12,35,Master,Reading,Art,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,قرائي,الفن
+U057,C012,2023-02-15,0.0835543375106897,Not Started,0.1069912611746233,79,4.11,59,High School,Kinesthetic,Data Science,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,حركي,علم البيانات
+U055,C017,2023-02-14,0.019128966437287,Completed,0.7194599676699719,72,3.19,19,Bachelor,Visual,Math,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,بصري,الرياضيات
+U047,C016,2023-01-01,0.1657481769652207,Completed,0.8545686640326409,72,3.77,24,Master,Reading,Art,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,قرائي,الفن
+U012,C012,2023-06-17,0.8908555349831467,In Progress,0.2569522995084699,70,4.47,53,PhD,Auditory,Math,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,الرياضيات
+U062,C008,2023-04-18,0.2415368417016817,Not Started,0.0209095123352349,74,4.7,51,High School,Auditory,AI,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,سمعي,الذكاء الاصطناعي
+U080,C020,2023-01-19,0.3542713272172156,In Progress,0.2230900184453558,76,4.6,32,Bachelor,Kinesthetic,Art,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,حركي,الفن
+U083,C003,2023-11-28,0.1053454844813331,In Progress,0.0565156907967573,87,3.96,24,PhD,Visual,History,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,بصري,التاريخ
+U008,C016,2023-03-13,0.2223613047481702,In Progress,0.1033949366300415,78,1.3416339312330612,40,Bachelor,Kinesthetic,Math,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,حركي,الرياضيات
+U149,C030,2023-04-19,0.5192245707802051,Completed,0.4315081198476423,78,3.12,23,PhD,Auditory,Math,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,سمعي,الرياضيات
+U081,C045,2023-09-25,0.6077526830956526,In Progress,0.2299183708616325,63,4.15,18,PhD,Reading,AI,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U118,C023,2023-08-28,0.245352314166211,In Progress,0.5159458785254234,81,4.27,20,PhD,Auditory,AI,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,سمعي,الذكاء الاصطناعي
+U198,C028,2023-10-28,0.0577321592251172,Completed,0.2534937532571903,81,2.53,21,Master,Reading,AI,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,قرائي,الذكاء الاصطناعي
+U200,C040,2023-03-31,0.3910328691273986,Not Started,0.9405373011029476,93,3.6,34,Bachelor,Reading,Music,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,قرائي,الموسيقى
+U025,C005,2023-04-13,0.2342033709263341,Not Started,0.9059439679262644,92,4.61,39,Master,Kinesthetic,Data Science,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,حركي,علم البيانات
+U089,C020,2023-09-07,0.2195539232298019,In Progress,0.566806105010466,92,3.72,28,Bachelor,Kinesthetic,Data Science,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,حركي,علم البيانات
+U012,C040,2023-01-08,0.9598628027134553,Completed,0.3544239919873861,92,1.2530136355947183,53,PhD,Auditory,Math,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,سمعي,الرياضيات
+U143,C044,2023-06-02,0.6163004859257241,Not Started,0.3811468820347355,71,3.28,49,Bachelor,Reading,Music,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,قرائي,الموسيقى
+U059,C001,2023-12-13,0.5568784431720959,In Progress,0.4118522831444969,61,4.68,46,PhD,Visual,Music,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,بصري,الموسيقى
+U154,C030,2023-06-23,0.4157751035233219,In Progress,0.727579322134944,87,2.89,28,PhD,Auditory,Math,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,سمعي,الرياضيات
+U109,C021,2023-12-09,0.4289443334301442,Completed,0.4516389955188379,69,3.02,52,High School,Visual,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,الفن
+U026,C020,2023-06-07,0.5409050038380808,In Progress,0.8567299465058974,81,4.22,42,Bachelor,Auditory,Math,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U047,C006,2023-08-03,0.6964298070361072,Not Started,0.9440947859303646,76,3.38,24,Master,Reading,Art,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,قرائي,الفن
+U032,C022,2023-06-26,0.7021460961818294,Completed,0.3359461533789338,85,4.28,20,Master,Kinesthetic,Data Science,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,حركي,علم البيانات
+U010,C018,2023-06-24,0.1716939077054495,Not Started,0.5606944813756801,62,2.89,28,Master,Auditory,Art,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,سمعي,الفن
+U016,C008,2023-12-06,0.500112752076627,Not Started,0.0950565368325644,66,3.13,39,Master,Visual,Math,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,الرياضيات
+U199,C039,2023-12-04,0.4119580950341019,Not Started,0.200469047766359,67,2.89,28,PhD,Kinesthetic,Art,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,حركي,الفن
+U145,C032,2023-05-26,0.8705269662693842,In Progress,0.4134657667101601,79,4.88,39,Bachelor,Visual,Math,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,بصري,الرياضيات
+U151,C033,2023-11-20,0.6314189212183764,In Progress,0.2062027159017788,68,2.461467366202611,45,High School,Visual,Data Science,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,بصري,علم البيانات
+U026,C016,2023-06-10,0.5325040664159818,Not Started,0.8765604907887176,71,3.51,42,Bachelor,Auditory,Math,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,الرياضيات
+U086,C012,2023-05-07,0.1153946421789173,Not Started,0.158286256059098,94,3.34,18,High School,Auditory,Music,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,الموسيقى
+U135,C038,2023-03-23,0.6056378893234114,Completed,0.4556608215530919,76,2.54,47,Bachelor,Kinesthetic,AI,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,حركي,الذكاء الاصطناعي
+U014,C034,2023-05-27,0.1172039056802334,Completed,0.6056992404598757,87,2.88,41,High School,Reading,AI,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U079,C014,2023-08-27,0.337206575565752,In Progress,0.6918639081608444,69,3.55,46,PhD,Visual,History,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,بصري,التاريخ
+U117,C036,2023-03-25,0.1428419648143318,In Progress,0.3830693697265067,81,2.67,31,PhD,Auditory,History,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,سمعي,التاريخ
+U007,C033,2023-04-23,0.6920736470243689,Completed,0.8690990687247285,92,3.78,36,Bachelor,Auditory,Art,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,سمعي,الفن
+U137,C023,2023-08-13,0.2062521138361526,Not Started,0.5683191510779255,81,3.64,40,High School,Auditory,History,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,سمعي,التاريخ
+U115,C050,2023-11-28,0.391859373188026,In Progress,0.4395077804475518,63,3.0339161412321043,52,High School,Visual,Data Science,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,علم البيانات
+U176,C045,2023-08-31,0.8956747776187787,Not Started,0.0672406340520366,72,4.42,41,Bachelor,Reading,Art,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,قرائي,الفن
+U072,C002,2023-05-23,0.2043163833989703,Completed,0.464689468445165,86,4.15,38,High School,Visual,AI,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,الذكاء الاصطناعي
+U059,C041,2023-02-10,0.5078050639587791,In Progress,0.8207358408157303,74,3.61,46,PhD,Visual,Music,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,بصري,الموسيقى
+U082,C021,2023-09-15,0.419271661166022,In Progress,0.6145410182213155,90,1.2544057455111894,42,High School,Auditory,Math,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U116,C002,2023-10-12,0.0181240410457297,Completed,0.8321624537291183,81,3.06,54,PhD,Visual,Data Science,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,علم البيانات
+U167,C027,2023-04-15,0.7927581135728128,In Progress,0.4940116705993056,89,4.32,44,High School,Visual,Art,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,الفن
+U146,C009,2023-07-21,0.0690459063145997,Completed,0.1184617050944818,93,4.27,45,High School,Auditory,Art,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,سمعي,الفن
+U187,C001,2023-11-03,0.4742550209769536,In Progress,0.013639845835881,93,2.88,40,Master,Visual,History,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,بصري,التاريخ
+U103,C011,2023-11-27,0.5606782949389499,Completed,0.3032195467185912,94,4.79,29,Bachelor,Reading,Data Science,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,قرائي,علم البيانات
+U017,C003,2023-09-23,0.6284264566145871,In Progress,0.6979904714977925,78,2.66,19,Bachelor,Kinesthetic,History,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,حركي,التاريخ
+U014,C023,2023-07-29,0.6886316293078756,Not Started,0.7902599039416938,67,2.64,41,High School,Reading,AI,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,قرائي,الذكاء الاصطناعي
+U159,C026,2023-02-20,0.2532723835227151,Not Started,0.2957528346203294,92,2.97,18,High School,Reading,Music,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,قرائي,الموسيقى
+U152,C004,2023-04-28,0.0099787766584493,Not Started,0.4956539208832471,87,4.77,37,PhD,Kinesthetic,Math,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,حركي,الرياضيات
+U108,C018,2023-07-20,0.723443662354912,In Progress,0.4211189044340816,84,3.8,54,High School,Auditory,Math,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,سمعي,الرياضيات
+U188,C006,2023-02-08,0.5356565993475786,In Progress,0.4105227843514278,95,4.47,54,High School,Visual,Art,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,بصري,الفن
+U045,C035,2023-01-28,0.8361177032072488,Not Started,0.2313487132001505,76,3.07,37,High School,Kinesthetic,AI,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,حركي,الذكاء الاصطناعي
+U098,C022,2023-09-16,0.8213883629006943,Not Started,0.1363711050294583,83,3.73,58,High School,Kinesthetic,History,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,حركي,التاريخ
+U131,C043,2023-03-25,0.8433261677878832,Completed,0.1966885582312131,80,3.4,49,Master,Reading,Art,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,قرائي,الفن
+U037,C015,2023-06-04,0.4850946599795401,Completed,0.0553323871633461,61,4.57,56,PhD,Visual,History,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,بصري,التاريخ
+U171,C022,2023-04-27,0.3336283958368656,Completed,0.198130741823577,81,3.7092027453426377,59,High School,Kinesthetic,History,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,حركي,التاريخ
+U168,C037,2023-01-02,0.79155820259137,Not Started,0.0092008976253794,90,2.56,26,Bachelor,Auditory,History,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,سمعي,التاريخ
+U183,C042,2023-04-03,0.4512941130292549,Not Started,0.6272584006359783,92,3.11,34,Master,Auditory,Art,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,سمعي,الفن
+U108,C012,2023-06-15,0.1834421964034345,Not Started,0.3163754073876829,89,2.88,54,High School,Auditory,Math,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,الرياضيات
+U039,C047,2023-12-16,0.8549740195614743,Completed,0.9731447114269086,71,4.65,21,Bachelor,Reading,Art,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,قرائي,الفن
+U015,C049,2023-10-23,0.8825598767723473,In Progress,0.1937170507762978,71,3.67,20,PhD,Visual,Data Science,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,علم البيانات
+U120,C042,2023-09-15,0.4663097561401701,Not Started,0.3458285703095939,83,3.51,22,PhD,Kinesthetic,Music,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,حركي,الموسيقى
+U004,C038,2023-03-22,0.0756997273097874,In Progress,0.3578411586415332,83,3.62,25,High School,Kinesthetic,History,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,حركي,التاريخ
+U093,C018,2023-09-25,0.3878260899169312,In Progress,0.0084514960624605,70,4.93,52,Master,Visual,History,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,بصري,التاريخ
+U153,C045,2023-08-23,0.8035376594626034,In Progress,0.8392079530394589,72,4.63,47,High School,Visual,Music,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,بصري,الموسيقى
+U141,C035,2023-11-17,0.9017740285462288,Completed,0.0319944601443247,86,4.27,53,Master,Reading,History,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,قرائي,التاريخ
+U161,C030,2023-11-07,0.2034727424975958,In Progress,0.9401798347292414,67,3.23,30,High School,Auditory,History,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,سمعي,التاريخ
+U016,C024,2023-10-28,0.0669736120252715,Not Started,0.8920743510936207,69,2.91,39,Master,Visual,Math,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,بصري,الرياضيات
+U170,C042,2023-12-23,0.8773504531328387,Completed,0.5355219160859636,67,4.8,50,PhD,Visual,AI,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,بصري,الذكاء الاصطناعي
+U108,C030,2023-08-01,0.3894049389788753,Not Started,0.5435955749112921,79,3.56,54,High School,Auditory,Math,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,سمعي,الرياضيات
+U126,C014,2023-03-03,0.5417609642675633,Not Started,0.6537779229561563,67,3.2,32,PhD,Visual,Math,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,بصري,الرياضيات
+U194,C006,2023-02-18,0.9680658120507588,Completed,0.387050011934887,68,3.68,43,Bachelor,Auditory,Data Science,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,سمعي,علم البيانات
+U055,C003,2023-05-07,0.0665647279142228,Not Started,0.6472222833978555,79,3.881333476663972,19,Bachelor,Visual,Math,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,بصري,الرياضيات
+U170,C016,2023-08-11,0.6483180074520956,Not Started,0.0447683886884868,66,4.79,50,PhD,Visual,AI,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,بصري,الذكاء الاصطناعي
+U034,C007,2023-10-06,0.074105422574867,Completed,0.0540476273497265,73,3.47,24,High School,Reading,Data Science,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,قرائي,علم البيانات
+U158,C014,2023-10-21,0.3754689284665004,Not Started,0.4572304196195443,87,3.91,50,PhD,Visual,History,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,بصري,التاريخ
+U013,C009,2023-10-11,0.8038145451934468,In Progress,0.5496223011060349,61,4.51,57,High School,Visual,AI,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,بصري,الذكاء الاصطناعي
+U141,C015,2023-10-04,0.4334722327556344,Not Started,0.887817640335819,67,3.57,53,Master,Reading,History,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,قرائي,التاريخ
+U018,C021,2023-04-17,0.9971823539029504,In Progress,0.1046606339078962,72,3.08,41,PhD,Auditory,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,الفن
+U160,C035,2023-05-26,0.5590592849466022,Not Started,0.8226479271938894,80,4.99,44,PhD,Reading,Data Science,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,قرائي,علم البيانات
+U096,C002,2023-04-09,0.3211621526359535,Completed,0.2100473372920696,87,4.89,59,High School,Auditory,Math,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,سمعي,الرياضيات
+U123,C027,2023-03-14,0.2201113259047531,Completed,0.3940836485100318,50,2.733003729236112,56,High School,Auditory,Data Science,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U039,C002,2023-05-02,0.3505205342861618,Not Started,0.3166024348274129,94,4.61,21,Bachelor,Reading,Art,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,قرائي,الفن
+U046,C035,2023-01-30,0.3725332737595508,Completed,0.400155272865399,82,4.22,45,Bachelor,Kinesthetic,Art,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,حركي,الفن
+U029,C018,2023-07-07,0.0687136777239609,Not Started,0.1504954980725855,56,4.739288161775205,45,Master,Visual,Art,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,بصري,الفن
+U190,C014,2023-12-30,0.3695741994267731,Completed,0.503570074403555,74,3.24,50,Master,Reading,Math,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,قرائي,الرياضيات
+U062,C020,2023-12-20,0.4642385197392249,In Progress,0.8016425898313673,61,4.78,51,High School,Auditory,AI,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U185,C018,2023-10-15,0.7227377522388047,Not Started,0.4415340103788969,71,3.19,19,High School,Visual,Art,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,بصري,الفن
+U016,C010,2023-07-14,0.656729484721608,In Progress,0.4906135758981991,95,4.5,39,Master,Visual,Math,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,بصري,الرياضيات
+U184,C025,2023-06-05,0.7087656552291542,In Progress,0.8487675852813142,78,4.787611597842068,19,High School,Reading,Music,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,قرائي,الموسيقى
+U121,C002,2023-06-21,0.008363681876857,Not Started,0.7060581146380308,62,4.8,43,Master,Auditory,Music,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,سمعي,الموسيقى
+U010,C025,2023-12-01,0.217667399580536,In Progress,0.4904544085197847,64,4.01,28,Master,Auditory,Art,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,سمعي,الفن
+U158,C033,2023-02-10,0.6616842883998565,Not Started,0.2576956481891796,62,4.51,50,PhD,Visual,History,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,بصري,التاريخ
+U153,C036,2023-03-04,0.4839893681797471,In Progress,0.8849267468449666,78,4.48,47,High School,Visual,Music,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,بصري,الموسيقى
+U103,C031,2023-01-23,0.0053134756683459,Not Started,0.5770204016905583,61,2.98,29,Bachelor,Reading,Data Science,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,قرائي,علم البيانات
+U084,C014,2023-12-26,0.8044946424318223,Not Started,0.2211476101106934,89,1.3637417996521646,26,PhD,Reading,AI,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U133,C001,2023-03-16,0.7728095732903374,Completed,0.2691197526380103,76,4.17,49,Bachelor,Kinesthetic,Math,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,حركي,الرياضيات
+U065,C046,2023-02-17,0.5484191629935626,Not Started,0.8031330889362459,73,2.73,31,PhD,Reading,Math,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,قرائي,الرياضيات
+U177,C016,2023-06-09,0.0664633257762721,Not Started,0.0441455620874554,87,3.77,58,High School,Auditory,Music,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,الموسيقى
+U003,C046,2023-11-09,0.7665150495325846,In Progress,0.99209218702882,86,2.91,32,PhD,Reading,Math,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,قرائي,الرياضيات
+U173,C003,2023-04-28,0.583713587731364,Not Started,0.1303516797147917,69,3.54,32,PhD,Auditory,AI,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الذكاء الاصطناعي
+U142,C035,2023-04-10,0.7819599771579592,Completed,0.7960685253969374,62,4.58,30,Master,Auditory,History,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,سمعي,التاريخ
+U120,C041,2023-06-16,0.7517469923958404,In Progress,0.3947753167716828,95,4.97,22,PhD,Kinesthetic,Music,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,حركي,الموسيقى
+U158,C006,2023-10-17,0.8030020719578371,In Progress,0.4922161832874668,84,3.29,50,PhD,Visual,History,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,بصري,التاريخ
+U068,C025,2023-06-05,0.5180080664046248,Completed,0.8806505774645779,81,3.83,25,PhD,Kinesthetic,AI,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U146,C013,2023-01-07,0.140324518193515,In Progress,0.4129111895892132,69,3.958252992445072,45,High School,Auditory,Art,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,سمعي,الفن
+U190,C034,2023-07-15,0.6711574733796887,In Progress,0.5374937536732345,71,1.796627590388268,50,Master,Reading,Math,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,قرائي,الرياضيات
+U037,C008,2023-02-25,0.6204737850519706,In Progress,0.0492996624091699,89,3.78,56,PhD,Visual,History,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,التاريخ
+U153,C021,2023-11-17,0.7422531871990872,In Progress,0.0023474738674531,80,4.89,47,High School,Visual,Music,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,الموسيقى
+U176,C034,2023-07-12,0.1698810060507353,Completed,0.2447998730017259,89,3.7,41,Bachelor,Reading,Art,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,قرائي,الفن
+U193,C004,2023-02-16,0.1949751999002892,Completed,0.6805830929187673,87,4.25,19,High School,Kinesthetic,AI,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U181,C025,2023-05-28,0.8904095172193285,In Progress,0.1212648933591367,90,4.8,20,High School,Auditory,Art,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,سمعي,الفن
+U073,C015,2023-10-02,0.7499777984520708,In Progress,0.1137619588045494,85,3.43,33,Master,Visual,Music,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,بصري,الموسيقى
+U143,C004,2023-06-06,0.9082284887003228,Completed,0.4109606080359033,81,4.76,49,Bachelor,Reading,Music,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,قرائي,الموسيقى
+U049,C045,2023-07-21,0.7587153211639207,Completed,0.6478370386082265,80,4.79,52,Bachelor,Auditory,History,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,سمعي,التاريخ
+U121,C012,2023-05-06,0.5971553059903019,Completed,0.7120719922479305,60,4.83,43,Master,Auditory,Music,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,الموسيقى
+U088,C032,2023-11-01,0.6541327370278737,In Progress,0.1784506740983747,72,3.18,41,PhD,Kinesthetic,Math,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,حركي,الرياضيات
+U196,C032,2023-10-21,0.88912792394001,In Progress,0.0795881473720424,80,3.5,23,Bachelor,Reading,AI,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U140,C028,2023-03-05,0.5788067545119405,Not Started,0.9403970339455442,68,4.68,46,PhD,Kinesthetic,Art,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,حركي,الفن
+U187,C013,2023-11-21,0.6323913243283874,Completed,0.2606663825621017,76,3.4,40,Master,Visual,History,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,بصري,التاريخ
+U037,C031,2023-06-25,0.1564767160036005,In Progress,0.8533464976087238,80,4.0,56,PhD,Visual,History,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,بصري,التاريخ
+U061,C014,2023-04-26,0.4739212201161027,Completed,0.8634914504628183,90,2.8,43,Bachelor,Auditory,History,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,سمعي,التاريخ
+U171,C020,2023-07-23,0.716397111958099,In Progress,0.7725225917625445,81,2.64,59,High School,Kinesthetic,History,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,حركي,التاريخ
+U124,C018,2023-11-17,0.2709426983163654,Completed,0.16883360665257,71,3.53,44,PhD,Auditory,AI,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,سمعي,الذكاء الاصطناعي
+U198,C029,2023-01-31,0.2022541805245349,In Progress,0.8218014592542003,65,3.95,21,Master,Reading,AI,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,قرائي,الذكاء الاصطناعي
+U039,C006,2023-04-23,0.3138268082244155,Not Started,0.7692505592415867,75,3.48,21,Bachelor,Reading,Art,Course 6,Data Science,Beginner,Text,المقرر 6,علم البيانات,مبتدئ,نص,قرائي,الفن
+U184,C032,2023-12-31,0.2415006279928334,Not Started,0.5967229901062171,85,3.94,19,High School,Reading,Music,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,الموسيقى
+U063,C029,2023-11-21,0.2149126370363958,Completed,0.3372020351689527,64,3.79,27,PhD,Auditory,Art,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,سمعي,الفن
+U046,C043,2023-12-10,0.4248508428680869,In Progress,0.2625086042665441,68,4.21,45,Bachelor,Kinesthetic,Art,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,حركي,الفن
+U088,C002,2023-03-08,0.907838513883534,In Progress,0.1218892120803589,73,4.12,41,PhD,Kinesthetic,Math,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,حركي,الرياضيات
+U011,C023,2023-03-16,0.5070596467387183,Completed,0.5097570669008714,89,3.56,41,PhD,Auditory,History,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,سمعي,التاريخ
+U062,C019,2023-02-14,0.187920380815323,In Progress,0.5852608755098465,85,3.56,51,High School,Auditory,AI,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,سمعي,الذكاء الاصطناعي
+U077,C031,2023-09-17,0.076971669380874,Completed,0.3593389905157872,88,2.85,42,Master,Reading,AI,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,قرائي,الذكاء الاصطناعي
+U153,C005,2023-06-03,0.6961561451379252,In Progress,0.4753590676808685,78,3.78,47,High School,Visual,Music,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,بصري,الموسيقى
+U199,C019,2023-06-04,0.3827987644363878,Completed,0.3635144573692667,67,3.97,28,PhD,Kinesthetic,Art,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,حركي,الفن
+U052,C034,2023-12-29,0.8218309465853593,In Progress,0.6410060573207013,86,4.578990283325204,53,Master,Kinesthetic,AI,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U004,C010,2023-08-22,0.6595107686407702,Completed,0.9012592077965632,82,3.69,25,High School,Kinesthetic,History,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,حركي,التاريخ
+U059,C025,2023-02-20,0.7962414505413685,In Progress,0.1639202620469448,94,3.31,46,PhD,Visual,Music,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,بصري,الموسيقى
+U072,C002,2023-11-02,0.2719460394184487,Not Started,0.3814088099031234,90,4.3,38,High School,Visual,AI,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,الذكاء الاصطناعي
+U148,C011,2023-09-19,0.6923589224610581,In Progress,0.1408686039508613,94,2.69,59,Master,Visual,Music,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,بصري,الموسيقى
+U093,C050,2023-11-11,0.2640619846937188,Completed,0.624943770407832,91,4.79,52,Master,Visual,History,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,التاريخ
+U063,C031,2023-05-05,0.9390684794502916,Not Started,0.7288705094885958,64,2.55,27,PhD,Auditory,Art,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,سمعي,الفن
+U054,C015,2023-09-02,0.6363742815333744,In Progress,0.931912732597456,75,4.91,21,PhD,Kinesthetic,AI,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U117,C009,2023-01-30,0.3245118001753421,Not Started,0.2788719262609649,87,2.481965748238057,31,PhD,Auditory,History,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,سمعي,التاريخ
+U110,C023,2023-05-02,0.2695118622922726,In Progress,0.9502112058654302,76,3.66,57,PhD,Auditory,Math,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,سمعي,الرياضيات
+U074,C019,2023-05-05,0.1909265850716435,Not Started,0.0632626718206748,91,3.53,35,Master,Reading,Art,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,قرائي,الفن
+U107,C009,2023-02-06,0.6946409588937278,Completed,0.6030138633645882,91,3.14,41,PhD,Visual,Art,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,بصري,الفن
+U057,C035,2023-06-19,0.2187156129979273,In Progress,0.0571327193433299,79,2.53,59,High School,Kinesthetic,Data Science,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,حركي,علم البيانات
+U169,C021,2023-05-04,0.5953032659274891,In Progress,0.8937741877619448,61,3.19,54,Master,Auditory,Music,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,الموسيقى
+U003,C009,2023-12-23,0.2646350269253573,Completed,0.5298090570700541,79,2.77,32,PhD,Reading,Math,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,قرائي,الرياضيات
+U120,C028,2023-02-04,0.6619689447938686,Not Started,0.6693483507627961,77,4.15,22,PhD,Kinesthetic,Music,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,حركي,الموسيقى
+U006,C046,2023-03-28,0.8149397285405392,Completed,0.8315739259104525,60,3.3,56,Bachelor,Kinesthetic,AI,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,حركي,الذكاء الاصطناعي
+U005,C007,2023-05-14,0.7780252431446532,Completed,0.1503106224839687,88,4.42,38,PhD,Auditory,AI,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,سمعي,الذكاء الاصطناعي
+U005,C016,2023-07-15,0.7608513309307817,Not Started,0.0385915619381338,88,3.02,38,PhD,Auditory,AI,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,سمعي,الذكاء الاصطناعي
+U054,C016,2023-10-01,0.187722405692252,Completed,0.8788811459128522,78,4.75,21,PhD,Kinesthetic,AI,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,حركي,الذكاء الاصطناعي
+U047,C033,2023-07-20,0.0883849469845187,In Progress,0.3149332274589325,65,3.81,24,Master,Reading,Art,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,قرائي,الفن
+U177,C004,2023-10-12,0.6989488284873856,In Progress,0.1289789079271652,67,2.79,58,High School,Auditory,Music,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,سمعي,الموسيقى
+U009,C004,2023-03-18,0.3683472137943513,In Progress,0.4684612370870865,83,3.5,28,Master,Kinesthetic,Math,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,حركي,الرياضيات
+U099,C039,2023-02-28,0.4323462264033473,Completed,0.5983060756960188,79,3.02,45,High School,Visual,Art,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,بصري,الفن
+U020,C040,2023-05-06,0.031149092793391,In Progress,0.0309706034225101,73,3.0,55,Master,Kinesthetic,History,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,حركي,التاريخ
+U122,C017,2023-04-19,0.2595764492750492,In Progress,0.2748956582570877,66,3.9734115822800495,31,Master,Reading,Art,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,قرائي,الفن
+U122,C017,2023-04-19,0.2595764492750492,In Progress,0.2748956582570877,86,3.4152123153750136,31,Master,Reading,Art,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,قرائي,الفن
+U061,C037,2023-08-12,0.033676403874464,In Progress,0.032799874276896,64,3.77,43,Bachelor,Auditory,History,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,سمعي,التاريخ
+U123,C039,2023-10-05,0.8791857726012476,In Progress,0.4203353891954989,93,4.18,56,High School,Auditory,Data Science,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U163,C029,2023-03-09,0.2433966832185304,In Progress,0.8951000290662443,75,4.78,20,PhD,Reading,Art,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,قرائي,الفن
+U178,C036,2023-03-10,0.557337169573008,In Progress,0.9826524114935692,66,3.76,29,Master,Reading,Data Science,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,قرائي,علم البيانات
+U082,C038,2023-06-14,0.0389793206611304,Completed,0.6370475535036275,75,4.91,42,High School,Auditory,Math,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U062,C039,2023-11-01,0.6668473913056581,In Progress,0.1616376937845918,66,4.85,51,High School,Auditory,AI,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,سمعي,الذكاء الاصطناعي
+U145,C050,2023-06-11,0.3230273457540938,In Progress,0.9058493899993058,86,4.66,39,Bachelor,Visual,Math,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,الرياضيات
+U003,C037,2023-12-31,0.8979191869576658,Not Started,0.5162478232000605,73,3.75,32,PhD,Reading,Math,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,قرائي,الرياضيات
+U160,C035,2023-12-08,0.8881181889340358,Completed,0.1537493121029181,73,2.85,44,PhD,Reading,Data Science,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,قرائي,علم البيانات
+U013,C007,2023-11-05,0.3252906183617478,Completed,0.9217266694516614,92,3.04,57,High School,Visual,AI,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,بصري,الذكاء الاصطناعي
+U120,C027,2023-12-09,0.900960895690468,Completed,0.757469050723103,92,4.12,22,PhD,Kinesthetic,Music,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الموسيقى
+U125,C028,2023-02-11,0.9961576734987788,Completed,0.7317052727231516,79,3.55,26,High School,Reading,Data Science,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,قرائي,علم البيانات
+U089,C022,2023-12-20,0.8254156641239481,In Progress,0.7091807037944047,95,2.87,28,Bachelor,Kinesthetic,Data Science,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,حركي,علم البيانات
+U073,C014,2023-04-19,0.844871347755229,In Progress,0.2003398210964423,66,3.7,33,Master,Visual,Music,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,بصري,الموسيقى
+U068,C007,2023-02-20,0.2490087361090899,Not Started,0.211006691707526,91,2.54,25,PhD,Kinesthetic,AI,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,حركي,الذكاء الاصطناعي
+U142,C037,2023-09-07,0.5767023988577563,Not Started,0.688292998427255,62,4.33,30,Master,Auditory,History,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,سمعي,التاريخ
+U101,C022,2023-12-07,0.0672559139673678,Completed,0.2197227501103968,88,2.68,26,PhD,Kinesthetic,Art,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,حركي,الفن
+U098,C005,2023-01-21,0.0949179368216697,Not Started,0.4386716968030488,83,4.07,58,High School,Kinesthetic,History,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,حركي,التاريخ
+U011,C002,2023-10-27,0.9988926120332906,Not Started,0.7820018255939414,81,4.48,41,PhD,Auditory,History,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,سمعي,التاريخ
+U105,C027,2023-05-19,0.3266392494259109,Completed,0.783952518097841,65,2.83,50,Bachelor,Kinesthetic,Music,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الموسيقى
+U184,C021,2023-12-25,0.7481839120488464,Completed,0.4532617725258596,83,3.8,19,High School,Reading,Music,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الموسيقى
+U067,C038,2023-11-20,0.8066650530268165,Not Started,0.7921899382752451,82,4.45,32,High School,Auditory,Music,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,سمعي,الموسيقى
+U123,C015,2023-04-02,0.8580232710072292,In Progress,0.8386217961980568,69,3.15,56,High School,Auditory,Data Science,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,علم البيانات
+U029,C021,2023-10-07,0.9976282974021564,Not Started,0.6547757512842602,75,2.91,45,Master,Visual,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,الفن
+U137,C010,2023-05-05,0.2414964852568678,Not Started,0.2284258523084201,55,3.2506216916109696,40,High School,Auditory,History,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,سمعي,التاريخ
+U195,C023,2023-04-21,0.0403508268596997,In Progress,0.2740117803855475,70,3.34,49,Master,Visual,AI,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,بصري,الذكاء الاصطناعي
+U153,C039,2023-12-20,0.411191517994586,In Progress,0.3148411554087353,91,3.89,47,High School,Visual,Music,Course 39,Math,Beginner,Quiz,المقرر 39,الرياضيات,مبتدئ,اختبار قصير,بصري,الموسيقى
+U076,C005,2023-05-19,0.1300806698289469,Completed,0.116804107733952,65,3.94,43,PhD,Reading,Math,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,قرائي,الرياضيات
+U170,C001,2023-09-30,0.0224258891620551,Completed,0.2731596203699451,83,2.83,50,PhD,Visual,AI,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,بصري,الذكاء الاصطناعي
+U009,C013,2023-04-09,0.3604268271414861,Not Started,0.2095192243125321,92,3.64,28,Master,Kinesthetic,Math,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,حركي,الرياضيات
+U040,C021,2023-09-09,0.7837382510752364,In Progress,0.4553287498086021,71,3.17,42,PhD,Auditory,Data Science,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U025,C026,2023-12-04,0.5661806912250709,Completed,0.9084375478722648,86,4.61,39,Master,Kinesthetic,Data Science,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,حركي,علم البيانات
+U005,C050,2023-04-14,0.312777989210354,Not Started,0.104480316753958,77,3.28,38,PhD,Auditory,AI,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,سمعي,الذكاء الاصطناعي
+U139,C045,2023-08-02,0.6543420054927197,In Progress,0.7202679239473956,72,4.6,32,Bachelor,Kinesthetic,AI,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,حركي,الذكاء الاصطناعي
+U187,C021,2023-09-06,0.2320181803088107,Not Started,0.6872830044131277,51,1.0512865980424233,40,Master,Visual,History,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,التاريخ
+U124,C018,2023-06-01,0.014381446072085,Completed,0.0957541986633576,89,3.57,44,PhD,Auditory,AI,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,سمعي,الذكاء الاصطناعي
+U038,C037,2023-09-07,0.7643533864364274,Completed,0.9225724049058,72,4.32,35,Master,Reading,Data Science,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,قرائي,علم البيانات
+U072,C045,2023-10-02,0.6237430848640091,In Progress,0.5684722021568196,64,1.2189799290383805,38,High School,Visual,AI,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,بصري,الذكاء الاصطناعي
+U133,C032,2023-06-14,0.76230262450096,Not Started,0.3637255211356842,93,3.78,49,Bachelor,Kinesthetic,Math,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,حركي,الرياضيات
+U176,C036,2023-12-07,0.0389380166876656,In Progress,0.7565385834953067,95,4.05,41,Bachelor,Reading,Art,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,قرائي,الفن
+U090,C017,2023-01-08,0.8371196278306522,Completed,0.257365458401634,89,3.49,34,PhD,Reading,Art,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,قرائي,الفن
+U146,C035,2023-10-11,0.6195262000363033,Completed,0.6935098370463204,84,4.42,45,High School,Auditory,Art,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,سمعي,الفن
+U198,C049,2023-01-05,0.5633953507126401,Not Started,0.0397112075722472,61,3.56,21,Master,Reading,AI,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U037,C011,2023-05-25,0.6246140481145316,Not Started,0.839408037609272,95,3.64,56,PhD,Visual,History,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,بصري,التاريخ
+U060,C021,2023-04-11,0.8644332468683641,Not Started,0.4481708470213185,77,3.79,35,High School,Auditory,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,الفن
+U176,C026,2023-06-13,0.5869365065589071,In Progress,0.6366929143579417,64,4.58,41,Bachelor,Reading,Art,Course 26,AI,Advanced,Text,المقرر 26,الذكاء الاصطناعي,متقدم,نص,قرائي,الفن
+U028,C004,2023-05-27,0.5809503798881793,Not Started,0.2212378198066836,62,4.047737502972389,59,Master,Reading,Data Science,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,قرائي,علم البيانات
+U197,C034,2023-03-05,0.9906791570657658,Not Started,0.677073712658448,78,4.15,49,Bachelor,Reading,Music,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,قرائي,الموسيقى
+U081,C048,2023-04-01,0.756730167068568,Completed,0.7722402758932766,77,3.37,18,PhD,Reading,AI,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U114,C018,2023-04-27,0.4422938054511353,Completed,0.4732131868843987,91,4.18,18,Bachelor,Reading,AI,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,قرائي,الذكاء الاصطناعي
+U040,C040,2023-12-20,0.7073970000329277,Not Started,0.6177269240617943,80,4.11,42,PhD,Auditory,Data Science,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,سمعي,علم البيانات
+U045,C035,2023-09-24,0.3892304716917885,Not Started,0.4563259238223985,69,4.83,37,High School,Kinesthetic,AI,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,حركي,الذكاء الاصطناعي
+U062,C041,2023-11-06,0.228875462483499,Completed,0.8940913692578455,81,4.6,51,High School,Auditory,AI,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,سمعي,الذكاء الاصطناعي
+U093,C029,2023-06-22,0.5968518768877594,Not Started,0.4978691805143191,72,4.12,52,Master,Visual,History,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,بصري,التاريخ
+U115,C029,2023-02-16,0.9281820981139516,In Progress,0.8418087090288189,76,3.35,52,High School,Visual,Data Science,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,بصري,علم البيانات
+U186,C038,2023-05-20,0.9291395200154628,In Progress,0.8013520582702486,68,4.45,45,PhD,Reading,Math,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,قرائي,الرياضيات
+U067,C042,2023-09-03,0.3419052781054903,In Progress,0.4105048213483565,83,3.94,32,High School,Auditory,Music,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,سمعي,الموسيقى
+U056,C021,2023-05-29,0.527677466221695,Not Started,0.230084491857475,73,4.96,23,PhD,Auditory,History,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,التاريخ
+U040,C042,2023-09-03,0.2116358985698612,Completed,0.406082132559771,67,3.12,42,PhD,Auditory,Data Science,Course 42,Data Science,Intermediate,Video,المقرر 42,علم البيانات,متوسط,فيديو,سمعي,علم البيانات
+U098,C013,2023-01-05,0.9956311094988834,Not Started,0.8262173757752201,78,2.7,58,High School,Kinesthetic,History,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,حركي,التاريخ
+U040,C049,2023-07-03,0.9811179078679356,Not Started,0.2276325358193923,87,2.67,42,PhD,Auditory,Data Science,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,علم البيانات
+U091,C041,2023-01-20,0.6495089297074473,Completed,0.5244363458577493,89,4.1,25,PhD,Reading,Art,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,قرائي,الفن
+U033,C017,2023-02-15,0.8044140596774734,Completed,0.8060967479607475,66,4.85,54,PhD,Visual,Music,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,بصري,الموسيقى
+U006,C009,2023-01-12,0.7151001612837,Completed,0.3534774751283788,85,2.5,56,Bachelor,Kinesthetic,AI,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,حركي,الذكاء الاصطناعي
+U147,C041,2023-03-11,0.5931582190394682,In Progress,0.6422096370026974,70,4.31,19,PhD,Visual,History,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,بصري,التاريخ
+U080,C001,2023-01-17,0.0533479969888976,Not Started,0.2456315740488145,73,4.14,32,Bachelor,Kinesthetic,Art,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,حركي,الفن
+U168,C002,2023-05-27,0.454764342552661,Completed,0.1092794453681599,80,4.33,26,Bachelor,Auditory,History,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,سمعي,التاريخ
+U092,C048,2023-06-03,0.6747863021674105,Not Started,0.7943842250928563,67,3.39,52,Bachelor,Reading,Math,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,قرائي,الرياضيات
+U097,C029,2023-10-31,0.6775316138836847,In Progress,0.0989686234087068,62,4.55,56,Master,Auditory,Art,Course 29,History,Advanced,Quiz,المقرر 29,التاريخ,متقدم,اختبار قصير,سمعي,الفن
+U059,C033,2023-04-18,0.3731226184223836,In Progress,0.2713813950795846,87,2.61,46,PhD,Visual,Music,Course 33,Art,Beginner,Text,المقرر 33,الفن,مبتدئ,نص,بصري,الموسيقى
+U059,C010,2023-08-24,0.9416919866580306,Completed,0.8551094219974401,88,4.39,46,PhD,Visual,Music,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,بصري,الموسيقى
+U048,C050,2023-11-04,0.167357032236781,Completed,0.3464692870786672,82,3.17,25,Master,Auditory,AI,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,سمعي,الذكاء الاصطناعي
+U169,C040,2023-12-18,0.5003594462155606,Not Started,0.9730453495141612,77,3.69,54,Master,Auditory,Music,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,سمعي,الموسيقى
+U013,C021,2023-03-11,0.6908839765508228,Completed,0.9797343347738596,94,4.56,57,High School,Visual,AI,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,الذكاء الاصطناعي
+U107,C028,2023-07-02,0.6971358058918092,Not Started,0.2682760204535567,72,3.18,41,PhD,Visual,Art,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,بصري,الفن
+U045,C011,2023-09-07,0.6486389567688156,Completed,0.0409782222498904,56,4.742092091035429,37,High School,Kinesthetic,AI,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,حركي,الذكاء الاصطناعي
+U089,C034,2023-08-16,0.2752882134518601,Not Started,0.7050632842053791,71,2.96,28,Bachelor,Kinesthetic,Data Science,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,حركي,علم البيانات
+U181,C008,2023-04-12,0.1562065686866219,Not Started,0.4509865026483437,64,4.2,20,High School,Auditory,Art,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,سمعي,الفن
+U170,C022,2023-03-16,0.6359403268267109,Not Started,0.1007528439595762,70,3.83,50,PhD,Visual,AI,Course 22,History,Advanced,Quiz,المقرر 22,التاريخ,متقدم,اختبار قصير,بصري,الذكاء الاصطناعي
+U100,C008,2023-08-04,0.5993021161394377,Not Started,0.7075228189780428,70,3.79,24,Bachelor,Reading,AI,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,قرائي,الذكاء الاصطناعي
+U191,C049,2023-07-22,0.1793560102892409,In Progress,0.0311749091119212,90,3.14,18,PhD,Reading,Math,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,قرائي,الرياضيات
+U155,C015,2023-07-11,0.7051391455705633,Not Started,0.8701966904922421,90,2.59,45,Master,Auditory,Art,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,سمعي,الفن
+U166,C017,2023-09-06,0.4551719917336564,Completed,0.1386525291133037,72,3.53,25,Bachelor,Reading,Math,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,قرائي,الرياضيات
+U188,C023,2023-08-30,0.6677605916031529,In Progress,0.127311878746725,73,2.77,54,High School,Visual,Art,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,بصري,الفن
+U007,C024,2023-06-28,0.8373670797701507,In Progress,0.1756722979685845,84,4.76,36,Bachelor,Auditory,Art,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,سمعي,الفن
+U133,C045,2023-08-07,0.1697284285769231,Not Started,0.9602663584920664,92,2.6,49,Bachelor,Kinesthetic,Math,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,حركي,الرياضيات
+U045,C019,2023-03-23,0.0191448679968366,In Progress,0.693169360253846,85,1.033982314428838,37,High School,Kinesthetic,AI,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,حركي,الذكاء الاصطناعي
+U058,C005,2023-04-02,0.7791025863957868,Not Started,0.8013715354636367,92,3.58,21,PhD,Auditory,AI,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,سمعي,الذكاء الاصطناعي
+U031,C032,2023-06-24,0.6096974251526159,Completed,0.397634985732753,74,2.63,32,PhD,Auditory,Data Science,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,سمعي,علم البيانات
+U023,C044,2023-08-27,0.6996395696221217,Not Started,0.3363127275049555,75,2.74,50,Master,Kinesthetic,Art,Course 44,Music,Advanced,Video,المقرر 44,الموسيقى,متقدم,فيديو,حركي,الفن
+U170,C001,2023-09-17,0.8381549749886426,In Progress,0.2344840067831699,65,4.15,50,PhD,Visual,AI,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,بصري,الذكاء الاصطناعي
+U138,C023,2023-12-31,0.8028109348245005,Completed,0.4806480283124089,84,4.12,56,Master,Visual,AI,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,بصري,الذكاء الاصطناعي
+U160,C037,2023-06-12,0.9609201469288248,Not Started,0.5518287335341685,74,2.58,44,PhD,Reading,Data Science,Course 37,Music,Advanced,Quiz,المقرر 37,الموسيقى,متقدم,اختبار قصير,قرائي,علم البيانات
+U107,C008,2023-02-17,0.5359350788521182,Completed,0.6317748436527554,97,4.923044697555406,41,PhD,Visual,Art,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,الفن
+U181,C013,2023-11-25,0.4884956326599053,Completed,0.2571185039986945,63,2.5,20,High School,Auditory,Art,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,سمعي,الفن
+U158,C008,2023-11-24,0.4018871998907301,In Progress,0.9486540809029906,63,2.7,50,PhD,Visual,History,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,بصري,التاريخ
+U039,C023,2023-04-26,0.1536910428442045,Completed,0.1697584982071358,89,4.41,21,Bachelor,Reading,Art,Course 23,Math,Intermediate,Video,المقرر 23,الرياضيات,متوسط,فيديو,قرائي,الفن
+U159,C043,2023-12-03,0.5726072328820224,In Progress,0.9656531747664124,93,3.96,18,High School,Reading,Music,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,قرائي,الموسيقى
+U082,C001,2023-12-03,0.2770125243259788,Completed,0.0148561225075037,86,2.6,42,High School,Auditory,Math,Course 1,Music,Beginner,Quiz,المقرر 1,الموسيقى,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U100,C045,2023-08-13,0.9213075122129756,Not Started,0.4811256918168456,90,3.72,24,Bachelor,Reading,AI,Course 45,Data Science,Beginner,Quiz,المقرر 45,علم البيانات,مبتدئ,اختبار قصير,قرائي,الذكاء الاصطناعي
+U002,C024,2023-12-18,0.5831908042770976,Completed,0.3333678381165628,91,4.28,46,Bachelor,Auditory,Data Science,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,سمعي,علم البيانات
+U077,C035,2023-11-24,0.5928401805081102,Not Started,0.4491234139302508,68,4.67,42,Master,Reading,AI,Course 35,Math,Intermediate,Text,المقرر 35,الرياضيات,متوسط,نص,قرائي,الذكاء الاصطناعي
+U012,C024,2023-05-27,0.35492466087701,Not Started,0.570664578980789,67,4.84,53,PhD,Auditory,Math,Course 24,Music,Beginner,Video,المقرر 24,الموسيقى,مبتدئ,فيديو,سمعي,الرياضيات
+U039,C017,2023-03-04,0.0519893519777074,Completed,0.435589158012709,73,3.32,21,Bachelor,Reading,Art,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,قرائي,الفن
+U194,C005,2023-10-21,0.0317437653729886,Not Started,0.4148468503015949,92,2.84,43,Bachelor,Auditory,Data Science,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,سمعي,علم البيانات
+U013,C020,2023-11-19,0.4233351441531975,Completed,0.7327234154133065,82,3.09,57,High School,Visual,AI,Course 20,Art,Beginner,Quiz,المقرر 20,الفن,مبتدئ,اختبار قصير,بصري,الذكاء الاصطناعي
+U046,C021,2023-11-21,0.0845653780972378,Completed,0.6858762750864646,80,4.44,45,Bachelor,Kinesthetic,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الفن
+U155,C040,2023-01-13,0.6068469555401391,Not Started,0.8332712820358479,71,4.93,45,Master,Auditory,Art,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,سمعي,الفن
+U113,C031,2023-07-08,0.8809730056396574,Not Started,0.2499589812394955,61,3.67,52,High School,Visual,History,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,بصري,التاريخ
+U017,C046,2023-10-14,0.8829148165187222,In Progress,0.6095285097540636,72,3.26,19,Bachelor,Kinesthetic,History,Course 46,Math,Beginner,Text,المقرر 46,الرياضيات,مبتدئ,نص,حركي,التاريخ
+U104,C036,2023-07-27,0.6590454101322324,Not Started,0.5851947853928539,63,3.57,51,Bachelor,Auditory,Data Science,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,سمعي,علم البيانات
+U098,C011,2023-04-24,0.211231831472931,In Progress,0.3697378108726887,79,3.26,58,High School,Kinesthetic,History,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,حركي,التاريخ
+U188,C015,2023-01-22,0.8629968313588721,Not Started,0.4860575419026809,73,3.14,54,High School,Visual,Art,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,بصري,الفن
+U192,C019,2023-12-15,0.8860934353132082,Completed,0.3137821433057287,89,3.98,36,Bachelor,Reading,History,Course 19,History,Advanced,Quiz,المقرر 19,التاريخ,متقدم,اختبار قصير,قرائي,التاريخ
+U088,C007,2023-08-02,0.1966535849529587,Not Started,0.1418443976169852,88,2.54,41,PhD,Kinesthetic,Math,Course 7,Music,Intermediate,Text,المقرر 7,الموسيقى,متوسط,نص,حركي,الرياضيات
+U109,C028,2023-06-20,0.7374260857706773,Completed,0.2138012106627328,67,3.15,52,High School,Visual,Art,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,بصري,الفن
+U163,C043,2023-11-19,0.2865195489271229,Completed,0.105513646401201,71,4.15,20,PhD,Reading,Art,Course 43,Data Science,Beginner,Text,المقرر 43,علم البيانات,مبتدئ,نص,قرائي,الفن
+U070,C005,2023-02-23,0.8026403123529297,Completed,0.6830695751901241,85,2.58,40,Master,Kinesthetic,Music,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,حركي,الموسيقى
+U158,C005,2023-10-25,0.9972378999036028,In Progress,0.6607273931091515,61,2.71,50,PhD,Visual,History,Course 5,History,Advanced,Text,المقرر 5,التاريخ,متقدم,نص,بصري,التاريخ
+U199,C030,2023-11-16,0.0300260053293928,Not Started,0.9506063715798728,73,3.23,28,PhD,Kinesthetic,Art,Course 30,Art,Beginner,Text,المقرر 30,الفن,مبتدئ,نص,حركي,الفن
+U074,C032,2023-05-06,0.8973658657909319,Completed,0.7296784136472413,65,4.69,35,Master,Reading,Art,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,قرائي,الفن
+U063,C008,2023-10-04,0.622630533598658,Completed,0.0520458387561314,90,4.41,27,PhD,Auditory,Art,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,سمعي,الفن
+U156,C010,2023-07-23,0.9733826191648212,In Progress,0.8842451739289542,76,2.56,42,PhD,Auditory,Art,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,سمعي,الفن
+U060,C038,2023-07-13,0.4650095175264276,Not Started,0.8626751629457258,84,3.75,35,High School,Auditory,Art,Course 38,Data Science,Beginner,Quiz,المقرر 38,علم البيانات,مبتدئ,اختبار قصير,سمعي,الفن
+U079,C047,2023-06-18,0.8473879305713737,Not Started,0.4433203207726987,91,3.19,46,PhD,Visual,History,Course 47,Art,Intermediate,Quiz,المقرر 47,الفن,متوسط,اختبار قصير,بصري,التاريخ
+U037,C032,2023-06-01,0.0623940685982772,In Progress,0.5858630505279215,71,4.12,56,PhD,Visual,History,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,بصري,التاريخ
+U022,C048,2023-02-04,0.3352790500782957,In Progress,0.9760783324725189,72,4.3,38,PhD,Auditory,Data Science,Course 48,Art,Beginner,Text,المقرر 48,الفن,مبتدئ,نص,سمعي,علم البيانات
+U196,C028,2023-07-03,0.0670165377512099,Not Started,0.5323043638481663,78,4.66,23,Bachelor,Reading,AI,Course 28,Art,Intermediate,Quiz,المقرر 28,الفن,متوسط,اختبار قصير,قرائي,الذكاء الاصطناعي
+U148,C017,2023-10-13,0.9753431334790704,In Progress,0.9053218283760898,84,3.69,59,Master,Visual,Music,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,بصري,الموسيقى
+U096,C031,2023-02-26,0.8169739072718367,Not Started,0.0830387578101864,90,4.99,59,High School,Auditory,Math,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,سمعي,الرياضيات
+U068,C008,2023-08-10,0.8525474212459705,Not Started,0.1910518687086828,84,4.95,25,PhD,Kinesthetic,AI,Course 8,History,Advanced,Quiz,المقرر 8,التاريخ,متقدم,اختبار قصير,حركي,الذكاء الاصطناعي
+U192,C040,2023-10-30,0.9379652314338942,Completed,0.4407549434413178,75,4.71,36,Bachelor,Reading,History,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,قرائي,التاريخ
+U017,C025,2023-06-12,0.0851034861197853,Completed,0.5847568083373047,82,3.94,19,Bachelor,Kinesthetic,History,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,حركي,التاريخ
+U012,C009,2023-01-19,0.3855975925133333,Not Started,0.8162278518628002,73,3.5,53,PhD,Auditory,Math,Course 9,History,Beginner,Quiz,المقرر 9,التاريخ,مبتدئ,اختبار قصير,سمعي,الرياضيات
+U150,C002,2023-09-21,0.0710348890440021,Not Started,0.9882621151431868,65,3.41,45,High School,Reading,Data Science,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,قرائي,علم البيانات
+U145,C015,2023-10-09,0.2107931015500286,Not Started,0.3888514964741164,84,2.53,39,Bachelor,Visual,Math,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,بصري,الرياضيات
+U138,C050,2023-04-23,0.2293657770376723,Not Started,0.0474156361400849,82,3.12,56,Master,Visual,AI,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,الذكاء الاصطناعي
+U118,C003,2023-11-23,0.4691072110475787,Not Started,0.8011715032953248,71,4.3,20,PhD,Auditory,AI,Course 3,AI,Advanced,Text,المقرر 3,الذكاء الاصطناعي,متقدم,نص,سمعي,الذكاء الاصطناعي
+U193,C049,2023-01-30,0.2685621674536426,Not Started,0.6043807190828081,72,4.01,19,High School,Kinesthetic,AI,Course 49,AI,Beginner,Quiz,المقرر 49,الذكاء الاصطناعي,مبتدئ,اختبار قصير,حركي,الذكاء الاصطناعي
+U022,C036,2023-05-15,0.100978106817761,In Progress,0.1985428588682016,95,4.79,38,PhD,Auditory,Data Science,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,سمعي,علم البيانات
+U120,C004,2023-03-08,0.1674910890941077,Not Started,0.4948284566214201,93,2.63,22,PhD,Kinesthetic,Music,Course 4,Math,Beginner,Text,المقرر 4,الرياضيات,مبتدئ,نص,حركي,الموسيقى
+U050,C014,2023-03-06,0.1472755635520909,In Progress,0.7423102455337244,65,2.89,31,Bachelor,Reading,Data Science,Course 14,Data Science,Beginner,Text,المقرر 14,علم البيانات,مبتدئ,نص,قرائي,علم البيانات
+U014,C041,2023-10-19,0.9730767979122984,In Progress,0.7704117870686438,67,4.47,41,High School,Reading,AI,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,قرائي,الذكاء الاصطناعي
+U192,C041,2023-01-25,0.7592925069184736,Not Started,0.499618411998762,67,3.4,36,Bachelor,Reading,History,Course 41,AI,Beginner,Text,المقرر 41,الذكاء الاصطناعي,مبتدئ,نص,قرائي,التاريخ
+U175,C025,2023-02-06,0.967761465269562,Not Started,0.3052145301288591,92,2.8,49,High School,Visual,Music,Course 25,AI,Beginner,Text,المقرر 25,الذكاء الاصطناعي,مبتدئ,نص,بصري,الموسيقى
+U029,C050,2023-01-01,0.4397404865079085,In Progress,0.9737425820384936,93,4.99,45,Master,Visual,Art,Course 50,Music,Intermediate,Video,المقرر 50,الموسيقى,متوسط,فيديو,بصري,الفن
+U164,C010,2023-02-06,0.2783684816626566,In Progress,0.6633626109564928,74,4.47,56,Bachelor,Visual,AI,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,بصري,الذكاء الاصطناعي
+U180,C021,2023-05-21,0.7982931972091867,Not Started,0.4082375193462987,95,3.52,19,PhD,Auditory,Art,Course 21,AI,Beginner,Quiz,المقرر 21,الذكاء الاصطناعي,مبتدئ,اختبار قصير,سمعي,الفن
+U125,C036,2023-08-20,0.3262539180411468,Not Started,0.2804632242046524,94,4.56,26,High School,Reading,Data Science,Course 36,Art,Intermediate,Text,المقرر 36,الفن,متوسط,نص,قرائي,علم البيانات
+U007,C012,2023-05-16,0.2993833737053483,In Progress,0.7311029830035621,81,4.2,36,Bachelor,Auditory,Art,Course 12,History,Advanced,Text,المقرر 12,التاريخ,متقدم,نص,سمعي,الفن
+U029,C027,2023-07-07,0.2325059922078312,In Progress,0.2421834455937677,82,4.47,45,Master,Visual,Art,Course 27,AI,Beginner,Quiz,المقرر 27,الذكاء الاصطناعي,مبتدئ,اختبار قصير,بصري,الفن
+U139,C040,2023-05-08,0.1296789782242353,In Progress,0.1717099889736881,81,4.54,32,Bachelor,Kinesthetic,AI,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,حركي,الذكاء الاصطناعي
+U033,C002,2023-07-20,0.2564630610167659,Completed,0.5298338889620703,64,2.71,54,PhD,Visual,Music,Course 2,Math,Intermediate,Quiz,المقرر 2,الرياضيات,متوسط,اختبار قصير,بصري,الموسيقى
+U134,C013,2023-05-07,0.3553197484738877,In Progress,0.2899873926441418,57,3.3087467048932355,21,Bachelor,Reading,Art,Course 13,History,Beginner,Video,المقرر 13,التاريخ,مبتدئ,فيديو,قرائي,الفن
+U111,C032,2023-09-14,0.6739942081457304,Completed,0.628905144923615,90,4.06,39,High School,Kinesthetic,Math,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,حركي,الرياضيات
+U079,C031,2023-06-13,0.0625648422194515,Not Started,0.1179386748742334,73,2.466550800385826,46,PhD,Visual,History,Course 31,History,Advanced,Text,المقرر 31,التاريخ,متقدم,نص,بصري,التاريخ
+U160,C016,2023-02-04,0.2105069396653429,Not Started,0.6549411045673216,72,2.52,44,PhD,Reading,Data Science,Course 16,History,Intermediate,Quiz,المقرر 16,التاريخ,متوسط,اختبار قصير,قرائي,علم البيانات
+U179,C032,2023-07-13,0.8090236402916764,In Progress,0.2832965279977022,87,2.61,56,Master,Kinesthetic,History,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,حركي,التاريخ
+U058,C032,2023-07-10,0.1469219235837707,Not Started,0.0002429344345127,79,4.76,21,PhD,Auditory,AI,Course 32,Art,Beginner,Text,المقرر 32,الفن,مبتدئ,نص,سمعي,الذكاء الاصطناعي
+U026,C034,2023-04-14,0.3426451465225215,Not Started,0.1269360576741763,92,3.82,42,Bachelor,Auditory,Math,Course 34,Music,Beginner,Text,المقرر 34,الموسيقى,مبتدئ,نص,سمعي,الرياضيات
+U174,C011,2023-01-23,0.8646589218581401,Not Started,0.933615377835094,75,4.34,49,High School,Auditory,AI,Course 11,Data Science,Advanced,Video,المقرر 11,علم البيانات,متقدم,فيديو,سمعي,الذكاء الاصطناعي
+U029,C010,2023-09-22,0.1549253111434426,Not Started,0.8673546391153578,88,4.6,45,Master,Visual,Art,Course 10,Art,Intermediate,Text,المقرر 10,الفن,متوسط,نص,بصري,الفن
+U004,C015,2023-10-17,0.0827368356181899,Completed,0.2336090320362368,82,4.87,25,High School,Kinesthetic,History,Course 15,Data Science,Beginner,Text,المقرر 15,علم البيانات,مبتدئ,نص,حركي,التاريخ
+U099,C017,2023-09-17,0.4845379950800108,Completed,0.7783719045454912,65,4.719687052582659,45,High School,Visual,Art,Course 17,Data Science,Beginner,Video,المقرر 17,علم البيانات,مبتدئ,فيديو,بصري,الفن
+U141,C040,2023-12-24,0.3024195112785364,In Progress,0.6085715931739742,83,4.67,53,Master,Reading,History,Course 40,Art,Intermediate,Quiz,المقرر 40,الفن,متوسط,اختبار قصير,قرائي,التاريخ
+U039,C018,2023-03-16,0.5634083644838541,In Progress,0.9709047114498696,73,3.810518305751663,21,Bachelor,Reading,Art,Course 18,History,Advanced,Video,المقرر 18,التاريخ,متقدم,فيديو,قرائي,الفن

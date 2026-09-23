@@ -136,7 +136,7 @@ Rules:
 # Generate Personalized Plan
 # =========================
 
-def generate_learning_plan(student_profile):
+def generate_learning_plan(student_profile, language="en"):
 
     # Retrieve relevant resources
     resources = retrieve_resources(
@@ -152,29 +152,39 @@ def generate_learning_plan(student_profile):
     # Build retrieved context
     context = ""
 
+    suffix = "_ar" if language == "ar" else ""
+
     for i, resource in enumerate(resources, 1):
+        metadata = resource["metadata"]
+        content = (
+            resource.get("content_ar")
+            if language == "ar"
+            else resource.get("content_en")
+        )
+        if not content:
+            content = resource.get("content_en", "")
 
         context += f"""
 
 RESOURCE {i}
 
 Title:
-{resource["metadata"].get("title")}
+{metadata.get(f"title{suffix}")}
 
 Topic:
-{resource["metadata"].get("topic")}
+{metadata.get(f"topic{suffix}")}
 
 Difficulty:
-{resource["metadata"].get("difficulty")}
+{metadata.get(f"difficulty{suffix}")}
 
 Content Type:
-{resource["metadata"].get("content_type")}
+{metadata.get(f"content_type{suffix}")}
 
 Learning Style:
-{resource["metadata"].get("learning_style")}
+{metadata.get(f"learning_style{suffix}")}
 
 Resource Information:
-{resource["content"]}
+{content}
 
 """
 
@@ -239,6 +249,18 @@ Keep the language simple and practical.
 
 Only recommend resources that appear
 in the retrieved context.
+"""
+
+    if language == "ar":
+        prompt += """
+
+Write the entire learning plan in clear, simple Modern Standard Arabic.
+Use the Arabic resource names from the retrieved context.
+"""
+    else:
+        prompt += """
+
+Write the entire learning plan in clear, simple English.
 """
 
 
