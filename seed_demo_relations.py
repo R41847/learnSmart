@@ -10,6 +10,8 @@ from database import DATABASE_NAME, create_tables
 
 
 TEACHER_CODE = "Ms. Sara Hassan"
+SCHOOL_NAME = "Nile Future School"
+CLASS_NAME = "5A"
 STUDENT_NAMES = (
     "Ahmed Ali",
     "Omar Mohamed",
@@ -43,6 +45,24 @@ def seed_demo_relations():
         else:
             teacher_id = teacher["id"]
 
+        school = conn.execute(
+            "SELECT id FROM schools WHERE name = ?",
+            (SCHOOL_NAME,),
+        ).fetchone()
+        if school is None:
+            cursor = conn.execute(
+                "INSERT INTO schools (name) VALUES (?)",
+                (SCHOOL_NAME,),
+            )
+            school_id = cursor.lastrowid
+        else:
+            school_id = school["id"]
+
+        conn.execute(
+            "UPDATE teachers SET school_id = ? WHERE id = ?",
+            (school_id, teacher_id),
+        )
+
         students = conn.execute(
             """
             SELECT id
@@ -64,10 +84,21 @@ def seed_demo_relations():
                 UPDATE students
                 SET student_name = ?,
                     teacher_name = ?,
-                    teacher_id = ?
+                    teacher_id = ?,
+                    class_name = ?,
+                    school_name = ?,
+                    school_id = ?
                 WHERE id = ?
                 """,
-                (student_name, TEACHER_CODE, teacher_id, student["id"]),
+                (
+                    student_name,
+                    TEACHER_CODE,
+                    teacher_id,
+                    CLASS_NAME,
+                    SCHOOL_NAME,
+                    school_id,
+                    student["id"],
+                ),
             )
 
         parent = conn.execute(
@@ -101,6 +132,7 @@ def seed_demo_relations():
 
     print("Demo relational seed complete:")
     print(f"  Teacher: {TEACHER_CODE} (teachers.id={teacher_id})")
+    print(f"  School: {SCHOOL_NAME}")
     print("  Students:")
     for student_name in STUDENT_NAMES:
         print(f"    - {student_name}")

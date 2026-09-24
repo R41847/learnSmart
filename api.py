@@ -9,6 +9,8 @@ from database import (
     authenticate_user,
     create_tables,
     create_user,
+    get_student_profile,
+    get_students_by_parent_email,
     get_students_by_teacher,
 )
 
@@ -67,6 +69,25 @@ class TeacherStudentResponse(BaseModel):
 class TeacherStudentsResponse(BaseModel):
     teacher_name: str
     students: list[TeacherStudentResponse]
+
+
+class StudentProfileResponse(BaseModel):
+    name: str
+    class_name: str | None = None
+    school_name: str | None = None
+    teacher_name: str | None = None
+    overall_score: float | None = None
+    attendance_percentage: float | None = None
+    study_hours_per_day: float | None = None
+    assignment_score: float | None = None
+    final_exam_score: float | None = None
+    midterm_score: float | None = None
+    participation_score: float | None = None
+
+
+class ParentChildrenResponse(BaseModel):
+    parent_email: str
+    children: list[StudentProfileResponse]
 
 
 @app.get("/health")
@@ -135,6 +156,60 @@ def teacher_students(teacher_name: str):
                 "overall_score": record["overall_score"],
                 "attendance_percentage": record["attendance_percentage"],
                 "performance_level": record["performance_level"],
+            }
+            for record in records
+        ],
+    }
+
+
+@app.get(
+    "/student/{student_name}/profile",
+    response_model=StudentProfileResponse,
+)
+def student_profile(student_name: str):
+    record = get_student_profile(student_name)
+    if record is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Student '{student_name}' was not found",
+        )
+
+    return {
+        "name": record["student_name"],
+        "class_name": record["class_name"],
+        "school_name": record["school_name"],
+        "teacher_name": record["teacher_name"],
+        "overall_score": record["overall_score"],
+        "attendance_percentage": record["attendance_percentage"],
+        "study_hours_per_day": record["study_hours_per_day"],
+        "assignment_score": record["assignment_score"],
+        "final_exam_score": record["final_exam_score"],
+        "midterm_score": record["midterm_score"],
+        "participation_score": record["participation_score"],
+    }
+
+
+@app.get(
+    "/parent/{parent_email}/children",
+    response_model=ParentChildrenResponse,
+)
+def parent_children(parent_email: str):
+    records = get_students_by_parent_email(parent_email)
+    return {
+        "parent_email": parent_email,
+        "children": [
+            {
+                "name": record["student_name"],
+                "class_name": record["class_name"],
+                "school_name": record["school_name"],
+                "teacher_name": record["teacher_name"],
+                "overall_score": record["overall_score"],
+                "attendance_percentage": record["attendance_percentage"],
+                "study_hours_per_day": record["study_hours_per_day"],
+                "assignment_score": record["assignment_score"],
+                "final_exam_score": record["final_exam_score"],
+                "midterm_score": record["midterm_score"],
+                "participation_score": record["participation_score"],
             }
             for record in records
         ],

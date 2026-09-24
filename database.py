@@ -169,7 +169,7 @@ def get_student_records(user_id, role, name):
             SELECT
                 s.student_name,
                 s.class_name,
-                s.school_name,
+                COALESCE(s.school_name, school.name) AS school_name,
                 s.teacher_name,
                 COALESCE(
                     (
@@ -187,6 +187,8 @@ def get_student_records(user_id, role, name):
                 h.study_hours_per_day,
                 COALESCE(h.performance_level, 'At Risk') AS performance_level
             FROM students s
+            LEFT JOIN schools school
+                ON school.id = s.school_id
             LEFT JOIN student_history h
                 ON h.id = (
                     SELECT latest.id
@@ -221,6 +223,65 @@ def get_student_records(user_id, role, name):
 def get_students_by_teacher(teacher_name):
     """Return dashboard-ready students assigned to a teacher by name."""
     return get_student_records(None, "teacher", teacher_name)
+
+
+def get_students_by_parent_email(parent_email):
+    """Return profile-ready students linked to a parent email."""
+    conn = get_connection()
+    try:
+        rows = conn.execute(
+            """
+            SELECT
+                s.student_name,
+                s.class_name,
+                COALESCE(s.school_name, school.name) AS school_name,
+                s.teacher_name,
+                h.overall_score,
+                h.attendance_percentage,
+                h.study_hours_per_day,
+                h.assignment_score,
+                h.midterm_score,
+                h.final_exam_score,
+                h.participation_score
+            FROM parent_student ps
+            JOIN parents p
+                ON p.id = ps.parent_id
+            JOIN users u
+                ON u.id = p.user_id
+            JOIN students s
+                ON s.id = ps.student_id
+            LEFT JOIN schools school
+                ON school.id = s.school_id
+            LEFT JOIN student_history h
+                ON h.id = (
+                    SELECT latest.id
+                    FROM student_history latest
+                    WHERE latest.student_id = s.id
+                    ORDER BY latest.date DESC, latest.id DESC
+                    LIMIT 1
+                )
+            WHERE lower(trim(u.email)) = lower(trim(?))
+            ORDER BY s.student_name
+            """,
+            (parent_email,),
+        ).fetchall()
+    finally:
+        conn.close()
+
+    columns = [
+        "student_name",
+        "class_name",
+        "school_name",
+        "teacher_name",
+        "overall_score",
+        "attendance_percentage",
+        "study_hours_per_day",
+        "assignment_score",
+        "midterm_score",
+        "final_exam_score",
+        "participation_score",
+    ]
+    return [dict(zip(columns, row)) for row in rows]
 
 
 def get_student_performance_trend(student_name=None, student_id=None):
@@ -328,7 +389,7 @@ def get_student_profile(student_name):
             SELECT
                 s.student_name,
                 s.class_name,
-                s.school_name,
+                COALESCE(s.school_name, school.name) AS school_name,
                 s.teacher_name,
                 h.overall_score,
                 h.grade,
@@ -341,6 +402,8 @@ def get_student_profile(student_name):
                 h.participation_score,
                 h.sleep_hours
             FROM students s
+            LEFT JOIN schools school
+                ON school.id = s.school_id
             LEFT JOIN student_history h
                 ON h.id = (
                     SELECT latest.id
