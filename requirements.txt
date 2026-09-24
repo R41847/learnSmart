@@ -1,0 +1,10 @@
+fastapi==0.141.1
+uvicorn==0.53.0
+pydantic==2.13.5
+pandas==3.0.6
+joblib==1.6.0
+streamlit==1.64.0
+gTTS==2.5.4
+chromadb==1.5.9
+sentence-transformers==6.1.0
+google-genai==2.25.0
