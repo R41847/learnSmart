@@ -18,6 +18,7 @@ from database import (
     get_assignment,
     get_assignment_questions,
     get_assignment_submission,
+    get_connection,
     get_student_profile,
     list_assignments_by_teacher,
     list_assignments_for_student,
@@ -188,6 +189,13 @@ class AssignmentSubmissionResponse(BaseModel):
     submitted_at: str
 
 
+class DemoSetupResponse(BaseModel):
+    success: bool
+    migration: str
+    seed: str
+    accounts: dict[str, str]
+
+
 def _generate_learning_plan(student_profile, language):
     """Load the RAG pipeline lazily and run its synchronous Gemini call."""
     rag_path = str(Path(__file__).resolve().parent / "Rag")
@@ -207,6 +215,23 @@ def _grade_assignment(title, questions, answers):
     from genai import grade_assignment
 
     return grade_assignment(title, questions, answers)
+
+
+def _ensure_demo_account(name, email, role, password):
+    conn = get_connection()
+    try:
+        existing = conn.execute(
+            "SELECT id FROM users WHERE lower(email) = lower(?)",
+            (email,),
+        ).fetchone()
+    finally:
+        conn.close()
+
+    if existing is not None:
+        return "skipped"
+
+    create_user(name, email, password, role)
+    return "created"
 
 
 @app.get("/health")
@@ -469,6 +494,78 @@ async def generate_plan(request: LearningPlanRequest):
         )
 
     return {"success": True, "plan": plan}
+
+
+@app.post("/admin/setup-demo-data", response_model=DemoSetupResponse)
+def setup_demo_data():
+    try:
+        create_tables()
+        conn = get_connection()
+        try:
+            student_count = conn.execute(
+                "SELECT COUNT(*) FROM students"
+            ).fetchone()[0]
+        finally:
+            conn.close()
+
+        if student_count:
+            migration_status = "skipped (student data already exists)"
+        else:
+            from migrate_data import migrate
+
+            migrate()
+            migration_status = "completed"
+
+        # The seed links the existing parent account, so ensure that account
+        # exists before running it on a fresh database.
+        account_status = {
+            "parent": _ensure_demo_account(
+                "Ahmed",
+                "ahmed123@gmail.com",
+                "parent",
+                "123456",
+            ),
+        }
+
+        from seed_demo_relations import seed_demo_relations
+
+        seed_demo_relations()
+        seed_status = "completed"
+
+        account_status.update(
+            {
+                "teacher": _ensure_demo_account(
+                    "Ms. Sara Hassan",
+                    "SaraHassan1@gmail.com",
+                    "teacher",
+                    "123456",
+                ),
+                "student": _ensure_demo_account(
+                    "Ahmed Ali",
+                    "AhmedAli1@gmail.com",
+                    "student",
+                    "123456",
+                ),
+                "school_admin": _ensure_demo_account(
+                    "Nile Future School",
+                    "NileFuture@gmail.com",
+                    "admin",
+                    "123456",
+                ),
+            }
+        )
+    except (OSError, RuntimeError, sqlite3.Error, ValueError) as error:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Demo data setup failed: {error}",
+        ) from error
+
+    return {
+        "success": True,
+        "migration": migration_status,
+        "seed": seed_status,
+        "accounts": account_status,
+    }
 
 
 @app.post("/assignments/create")

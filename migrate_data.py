@@ -1,8 +1,9 @@
 import pandas as pd
+from pathlib import Path
 from database import get_connection, create_tables
 
 
-CSV_FILE = "student_performance_data (1).csv"
+CSV_FILE = Path(__file__).resolve().parent / "student_performance_data (1).csv"
 
 
 def assign_performance_level(grade):
