@@ -284,6 +284,52 @@ def get_students_by_parent_email(parent_email):
     return [dict(zip(columns, row)) for row in rows]
 
 
+def get_students_by_school(school_name):
+    """Return dashboard-ready students belonging to a school."""
+    conn = get_connection()
+    try:
+        rows = conn.execute(
+            """
+            SELECT
+                s.student_name,
+                s.class_name,
+                COALESCE(s.school_name, school.name) AS school_name,
+                s.teacher_name,
+                h.overall_score,
+                h.attendance_percentage,
+                COALESCE(h.performance_level, 'At Risk') AS performance_level
+            FROM students s
+            LEFT JOIN schools school
+                ON school.id = s.school_id
+            LEFT JOIN student_history h
+                ON h.id = (
+                    SELECT latest.id
+                    FROM student_history latest
+                    WHERE latest.student_id = s.id
+                    ORDER BY latest.date DESC, latest.id DESC
+                    LIMIT 1
+                )
+            WHERE lower(trim(COALESCE(s.school_name, school.name))) =
+                  lower(trim(?))
+            ORDER BY s.student_name
+            """,
+            (school_name,),
+        ).fetchall()
+    finally:
+        conn.close()
+
+    columns = [
+        "student_name",
+        "class_name",
+        "school_name",
+        "teacher_name",
+        "overall_score",
+        "attendance_percentage",
+        "performance_level",
+    ]
+    return [dict(zip(columns, row)) for row in rows]
+
+
 def get_student_performance_trend(student_name=None, student_id=None):
     """Combine history and assignment scores into a simple performance trend."""
     conn = get_connection()

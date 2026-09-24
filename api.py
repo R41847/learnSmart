@@ -11,6 +11,7 @@ from database import (
     create_user,
     get_student_profile,
     get_students_by_parent_email,
+    get_students_by_school,
     get_students_by_teacher,
 )
 
@@ -88,6 +89,28 @@ class StudentProfileResponse(BaseModel):
 class ParentChildrenResponse(BaseModel):
     parent_email: str
     children: list[StudentProfileResponse]
+
+
+class AdminStudentResponse(BaseModel):
+    name: str
+    class_name: str | None = None
+    overall_score: float | None = None
+    attendance_percentage: float | None = None
+    performance_level: str | None = None
+    teacher_name: str | None = None
+
+
+class ClassSummaryResponse(BaseModel):
+    class_name: str | None = None
+    student_count: int
+    average_score: float | None = None
+    average_attendance: float | None = None
+
+
+class AdminStudentsResponse(BaseModel):
+    school_name: str
+    students: list[AdminStudentResponse]
+    classes: list[ClassSummaryResponse]
 
 
 @app.get("/health")
@@ -213,4 +236,64 @@ def parent_children(parent_email: str):
             }
             for record in records
         ],
+    }
+
+
+@app.get(
+    "/admin/{school_name}/students",
+    response_model=AdminStudentsResponse,
+)
+def admin_students(school_name: str):
+    records = get_students_by_school(school_name)
+    class_records = {}
+
+    for record in records:
+        class_name = record["class_name"]
+        summary = class_records.setdefault(
+            class_name,
+            {
+                "class_name": class_name,
+                "student_count": 0,
+                "scores": [],
+                "attendance": [],
+            },
+        )
+        summary["student_count"] += 1
+        if record["overall_score"] is not None:
+            summary["scores"].append(record["overall_score"])
+        if record["attendance_percentage"] is not None:
+            summary["attendance"].append(record["attendance_percentage"])
+
+    classes = [
+        {
+            "class_name": summary["class_name"],
+            "student_count": summary["student_count"],
+            "average_score": (
+                sum(summary["scores"]) / len(summary["scores"])
+                if summary["scores"]
+                else None
+            ),
+            "average_attendance": (
+                sum(summary["attendance"]) / len(summary["attendance"])
+                if summary["attendance"]
+                else None
+            ),
+        }
+        for summary in class_records.values()
+    ]
+
+    return {
+        "school_name": school_name,
+        "students": [
+            {
+                "name": record["student_name"],
+                "class_name": record["class_name"],
+                "overall_score": record["overall_score"],
+                "attendance_percentage": record["attendance_percentage"],
+                "performance_level": record["performance_level"],
+                "teacher_name": record["teacher_name"],
+            }
+            for record in records
+        ],
+        "classes": classes,
     }
