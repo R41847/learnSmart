@@ -330,6 +330,198 @@ def get_students_by_school(school_name):
     return [dict(zip(columns, row)) for row in rows]
 
 
+def create_assignment(teacher_name, title, subject, instructions, questions):
+    """Create an assignment and its ordered questions in one transaction."""
+    conn = get_connection()
+    try:
+        cursor = conn.execute(
+            """
+            INSERT INTO assignments (teacher_name, title, subject, instructions)
+            VALUES (?, ?, ?, ?)
+            """,
+            (teacher_name, title, subject, instructions),
+        )
+        assignment_id = cursor.lastrowid
+        conn.executemany(
+            """
+            INSERT INTO assignment_questions
+                (assignment_id, question_order, question, model_answer, max_points)
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            [
+                (
+                    assignment_id,
+                    index,
+                    question["question"],
+                    question["model_answer"],
+                    question["max_points"],
+                )
+                for index, question in enumerate(questions, 1)
+            ],
+        )
+        conn.commit()
+        return assignment_id
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
+
+
+def list_assignments_by_teacher(teacher_name):
+    conn = get_connection()
+    try:
+        return conn.execute(
+            """
+            SELECT id, title, subject, created_at
+            FROM assignments
+            WHERE lower(trim(teacher_name)) = lower(trim(?))
+            ORDER BY created_at DESC, id DESC
+            """,
+            (teacher_name,),
+        ).fetchall()
+    finally:
+        conn.close()
+
+
+def get_assignment(assignment_id):
+    conn = get_connection()
+    try:
+        return conn.execute(
+            """
+            SELECT id, teacher_name, title, subject, instructions, created_at
+            FROM assignments
+            WHERE id = ?
+            """,
+            (assignment_id,),
+        ).fetchone()
+    finally:
+        conn.close()
+
+
+def get_assignment_questions(assignment_id):
+    conn = get_connection()
+    try:
+        return conn.execute(
+            """
+            SELECT id, question_order, question, model_answer, max_points
+            FROM assignment_questions
+            WHERE assignment_id = ?
+            ORDER BY question_order
+            """,
+            (assignment_id,),
+        ).fetchall()
+    finally:
+        conn.close()
+
+
+def list_assignments_for_student(student_name):
+    conn = get_connection()
+    try:
+        return conn.execute(
+            """
+            SELECT
+                a.id,
+                a.title,
+                a.subject,
+                a.created_at,
+                CASE WHEN s.id IS NULL THEN 'pending' ELSE 'submitted' END
+                    AS status
+            FROM students student
+            JOIN assignments a
+                ON lower(trim(a.teacher_name)) =
+                   lower(trim(student.teacher_name))
+            LEFT JOIN assignment_submissions s
+                ON s.assignment_id = a.id
+                AND lower(trim(s.student_name)) = lower(trim(student.student_name))
+            WHERE lower(trim(student.student_name)) = lower(trim(?))
+            ORDER BY a.created_at DESC, a.id DESC
+            """,
+            (student_name,),
+        ).fetchall()
+    finally:
+        conn.close()
+
+
+def save_assignment_submission(
+    assignment_id,
+    student_name,
+    answers,
+    grading,
+):
+    import json
+
+    conn = get_connection()
+    try:
+        conn.execute(
+            """
+            INSERT INTO assignment_submissions
+                (
+                    assignment_id,
+                    student_name,
+                    answers_json,
+                    grading_json,
+                    earned_points,
+                    max_points,
+                    percentage
+                )
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(assignment_id, student_name) DO UPDATE SET
+                answers_json = excluded.answers_json,
+                grading_json = excluded.grading_json,
+                earned_points = excluded.earned_points,
+                max_points = excluded.max_points,
+                percentage = excluded.percentage,
+                submitted_at = CURRENT_TIMESTAMP
+            """,
+            (
+                assignment_id,
+                student_name,
+                json.dumps(answers),
+                json.dumps(grading),
+                grading["earned_points"],
+                grading["max_points"],
+                grading["percentage"],
+            ),
+        )
+        conn.commit()
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
+
+
+def get_assignment_submission(assignment_id, student_name):
+    import json
+
+    conn = get_connection()
+    try:
+        row = conn.execute(
+            """
+            SELECT answers_json, grading_json, earned_points, max_points,
+                   percentage, submitted_at
+            FROM assignment_submissions
+            WHERE assignment_id = ? AND lower(trim(student_name)) = lower(trim(?))
+            """,
+            (assignment_id, student_name),
+        ).fetchone()
+    finally:
+        conn.close()
+
+    if row is None:
+        return None
+
+    return {
+        "answers": json.loads(row[0]),
+        "grading": json.loads(row[1]),
+        "earned_points": row[2],
+        "max_points": row[3],
+        "percentage": row[4],
+        "submitted_at": row[5],
+    }
+
+
 def get_student_performance_trend(student_name=None, student_id=None):
     """Combine history and assignment scores into a simple performance trend."""
     conn = get_connection()

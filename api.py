@@ -1,5 +1,9 @@
 from contextlib import asynccontextmanager
+import asyncio
+import os
+from pathlib import Path
 import sqlite3
+import sys
 
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
@@ -9,7 +13,14 @@ from database import (
     authenticate_user,
     create_tables,
     create_user,
+    create_assignment,
+    get_assignment,
+    get_assignment_questions,
+    get_assignment_submission,
     get_student_profile,
+    list_assignments_by_teacher,
+    list_assignments_for_student,
+    save_assignment_submission,
     get_students_by_parent_email,
     get_students_by_school,
     get_students_by_teacher,
@@ -111,6 +122,85 @@ class AdminStudentsResponse(BaseModel):
     school_name: str
     students: list[AdminStudentResponse]
     classes: list[ClassSummaryResponse]
+
+
+class LearningPlanRequest(BaseModel):
+    student_name: str
+    age: int
+    preferred_topic: str
+    learning_style: str
+
+
+class LearningPlanResponse(BaseModel):
+    success: bool
+    plan: str
+
+
+class AssignmentQuestionRequest(BaseModel):
+    question: str
+    model_answer: str
+    max_points: float = 1
+
+
+class CreateAssignmentRequest(BaseModel):
+    teacher_name: str
+    title: str
+    subject: str
+    instructions: str
+    questions: list[AssignmentQuestionRequest]
+
+
+class AssignmentQuestionResponse(BaseModel):
+    id: int
+    question_order: int
+    question: str
+    max_points: float
+
+
+class AssignmentResponse(BaseModel):
+    id: int
+    title: str
+    subject: str | None = None
+    created_at: str
+
+
+class StudentAssignmentResponse(AssignmentResponse):
+    status: str
+
+
+class AssignmentSubmissionRequest(BaseModel):
+    student_name: str
+    answers: list[str]
+
+
+class AssignmentSubmissionResponse(BaseModel):
+    answers: list[str]
+    grading: dict
+    earned_points: float
+    max_points: float
+    percentage: float
+    submitted_at: str
+
+
+def _generate_learning_plan(student_profile):
+    """Load the RAG pipeline lazily and run its synchronous Gemini call."""
+    rag_path = str(Path(__file__).resolve().parent / "Rag")
+    if rag_path not in sys.path:
+        sys.path.insert(0, rag_path)
+
+    from genai import generate_learning_plan
+
+    return generate_learning_plan(student_profile)
+
+
+def _grade_assignment(title, questions, answers):
+    rag_path = str(Path(__file__).resolve().parent / "Rag")
+    if rag_path not in sys.path:
+        sys.path.insert(0, rag_path)
+
+    from genai import grade_assignment
+
+    return grade_assignment(title, questions, answers)
 
 
 @app.get("/health")
@@ -297,3 +387,271 @@ def admin_students(school_name: str):
         ],
         "classes": classes,
     }
+
+
+@app.post(
+    "/ai-assistant/generate-plan",
+    response_model=LearningPlanResponse,
+)
+async def generate_plan(request: LearningPlanRequest):
+    if request.age <= 0:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="Age must be greater than zero",
+        )
+
+    record = get_student_profile(request.student_name)
+    if record is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Student '{request.student_name}' was not found",
+        )
+
+    score_fields = {
+        "Assignment": record["assignment_score"],
+        "Midterm": record["midterm_score"],
+        "Final Exam": record["final_exam_score"],
+        "Participation": record["participation_score"],
+    }
+    available_scores = {
+        name: score for name, score in score_fields.items()
+        if score is not None
+    }
+    weakest_area = (
+        min(available_scores, key=available_scores.get)
+        if available_scores
+        else "overall"
+    )
+
+    student_profile = {
+        "performance_level": record["performance_level"] or "Unknown",
+        "age": request.age,
+        "education_level": "Primary",
+        "learning_style": request.learning_style,
+        "preferred_topics": request.preferred_topic,
+        "weak_areas": f"Low {weakest_area} performance",
+        "study_hours": record["study_hours_per_day"],
+        "attendance": record["attendance_percentage"],
+    }
+
+    if not os.getenv("GEMINI_API_KEY"):
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="AI service is unavailable because GEMINI_API_KEY is not set",
+        )
+
+    try:
+        plan = await asyncio.to_thread(
+            _generate_learning_plan,
+            student_profile,
+        )
+    except ValueError as error:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=f"AI service configuration error: {error}",
+        ) from error
+    except Exception as error:
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail=f"AI plan generation failed: {error}",
+        ) from error
+
+    if not isinstance(plan, str) or not plan.strip():
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail="AI service returned an empty learning plan",
+        )
+
+    return {"success": True, "plan": plan}
+
+
+@app.post("/assignments/create")
+def assignment_create(request: CreateAssignmentRequest):
+    if not request.questions:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="An assignment must include at least one question",
+        )
+    if any(question.max_points <= 0 for question in request.questions):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="Each question max_points must be greater than zero",
+        )
+
+    assignment_id = create_assignment(
+        request.teacher_name,
+        request.title,
+        request.subject,
+        request.instructions,
+        [question.model_dump() for question in request.questions],
+    )
+    return {
+        "success": True,
+        "assignment": {
+            "id": assignment_id,
+            "title": request.title,
+            "subject": request.subject,
+        },
+    }
+
+
+@app.get(
+    "/assignments/teacher/{teacher_name}",
+    response_model=list[AssignmentResponse],
+)
+def teacher_assignments(teacher_name: str):
+    return [
+        {
+            "id": row[0],
+            "title": row[1],
+            "subject": row[2],
+            "created_at": row[3],
+        }
+        for row in list_assignments_by_teacher(teacher_name)
+    ]
+
+
+@app.get(
+    "/assignments/student/{student_name}",
+    response_model=list[StudentAssignmentResponse],
+)
+def student_assignments(student_name: str):
+    if get_student_profile(student_name) is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Student '{student_name}' was not found",
+        )
+
+    return [
+        {
+            "id": row[0],
+            "title": row[1],
+            "subject": row[2],
+            "created_at": row[3],
+            "status": row[4],
+        }
+        for row in list_assignments_for_student(student_name)
+    ]
+
+
+@app.get(
+    "/assignments/{assignment_id}/questions",
+    response_model=list[AssignmentQuestionResponse],
+)
+def assignment_questions(assignment_id: int):
+    if get_assignment(assignment_id) is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Assignment {assignment_id} was not found",
+        )
+
+    return [
+        {
+            "id": row[0],
+            "question_order": row[1],
+            "question": row[2],
+            "max_points": row[4],
+        }
+        for row in get_assignment_questions(assignment_id)
+    ]
+
+
+@app.post(
+    "/assignments/{assignment_id}/submit",
+)
+async def assignment_submit(
+    assignment_id: int,
+    request: AssignmentSubmissionRequest,
+):
+    assignment = get_assignment(assignment_id)
+    if assignment is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Assignment {assignment_id} was not found",
+        )
+
+    student = get_student_profile(request.student_name)
+    if student is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Student '{request.student_name}' was not found",
+        )
+    if (
+        student["teacher_name"] is None
+        or student["teacher_name"].strip().lower()
+        != assignment[1].strip().lower()
+    ):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="This assignment is not available to this student",
+        )
+
+    question_rows = get_assignment_questions(assignment_id)
+    if len(request.answers) != len(question_rows):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=(
+                f"Expected {len(question_rows)} answers, "
+                f"received {len(request.answers)}"
+            ),
+        )
+
+    questions = [
+        {
+            "question": row[2],
+            "model_answer": row[3],
+            "max_points": row[4],
+        }
+        for row in question_rows
+    ]
+    if not os.getenv("GEMINI_API_KEY"):
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="AI grading is unavailable because GEMINI_API_KEY is not set",
+        )
+
+    try:
+        grading = await asyncio.to_thread(
+            _grade_assignment,
+            assignment[2],
+            questions,
+            request.answers,
+        )
+    except ValueError as error:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=f"AI grading returned an invalid result: {error}",
+        ) from error
+    except Exception as error:
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail=f"AI grading failed: {error}",
+        ) from error
+
+    save_assignment_submission(
+        assignment_id,
+        request.student_name,
+        request.answers,
+        grading,
+    )
+    return {"success": True, **grading}
+
+
+@app.get(
+    "/assignments/{assignment_id}/submission/{student_name}",
+    response_model=AssignmentSubmissionResponse,
+)
+def assignment_submission(assignment_id: int, student_name: str):
+    if get_assignment(assignment_id) is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Assignment {assignment_id} was not found",
+        )
+
+    submission = get_assignment_submission(assignment_id, student_name)
+    if submission is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="No submission was found for this student and assignment",
+        )
+    return submission
