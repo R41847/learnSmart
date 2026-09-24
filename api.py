@@ -42,6 +42,7 @@ app.add_middleware(
         "http://localhost:3000",
         "https://bloom-ai-frontend.vercel.app",
     ],
+    allow_origin_regex=r"https://bloom-ai-frontend.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
