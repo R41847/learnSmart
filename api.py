@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import sqlite3
 import sys
+from typing import Literal
 
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
@@ -129,6 +130,7 @@ class LearningPlanRequest(BaseModel):
     age: int
     preferred_topic: str
     learning_style: str
+    language: Literal["en", "ar"] = "en"
 
 
 class LearningPlanResponse(BaseModel):
@@ -182,7 +184,7 @@ class AssignmentSubmissionResponse(BaseModel):
     submitted_at: str
 
 
-def _generate_learning_plan(student_profile):
+def _generate_learning_plan(student_profile, language):
     """Load the RAG pipeline lazily and run its synchronous Gemini call."""
     rag_path = str(Path(__file__).resolve().parent / "Rag")
     if rag_path not in sys.path:
@@ -190,7 +192,7 @@ def _generate_learning_plan(student_profile):
 
     from genai import generate_learning_plan
 
-    return generate_learning_plan(student_profile)
+    return generate_learning_plan(student_profile, language=language)
 
 
 def _grade_assignment(title, questions, answers):
@@ -399,7 +401,6 @@ async def generate_plan(request: LearningPlanRequest):
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail="Age must be greater than zero",
         )
-
     record = get_student_profile(request.student_name)
     if record is None:
         raise HTTPException(
@@ -444,6 +445,7 @@ async def generate_plan(request: LearningPlanRequest):
         plan = await asyncio.to_thread(
             _generate_learning_plan,
             student_profile,
+            request.language,
         )
     except ValueError as error:
         raise HTTPException(
