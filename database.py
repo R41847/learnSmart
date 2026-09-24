@@ -218,6 +218,11 @@ def get_student_records(user_id, role, name):
     return [dict(zip(columns, row)) for row in rows]
 
 
+def get_students_by_teacher(teacher_name):
+    """Return dashboard-ready students assigned to a teacher by name."""
+    return get_student_records(None, "teacher", teacher_name)
+
+
 def get_student_performance_trend(student_name=None, student_id=None):
     """Combine history and assignment scores into a simple performance trend."""
     conn = get_connection()

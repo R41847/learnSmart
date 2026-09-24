@@ -5,7 +5,12 @@ from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from database import authenticate_user, create_tables, create_user
+from database import (
+    authenticate_user,
+    create_tables,
+    create_user,
+    get_students_by_teacher,
+)
 
 
 @asynccontextmanager
@@ -47,6 +52,21 @@ class UserResponse(BaseModel):
 class AuthResponse(BaseModel):
     success: bool
     user: UserResponse
+
+
+class TeacherStudentResponse(BaseModel):
+    name: str
+    class_name: str | None = None
+    school_name: str | None = None
+    parent_name: str | None = None
+    overall_score: float | None = None
+    attendance_percentage: float | None = None
+    performance_level: str | None = None
+
+
+class TeacherStudentsResponse(BaseModel):
+    teacher_name: str
+    students: list[TeacherStudentResponse]
 
 
 @app.get("/health")
@@ -92,3 +112,30 @@ def signup(request: SignupRequest):
 
     user["id"] = user_id
     return {"success": True, "user": user}
+
+
+@app.get(
+    "/teacher/{teacher_name}/students",
+    response_model=TeacherStudentsResponse,
+)
+def teacher_students(teacher_name: str):
+    records = get_students_by_teacher(teacher_name)
+    return {
+        "teacher_name": teacher_name,
+        "students": [
+            {
+                "name": record["student_name"],
+                "class_name": record["class_name"],
+                "school_name": record["school_name"],
+                "parent_name": (
+                    None
+                    if record["parent_name"] == "Not linked"
+                    else record["parent_name"]
+                ),
+                "overall_score": record["overall_score"],
+                "attendance_percentage": record["attendance_percentage"],
+                "performance_level": record["performance_level"],
+            }
+            for record in records
+        ],
+    }
